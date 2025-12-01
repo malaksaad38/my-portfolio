@@ -146,6 +146,7 @@ const CyberpunkMenu = () => {
                 return (
                     <CyberpunkSpotlight cornerBracketColor={page.bracketColor}>
                         <div className="md:p-8 p-6 relative">
+
                             {/* === ANIMATED SCANNER LINES === */}
                             {[0, 1].map((i) => (
                                 <motion.div
@@ -155,7 +156,7 @@ const CyberpunkMenu = () => {
                                             ? "bg-gradient-to-r from-transparent via-blue-400/50 to-transparent"
                                             : "bg-gradient-to-r from-transparent via-blue-300/30 to-transparent"
                                     }`}
-                                    animate={{x: ["-100%", "100%"]}}
+                                    animate={{ x: ["-100%", "100%"] }}
                                     transition={{
                                         duration: 3 + i,
                                         repeat: Infinity,
@@ -166,25 +167,23 @@ const CyberpunkMenu = () => {
                             ))}
 
                             {/* === NEON BORDERS === */}
-                            <div
-                                className="absolute right-0 top-0 h-full w-[2px] bg-gradient-to-b from-blue-500/50 via-blue-400/20 to-transparent"/>
-                            <div
-                                className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-blue-400/20 to-blue-500/50"/>
+                            <div className="absolute right-0 top-0 h-full w-[2px] bg-gradient-to-b from-blue-500/50 via-blue-400/20 to-transparent" />
+                            <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-blue-400/20 to-blue-500/50" />
 
-                            {/* === BACKGROUND PAGE NUMBER WITH GLOW === */}
+                            {/* === BACKGROUND PAGE NUMBER === */}
                             <motion.h1
-                                className={`fixed right-4 bottom-4 ${page.text} opacity-30 font-cyber-outline leading-none text-[8rem] font-bold`}
+                                className={`fixed right-4 bottom-4 ${page.text} opacity-30 font-cyber-outline leading-none text-[5rem] md:text-[7rem] font-bold`}
                                 animate={{
                                     textShadow: [
                                         `0 0 10px ${currentPage?.glowColor}, 0 0 30px ${currentPage?.glowColor}`,
                                         `0 0 20px ${currentPage?.glowColor}, 0 0 50px ${currentPage?.glowColor}`,
                                         `0 0 10px ${currentPage?.glowColor}, 0 0 30px ${currentPage?.glowColor}`,
                                     ],
-                                    scale: [1, 1.02, 1]
+                                    scale: [1, 1.02, 1],
                                 }}
-                                transition={{duration: 3, repeat: Infinity}}
+                                transition={{ duration: 3, repeat: Infinity }}
                             >
-                                <GlitchText text="01" textColor={page.text}/>
+                                <GlitchText text="01" textColor={page.text} />
                             </motion.h1>
 
                             {/* === HERO CONTENT === */}
@@ -198,15 +197,16 @@ const CyberpunkMenu = () => {
                                 <motion.h1
                                     variants={textVariant}
                                     custom={0.2}
-                                    className={`text-5xl md:text-6xl font-black mb-4 font-cyber-outline z-10 ${page.text} bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent`}>
-                                    <GlitchText text="Malak Saad" textColor={page.text}/>
+                                    className={`text-4xl md:text-5xl font-black mb-4 font-cyber-outline z-10 ${page.text} bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent`}
+                                >
+                                    <GlitchText text="Malak Saad" textColor={page.text} />
                                 </motion.h1>
 
                                 {/* Subtitle */}
                                 <motion.h2
                                     variants={textVariant}
                                     custom={0.2}
-                                    className="text-2xl md:text-3xl font-bold text-gray-300 mb-2"
+                                    className="text-xl md:text-2xl font-bold text-gray-300 mb-2"
                                 >
                                     Full-Stack Developer & UI Specialist
                                 </motion.h2>
@@ -218,18 +218,20 @@ const CyberpunkMenu = () => {
                                     className="flex items-center gap-2 mb-6"
                                 >
                                     <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
-                                    <span className="text-sm tracking-widest opacity-70 text-blue-300 uppercase">Building the future of web</span>
+                                    <span className="text-xs tracking-widest opacity-70 text-blue-300 uppercase">
+                    Building the future of web
+                </span>
                                 </motion.div>
 
                                 {/* Main Description */}
                                 <motion.p
                                     variants={textVariant}
                                     custom={0.4}
-                                    className="text-lg leading-relaxed max-w-3xl opacity-85 text-gray-200 mb-2 font-light"
+                                    className="text-base md:text-lg leading-relaxed max-w-3xl opacity-85 text-gray-200 mb-2 font-light"
                                 >
-                                    I transform ideas into powerful digital solutions. Specializing in <span
-                                    className="font-bold text-blue-400">Next.js, React, TypeScript,</span> and <span
-                                    className="font-bold text-blue-400">Node.js</span>, I craft scalable applications
+                                    I transform ideas into powerful digital solutions. Specializing in{" "}
+                                    <span className="font-bold text-blue-400">Next.js, React, TypeScript,</span> and{" "}
+                                    <span className="font-bold text-blue-400">Node.js</span>, I craft scalable applications
                                     with exceptional user experiences that make an impact.
                                 </motion.p>
 
@@ -237,7 +239,7 @@ const CyberpunkMenu = () => {
                                 <motion.p
                                     variants={textVariant}
                                     custom={0.5}
-                                    className="text-base opacity-70 text-gray-400 max-w-3xl mb-8"
+                                    className="text-sm md:text-base opacity-70 text-gray-400 max-w-3xl mb-8"
                                 >
                                     With 4+ years of hands-on experience, I've helped 30+ companies achieve their
                                     digital goals through cutting-edge technology and creative problem-solving.
@@ -250,30 +252,29 @@ const CyberpunkMenu = () => {
                                     className="grid grid-cols-3 gap-4 md:gap-8 py-6 mb-8 border-y border-blue-500/30"
                                 >
                                     <div className="text-center group">
-                                        <div
-                                            className={`text-3xl md:text-4xl font-black ${page.text} group-hover:scale-110 transition-transform`}>50+
+                                        <div className={`text-2xl md:text-3xl font-black ${page.text} group-hover:scale-110 transition-transform`}>
+                                            50+
                                         </div>
-                                        <div
-                                            className="text-xs text-gray-400 uppercase tracking-wider mt-2 font-semibold">Projects
-                                            Delivered
-                                        </div>
-                                    </div>
-                                    <div className="text-center group">
-                                        <div
-                                            className={`text-3xl md:text-4xl font-black ${page.text} group-hover:scale-110 transition-transform`}>30+
-                                        </div>
-                                        <div
-                                            className="text-xs text-gray-400 uppercase tracking-wider mt-2 font-semibold">Happy
-                                            Clients
+                                        <div className="text-xs text-gray-400 uppercase tracking-wider mt-2 font-semibold">
+                                            Projects Delivered
                                         </div>
                                     </div>
+
                                     <div className="text-center group">
-                                        <div
-                                            className={`text-3xl md:text-4xl font-black ${page.text} group-hover:scale-110 transition-transform`}>4+
+                                        <div className={`text-2xl md:text-3xl font-black ${page.text} group-hover:scale-110 transition-transform`}>
+                                            30+
                                         </div>
-                                        <div
-                                            className="text-xs text-gray-400 uppercase tracking-wider mt-2 font-semibold">Years
-                                            Experience
+                                        <div className="text-xs text-gray-400 uppercase tracking-wider mt-2 font-semibold">
+                                            Happy Clients
+                                        </div>
+                                    </div>
+
+                                    <div className="text-center group">
+                                        <div className={`text-2xl md:text-3xl font-black ${page.text} group-hover:scale-110 transition-transform`}>
+                                            4+
+                                        </div>
+                                        <div className="text-xs text-gray-400 uppercase tracking-wider mt-2 font-semibold">
+                                            Years Experience
                                         </div>
                                     </div>
                                 </motion.div>
@@ -284,8 +285,10 @@ const CyberpunkMenu = () => {
                                     custom={0.75}
                                     className="mb-8"
                                 >
-                                    <p className="text-xs text-gray-500 uppercase tracking-widest font-bold mb-3">Tech
-                                        Stack & Expertise</p>
+                                    <p className="text-xs text-gray-500 uppercase tracking-widest font-bold mb-3">
+                                        Tech Stack & Expertise
+                                    </p>
+
                                     <div className="flex flex-wrap gap-2 sm:gap-3 opacity-90">
                                         {[
                                             "React 18+",
@@ -319,33 +322,30 @@ const CyberpunkMenu = () => {
                                     className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 mb-10"
                                 >
                                     <button
-                                        className="px-6 sm:px-8 py-3 rounded-xl border-2 border-blue-500 text-blue-300 font-black uppercase tracking-widest text-xs sm:text-sm
+                                        className="px-6 sm:px-8 py-3 rounded-xl border-2 border-blue-500 text-blue-300 font-black uppercase tracking-widest text-[10px] sm:text-xs
                     bg-gradient-to-br from-blue-600/30 to-blue-500/10 hover:from-blue-600/50 hover:to-blue-500/30
                     shadow-lg shadow-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/60 transition-all duration-300 hover:scale-105
                     relative overflow-hidden group flex-1 sm:flex-none"
-
                                     >
-                                    <span className="relative z-10 flex items-center justify-center gap-2">
-                                        View My Work <span
-                                        className="group-hover:translate-x-1 transition-transform">→</span>
-                                    </span>
-                                        <div
-                                            className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-400 opacity-0 group-hover:opacity-20 transition-opacity"></div>
+                    <span className="relative z-10 flex items-center justify-center gap-2">
+                        View My Work <span className="group-hover:translate-x-1 transition-transform">→</span>
+                    </span>
+                                        <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-400 opacity-0 group-hover:opacity-20 transition-opacity"></div>
                                     </button>
 
                                     <button
-                                        className="px-6 sm:px-8 py-3 rounded-xl border-2 border-blue-400/50 text-blue-200 font-black uppercase tracking-widest text-xs sm:text-sm
+                                        className="px-6 sm:px-8 py-3 rounded-xl border-2 border-blue-400/50 text-blue-200 font-black uppercase tracking-widest text-[10px] sm:text-xs
                     bg-gradient-to-br from-blue-500/10 to-transparent hover:from-blue-500/30 hover:to-blue-400/10
                     shadow-lg shadow-blue-400/20 hover:shadow-xl hover:shadow-blue-400/40 transition-all duration-300 hover:scale-105
                     relative overflow-hidden group flex-1 sm:flex-none"
                                     >
-                                    <span className="relative z-10 flex items-center justify-center gap-2">
-                                        💬 Let's Talk
-                                    </span>
+                    <span className="relative z-10 flex items-center justify-center gap-2">
+                        💬 Let's Talk
+                    </span>
                                     </button>
 
                                     <button
-                                        className="px-6 sm:px-8 py-3 rounded-xl border-2 border-blue-300/30 text-blue-200/70 font-black uppercase tracking-widest text-xs sm:text-sm
+                                        className="px-6 sm:px-8 py-3 rounded-xl border-2 border-blue-300/30 text-blue-200/70 font-black uppercase tracking-widest text-[10px] sm:text-xs
                     bg-gradient-to-br from-blue-400/5 to-transparent hover:from-blue-500/20 hover:to-blue-400/10 hover:text-blue-200
                     transition-all duration-300 hover:scale-105 hover:border-blue-300/60 flex-1 sm:flex-none"
                                     >
@@ -360,14 +360,20 @@ const CyberpunkMenu = () => {
                                     className="grid md:grid-cols-3 gap-4 mb-8"
                                 >
                                     {[
-                                        {label: "Response Time", value: "< 24 hours"},
-                                        {label: "Project Completion", value: "99% On-time"},
-                                        {label: "Client Satisfaction", value: "100%"}
+                                        { label: "Response Time", value: "< 24 hours" },
+                                        { label: "Project Completion", value: "99% On-time" },
+                                        { label: "Client Satisfaction", value: "100%" },
                                     ].map((stat, i) => (
-                                        <div key={i}
-                                             className="border border-blue-500/30 rounded-lg p-3 bg-blue-500/5 text-center">
-                                            <p className="text-xs text-gray-400 uppercase tracking-wider">{stat.label}</p>
-                                            <p className="text-lg font-black text-blue-300">{stat.value}</p>
+                                        <div
+                                            key={i}
+                                            className="border border-blue-500/30 rounded-lg p-3 bg-blue-500/5 text-center"
+                                        >
+                                            <p className="text-xs text-gray-400 uppercase tracking-wider">
+                                                {stat.label}
+                                            </p>
+                                            <p className="text-base md:text-lg font-black text-blue-300">
+                                                {stat.value}
+                                            </p>
                                         </div>
                                     ))}
                                 </motion.div>
@@ -376,13 +382,11 @@ const CyberpunkMenu = () => {
                                 <motion.div
                                     variants={textVariant}
                                     custom={1.1}
-                                    className="opacity-40 font-cyber-outline tracking-widest text-xs text-gray-500 border-t border-blue-500/20 pt-6"
+                                    className="opacity-40 font-cyber-outline tracking-widest text-[10px] md:text-xs text-gray-500 border-t border-blue-500/20 pt-6"
                                 >
                                     ▸ CRAFTING DIGITAL EXCELLENCE SINCE 2020 ▸
                                 </motion.div>
                             </motion.div>
-
-                            {/* === SOCIAL ICONS === */}
                         </div>
                     </CyberpunkSpotlight>
                 );
@@ -391,6 +395,7 @@ const CyberpunkMenu = () => {
                 return (
                     <CyberpunkSpotlight cornerBracketColor={page.bracketColor}>
                         <div className="md:p-8 p-6 relative">
+
                             {/* === SCANNER LINES === */}
                             {[0, 1].map((i) => (
                                 <motion.div
@@ -400,7 +405,7 @@ const CyberpunkMenu = () => {
                                             ? "bg-gradient-to-r from-transparent via-green-400/50 to-transparent"
                                             : "bg-gradient-to-r from-transparent via-green-300/30 to-transparent"
                                     }`}
-                                    animate={{x: ["-100%", "100%"]}}
+                                    animate={{ x: ["-100%", "100%"] }}
                                     transition={{
                                         duration: 3 + i,
                                         repeat: Infinity,
@@ -409,20 +414,23 @@ const CyberpunkMenu = () => {
                                 />
                             ))}
 
-                            <div
-                                className="absolute right-0 top-0 h-full w-[2px] bg-gradient-to-b from-green-500/50 via-green-400/20 to-transparent"/>
-                            <div
-                                className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-green-400/20 to-green-500/50"/>
+                            <div className="absolute right-0 top-0 h-full w-[2px] bg-gradient-to-b from-green-500/50 via-green-400/20 to-transparent" />
+                            <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-green-400/20 to-green-500/50" />
 
+                            {/* === BACKGROUND NUMBER === */}
                             <motion.h1
-                                className={`fixed right-4 bottom-4 ${page.text} opacity-30 font-cyber-outline leading-none text-[8rem] font-bold`}
+                                className={`fixed right-4 bottom-4 ${page.text} opacity-30 font-cyber-outline leading-none text-[5rem] md:text-[7rem] font-bold`}
                                 animate={{
-                                    textShadow: [`0 0 10px ${currentPage?.glowColor}, 0 0 30px ${currentPage?.glowColor}`, `0 0 20px ${currentPage?.glowColor}, 0 0 50px ${currentPage?.glowColor}`, `0 0 10px ${currentPage?.glowColor}, 0 0 30px ${currentPage?.glowColor}`],
-                                    scale: [1, 1.02, 1]
+                                    textShadow: [
+                                        `0 0 10px ${currentPage?.glowColor}, 0 0 30px ${currentPage?.glowColor}`,
+                                        `0 0 20px ${currentPage?.glowColor}, 0 0 50px ${currentPage?.glowColor}`,
+                                        `0 0 10px ${currentPage?.glowColor}, 0 0 30px ${currentPage?.glowColor}`,
+                                    ],
+                                    scale: [1, 1.02, 1],
                                 }}
-                                transition={{duration: 3, repeat: Infinity}}
+                                transition={{ duration: 3, repeat: Infinity }}
                             >
-                                <GlitchText text="02" textColor={page.text}/>
+                                <GlitchText text="02" textColor={page.text} />
                             </motion.h1>
 
                             <motion.div
@@ -431,11 +439,13 @@ const CyberpunkMenu = () => {
                                 className="relative z-10 max-w-5xl"
                             >
 
+                                {/* TITLE */}
                                 <motion.h1
                                     variants={textVariant}
                                     custom={0.2}
-                                    className={`text-5xl md:text-6xl font-black mb-4 font-cyber-outline z-10 ${page.text} bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent`}>
-                                    <GlitchText text="Who I Am" textColor={page.text}/>
+                                    className={`text-4xl md:text-5xl font-black mb-4 font-cyber-outline z-10 ${page.text} bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent`}
+                                >
+                                    <GlitchText text="Who I Am" textColor={page.text} />
                                 </motion.h1>
 
                                 <motion.div
@@ -444,8 +454,12 @@ const CyberpunkMenu = () => {
                                     animate="visible"
                                     className="space-y-8"
                                 >
-                                    <motion.div variants={itemVariant}
-                                                className="text-lg leading-relaxed text-gray-300 border-l-4 border-green-500 pl-6 py-4 bg-green-500/5 rounded-r-lg">
+
+                                    {/* ABOUT TEXT */}
+                                    <motion.div
+                                        variants={itemVariant}
+                                        className="text-base md:text-lg leading-relaxed text-gray-300 border-l-4 border-green-500 pl-6 py-4 bg-green-500/5 rounded-r-lg"
+                                    >
                                         <p className="mb-4">
                                             I'm <span className="font-black text-green-400">Malak Saad</span>, a
                                             passionate full-stack developer and creative problem solver with a mission
@@ -460,69 +474,52 @@ const CyberpunkMenu = () => {
                                         </p>
                                     </motion.div>
 
+                                    {/* EXPERTISE + ACHIEVEMENTS GRID */}
                                     <motion.div variants={itemVariant} className="grid md:grid-cols-2 gap-6">
-                                        <div
-                                            className="border-2 border-green-500/50 rounded-xl p-6 bg-gradient-to-br from-green-500/10 to-green-400/5 hover:border-green-400 hover:shadow-lg hover:shadow-green-500/20 transition-all">
-                                            <h3 className="text-green-400 font-black mb-4 text-lg uppercase tracking-wider">🎯
-                                                Expertise</h3>
+                                        {/* Expertise */}
+                                        <div className="border-2 border-green-500/50 rounded-xl p-6 bg-gradient-to-br from-green-500/10 to-green-400/5 hover:border-green-400 hover:shadow-lg hover:shadow-green-500/20 transition-all">
+                                            <h3 className="text-green-400 font-black mb-4 text-lg uppercase tracking-wider">
+                                                🎯 Expertise
+                                            </h3>
                                             <ul className="text-gray-300 text-sm space-y-3 font-semibold">
-                                                <li className="flex items-center gap-2"><span
-                                                    className="text-green-400">▸</span> Full-Stack Web Development
-                                                </li>
-                                                <li className="flex items-center gap-2"><span
-                                                    className="text-green-400">▸</span> React & Next.js Architecture
-                                                </li>
-                                                <li className="flex items-center gap-2"><span
-                                                    className="text-green-400">▸</span> TypeScript & Modern JavaScript
-                                                </li>
-                                                <li className="flex items-center gap-2"><span
-                                                    className="text-green-400">▸</span> Backend & Database Design
-                                                </li>
-                                                <li className="flex items-center gap-2"><span
-                                                    className="text-green-400">▸</span> Performance Optimization
-                                                </li>
-                                                <li className="flex items-center gap-2"><span
-                                                    className="text-green-400">▸</span> UI/UX Implementation
-                                                </li>
+                                                <li className="flex items-center gap-2"><span className="text-green-400">▸</span> Full-Stack Web Development</li>
+                                                <li className="flex items-center gap-2"><span className="text-green-400">▸</span> React & Next.js Architecture</li>
+                                                <li className="flex items-center gap-2"><span className="text-green-400">▸</span> TypeScript & Modern JavaScript</li>
+                                                <li className="flex items-center gap-2"><span className="text-green-400">▸</span> Backend & Database Design</li>
+                                                <li className="flex items-center gap-2"><span className="text-green-400">▸</span> Performance Optimization</li>
+                                                <li className="flex items-center gap-2"><span className="text-green-400">▸</span> UI/UX Implementation</li>
                                             </ul>
                                         </div>
 
-                                        <div
-                                            className="border-2 border-green-500/50 rounded-xl p-6 bg-gradient-to-br from-green-500/10 to-green-400/5 hover:border-green-400 hover:shadow-lg hover:shadow-green-500/20 transition-all">
-                                            <h3 className="text-green-400 font-black mb-4 text-lg uppercase tracking-wider">🏆
-                                                Achievements</h3>
+                                        {/* Achievements */}
+                                        <div className="border-2 border-green-500/50 rounded-xl p-6 bg-gradient-to-br from-green-500/10 to-green-400/5 hover:border-green-400 hover:shadow-lg hover:shadow-green-500/20 transition-all">
+                                            <h3 className="text-green-400 font-black mb-4 text-lg uppercase tracking-wider">
+                                                🏆 Achievements
+                                            </h3>
                                             <ul className="text-gray-300 text-sm space-y-3 font-semibold">
-                                                <li className="flex items-center gap-2"><span
-                                                    className="text-green-400">▸</span> 50+ Successful Projects
-                                                </li>
-                                                <li className="flex items-center gap-2"><span
-                                                    className="text-green-400">▸</span> 30+ Global Clients
-                                                </li>
-                                                <li className="flex items-center gap-2"><span
-                                                    className="text-green-400">▸</span> 99% On-time Delivery
-                                                </li>
-                                                <li className="flex items-center gap-2"><span
-                                                    className="text-green-400">▸</span> Mentor to 10+ Developers
-                                                </li>
-                                                <li className="flex items-center gap-2"><span
-                                                    className="text-green-400">▸</span> Open-source Contributor
-                                                </li>
-                                                <li className="flex items-center gap-2"><span
-                                                    className="text-green-400">▸</span> Tech Community Speaker
-                                                </li>
+                                                <li className="flex items-center gap-2"><span className="text-green-400">▸</span> 50+ Successful Projects</li>
+                                                <li className="flex items-center gap-2"><span className="text-green-400">▸</span> 30+ Global Clients</li>
+                                                <li className="flex items-center gap-2"><span className="text-green-400">▸</span> 99% On-time Delivery</li>
+                                                <li className="flex items-center gap-2"><span className="text-green-400">▸</span> Mentor to 10+ Developers</li>
+                                                <li className="flex items-center gap-2"><span className="text-green-400">▸</span> Open-source Contributor</li>
+                                                <li className="flex items-center gap-2"><span className="text-green-400">▸</span> Tech Community Speaker</li>
                                             </ul>
                                         </div>
                                     </motion.div>
 
-                                    <motion.div variants={itemVariant}
-                                                className="border-2 border-green-500/50 rounded-xl p-6 bg-gradient-to-br from-green-500/10 to-green-400/5 hover:border-green-400 hover:shadow-lg hover:shadow-green-500/20 transition-all">
-                                        <h3 className="text-green-400 font-black mb-4 text-lg uppercase tracking-wider">📚
-                                            Education & Certifications</h3>
+                                    {/* EDUCATION */}
+                                    <motion.div
+                                        variants={itemVariant}
+                                        className="border-2 border-green-500/50 rounded-xl p-6 bg-gradient-to-br from-green-500/10 to-green-400/5 hover:border-green-400 hover:shadow-lg hover:shadow-green-500/20 transition-all"
+                                    >
+                                        <h3 className="text-green-400 font-black mb-4 text-lg uppercase tracking-wider">
+                                            📚 Education & Certifications
+                                        </h3>
+
                                         <div className="grid md:grid-cols-2 gap-4">
                                             <div className="border-l-4 border-green-400 pl-4">
                                                 <p className="font-black text-gray-200">BS in Computer Science</p>
-                                                <p className="text-sm text-gray-400">University of Engineering &
-                                                    Technology • 2023</p>
+                                                <p className="text-sm text-gray-400">University of Engineering & Technology • 2023</p>
                                             </div>
                                             <div className="border-l-4 border-green-400 pl-4">
                                                 <p className="font-black text-gray-200">AWS Solutions Architect</p>
@@ -534,30 +531,37 @@ const CyberpunkMenu = () => {
                                             </div>
                                             <div className="border-l-4 border-green-400 pl-4">
                                                 <p className="font-black text-gray-200">Full-Stack Web Mastery</p>
-                                                <p className="text-sm text-gray-400">Comprehensive Training Program •
-                                                    2021</p>
+                                                <p className="text-sm text-gray-400">Comprehensive Training Program • 2021</p>
                                             </div>
                                         </div>
                                     </motion.div>
 
+                                    {/* STATS */}
                                     <motion.div variants={itemVariant} className="grid md:grid-cols-3 gap-4">
                                         {[
-                                            {num: "4+", label: "Years of Experience"},
-                                            {num: "100%", label: "Client Satisfaction Rate"},
-                                            {num: "24/7", label: "Development Support"}
+                                            { num: "4+", label: "Years of Experience" },
+                                            { num: "100%", label: "Client Satisfaction Rate" },
+                                            { num: "24/7", label: "Development Support" },
                                         ].map((item, i) => (
-                                            <div key={i}
-                                                 className="border border-green-500/30 rounded-lg p-4 text-center bg-green-500/5">
-                                                <div
-                                                    className="text-3xl font-black text-green-400 mb-1">{item.num}</div>
-                                                <div
-                                                    className="text-xs text-gray-400 uppercase font-bold tracking-wider">{item.label}</div>
+                                            <div
+                                                key={i}
+                                                className="border border-green-500/30 rounded-lg p-4 text-center bg-green-500/5"
+                                            >
+                                                <div className="text-2xl md:text-3xl font-black text-green-400 mb-1">
+                                                    {item.num}
+                                                </div>
+                                                <div className="text-xs text-gray-400 uppercase font-bold tracking-wider">
+                                                    {item.label}
+                                                </div>
                                             </div>
                                         ))}
                                     </motion.div>
 
-                                    <motion.p variants={itemVariant}
-                                              className="text-gray-400 italic text-center border-t border-green-500/20 pt-6">
+                                    {/* FOOTER QUOTE */}
+                                    <motion.p
+                                        variants={itemVariant}
+                                        className="text-sm md:text-base text-gray-400 italic text-center border-t border-green-500/20 pt-6"
+                                    >
                                         "When I'm not coding, you'll find me exploring emerging technologies,
                                         contributing to open-source projects, writing technical articles, or mentoring
                                         aspiring developers."
@@ -572,6 +576,7 @@ const CyberpunkMenu = () => {
                 return (
                     <CyberpunkSpotlight cornerBracketColor={page.bracketColor}>
                         <div className="md:p-8 p-6 relative">
+
                             {/* === SCANNER LINES === */}
                             {[0, 1].map((i) => (
                                 <motion.div
@@ -581,7 +586,7 @@ const CyberpunkMenu = () => {
                                             ? "bg-gradient-to-r from-transparent via-purple-400/50 to-transparent"
                                             : "bg-gradient-to-r from-transparent via-purple-300/30 to-transparent"
                                     }`}
-                                    animate={{x: ["-100%", "100%"]}}
+                                    animate={{ x: ["-100%", "100%"] }}
                                     transition={{
                                         duration: 3 + i,
                                         repeat: Infinity,
@@ -590,18 +595,21 @@ const CyberpunkMenu = () => {
                                 />
                             ))}
 
-                            <div
-                                className="absolute right-0 top-0 h-full w-[2px] bg-gradient-to-b from-purple-500/50 via-purple-400/20 to-transparent"/>
-                            <div
-                                className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-purple-400/20 to-purple-500/50"/>
+                            <div className="absolute right-0 top-0 h-full w-[2px] bg-gradient-to-b from-purple-500/50 via-purple-400/20 to-transparent"/>
+                            <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-purple-400/20 to-purple-500/50"/>
 
+                            {/* BACKGROUND NUMBER */}
                             <motion.h1
-                                className={`fixed right-4 bottom-4 ${page.text} opacity-30 font-cyber-outline leading-none text-[8rem] font-bold`}
+                                className={`fixed right-4 bottom-4 ${page.text} opacity-30 font-cyber-outline leading-none text-[5rem] md:text-[7rem] font-bold`}
                                 animate={{
-                                    textShadow: [`0 0 10px ${currentPage?.glowColor}, 0 0 30px ${currentPage?.glowColor}`, `0 0 20px ${currentPage?.glowColor}, 0 0 50px ${currentPage?.glowColor}`, `0 0 10px ${currentPage?.glowColor}, 0 0 30px ${currentPage?.glowColor}`],
-                                    scale: [1, 1.02, 1]
+                                    textShadow: [
+                                        `0 0 10px ${currentPage?.glowColor}, 0 0 30px ${currentPage?.glowColor}`,
+                                        `0 0 20px ${currentPage?.glowColor}, 0 0 50px ${currentPage?.glowColor}`,
+                                        `0 0 10px ${currentPage?.glowColor}, 0 0 30px ${currentPage?.glowColor}`,
+                                    ],
+                                    scale: [1, 1.02, 1],
                                 }}
-                                transition={{duration: 3, repeat: Infinity}}
+                                transition={{ duration: 3, repeat: Infinity }}
                             >
                                 <GlitchText text="03" textColor={page.text}/>
                             </motion.h1>
@@ -612,21 +620,25 @@ const CyberpunkMenu = () => {
                                 className="relative z-10 max-w-6xl"
                             >
 
+                                {/* MAIN HEADING */}
                                 <motion.h1
                                     variants={textVariant}
                                     custom={0.2}
-                                    className={`text-5xl md:text-6xl font-black mb-2 font-cyber-outline z-10 ${page.text} bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent`}>
+                                    className={`text-4xl md:text-5xl font-black mb-2 font-cyber-outline z-10 ${page.text} bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent`}
+                                >
                                     <GlitchText text="What I Offer" textColor={page.text}/>
                                 </motion.h1>
 
+                                {/* SUBTEXT */}
                                 <motion.p
                                     variants={textVariant}
                                     custom={0.3}
-                                    className="text-gray-400 mb-12 text-lg max-w-2xl"
+                                    className="text-gray-400 mb-12 text-base max-w-2xl"
                                 >
                                     Comprehensive web development solutions tailored to your unique business needs
                                 </motion.p>
 
+                                {/* SERVICES GRID */}
                                 <motion.div
                                     variants={containerVariant}
                                     initial="hidden"
@@ -676,49 +688,51 @@ const CyberpunkMenu = () => {
                                             variants={itemVariant}
                                             className="border-2 border-purple-500/50 rounded-xl p-6 bg-gradient-to-br from-purple-500/10 to-purple-400/5 hover:border-purple-400 hover:shadow-lg hover:shadow-purple-500/30 transition-all group"
                                         >
-                                            <div
-                                                className="text-5xl mb-4 group-hover:scale-110 transition-transform">{service.icon}</div>
-                                            <h3 className="text-lg font-black text-purple-300 mb-2 uppercase tracking-wider">{service.title}</h3>
-                                            <p className="text-sm text-gray-400 mb-4">{service.desc}</p>
+                                            <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">{service.icon}</div>
+
+                                            <h3 className="text-base font-black text-purple-300 mb-2 uppercase tracking-wider">
+                                                {service.title}
+                                            </h3>
+
+                                            <p className="text-xs text-gray-400 mb-4">{service.desc}</p>
+
                                             <div className="flex flex-wrap gap-2 pt-4 border-t border-purple-500/20">
                                                 {service.features.map((feature, j) => (
-                                                    <span key={j}
-                                                          className="text-xs px-2 py-1 bg-purple-500/20 text-purple-200 rounded font-semibold">
-                                                    {feature}
-                                                </span>
+                                                    <span
+                                                        key={j}
+                                                        className="text-[11px] px-2 py-1 bg-purple-500/20 text-purple-200 rounded font-semibold"
+                                                    >
+                                    {feature}
+                                </span>
                                                 ))}
                                             </div>
                                         </motion.div>
                                     ))}
                                 </motion.div>
 
-                                {/* Process */}
-                                <motion.div variants={itemVariant}
-                                            className="border-2 border-purple-500/50 rounded-xl p-8 bg-gradient-to-br from-purple-500/10 to-purple-400/5">
-                                    <h2 className="text-2xl font-black text-purple-400 mb-8 uppercase tracking-wider">My
-                                        Development Process</h2>
+                                {/* PROCESS SECTION */}
+                                <motion.div
+                                    variants={itemVariant}
+                                    className="border-2 border-purple-500/50 rounded-xl p-8 bg-gradient-to-br from-purple-500/10 to-purple-400/5"
+                                >
+                                    <h2 className="text-xl font-black text-purple-400 mb-8 uppercase tracking-wider">
+                                        My Development Process
+                                    </h2>
+
                                     <div className="grid md:grid-cols-4 gap-4">
                                         {[
-                                            {
-                                                num: "01",
-                                                title: "Discovery",
-                                                desc: "Understand your vision and requirements"
-                                            },
-                                            {num: "02", title: "Planning", desc: "Strategy and technical architecture"},
-                                            {
-                                                num: "03",
-                                                title: "Development",
-                                                desc: "Building with excellence and precision"
-                                            },
-                                            {num: "04", title: "Delivery", desc: "Launch and continuous support"}
+                                            { num: "01", title: "Discovery", desc: "Understand your vision and requirements" },
+                                            { num: "02", title: "Planning", desc: "Strategy and technical architecture" },
+                                            { num: "03", title: "Development", desc: "Building with excellence and precision" },
+                                            { num: "04", title: "Delivery", desc: "Launch and continuous support" },
                                         ].map((step, i) => (
                                             <div key={i} className="relative">
-                                                <div
-                                                    className="border border-purple-500/30 rounded-lg p-4 text-center hover:bg-purple-500/10 transition-all">
-                                                    <div
-                                                        className="text-2xl font-black text-purple-400 mb-2">{step.num}</div>
-                                                    <p className="font-bold text-gray-300 text-sm mb-1">{step.title}</p>
-                                                    <p className="text-xs text-gray-500">{step.desc}</p>
+                                                <div className="border border-purple-500/30 rounded-lg p-4 text-center hover:bg-purple-500/10 transition-all">
+                                                    <div className="text-xl font-black text-purple-400 mb-2">{step.num}</div>
+
+                                                    <p className="font-bold text-gray-300 text-xs mb-1">{step.title}</p>
+
+                                                    <p className="text-[11px] text-gray-500">{step.desc}</p>
                                                 </div>
                                             </div>
                                         ))}
@@ -733,6 +747,7 @@ const CyberpunkMenu = () => {
                 return (
                     <CyberpunkSpotlight cornerBracketColor={page.bracketColor}>
                         <div className="md:p-8 p-6 relative">
+
                             {/* === SCANNER LINES === */}
                             {[0, 1].map((i) => (
                                 <motion.div
@@ -742,7 +757,7 @@ const CyberpunkMenu = () => {
                                             ? "bg-gradient-to-r from-transparent via-yellow-400/50 to-transparent"
                                             : "bg-gradient-to-r from-transparent via-yellow-300/30 to-transparent"
                                     }`}
-                                    animate={{x: ["-100%", "100%"]}}
+                                    animate={{ x: ["-100%", "100%"] }}
                                     transition={{
                                         duration: 3 + i,
                                         repeat: Infinity,
@@ -751,44 +766,46 @@ const CyberpunkMenu = () => {
                                 />
                             ))}
 
-                            <div
-                                className="absolute right-0 top-0 h-full w-[2px] bg-gradient-to-b from-yellow-500/50 via-yellow-400/20 to-transparent"/>
-                            <div
-                                className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-yellow-400/20 to-yellow-500/50"/>
+                            <div className="absolute right-0 top-0 h-full w-[2px] bg-gradient-to-b from-yellow-500/50 via-yellow-400/20 to-transparent"/>
+                            <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-yellow-400/20 to-yellow-500/50"/>
 
+                            {/* BACKGROUND NUMBER */}
                             <motion.h1
-                                className={`fixed right-4 bottom-4 ${page.text} opacity-30 font-cyber-outline leading-none text-[8rem] font-bold`}
+                                className={`fixed right-4 bottom-4 ${page.text} opacity-30 font-cyber-outline leading-none text-[5rem] md:text-[7rem] font-bold`}
                                 animate={{
-                                    textShadow: [`0 0 10px ${currentPage?.glowColor}, 0 0 30px ${currentPage?.glowColor}`, `0 0 20px ${currentPage?.glowColor}, 0 0 50px ${currentPage?.glowColor}`, `0 0 10px ${currentPage?.glowColor}, 0 0 30px ${currentPage?.glowColor}`],
-                                    scale: [1, 1.02, 1]
+                                    textShadow: [
+                                        `0 0 10px ${currentPage?.glowColor}, 0 0 30px ${currentPage?.glowColor}`,
+                                        `0 0 20px ${currentPage?.glowColor}, 0 0 50px ${currentPage?.glowColor}`,
+                                        `0 0 10px ${currentPage?.glowColor}, 0 0 30px ${currentPage?.glowColor}`,
+                                    ],
+                                    scale: [1, 1.02, 1],
                                 }}
-                                transition={{duration: 3, repeat: Infinity}}
+                                transition={{ duration: 3, repeat: Infinity }}
                             >
                                 <GlitchText text="04" textColor={page.text}/>
                             </motion.h1>
 
-                            <motion.div
-                                initial="hidden"
-                                animate="visible"
-                                className="relative z-10 max-w-6xl"
-                            >
+                            <motion.div initial="hidden" animate="visible" className="relative z-10 max-w-6xl">
 
+                                {/* MAIN HEADING */}
                                 <motion.h1
                                     variants={textVariant}
                                     custom={0.2}
-                                    className={`text-5xl md:text-6xl font-black mb-2 font-cyber-outline z-10 ${page.text} bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent`}>
-                                    <GlitchText text="Featured Work" textColor={page.text}/>
+                                    className={`text-4xl md:text-5xl font-black mb-2 font-cyber-outline z-10 ${page.text} bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent`}
+                                >
+                                    <GlitchText text="My Projects" textColor={page.text}/>
                                 </motion.h1>
 
+                                {/* SUBTEXT */}
                                 <motion.p
                                     variants={textVariant}
                                     custom={0.3}
-                                    className="text-gray-400 mb-12 text-lg max-w-2xl"
+                                    className="text-gray-400 mb-12 text-base max-w-2xl"
                                 >
-                                    Showcasing some of my best projects that demonstrate expertise in modern web
-                                    development
+                                    Showcasing some of my best projects that demonstrate expertise in modern web development
                                 </motion.p>
 
+                                {/* PROJECT GRID */}
                                 <motion.div
                                     variants={containerVariant}
                                     initial="hidden"
@@ -844,26 +861,30 @@ const CyberpunkMenu = () => {
                                             variants={itemVariant}
                                             className="border-2 border-yellow-500/50 rounded-xl p-6 bg-gradient-to-br from-yellow-500/10 to-yellow-400/5 hover:border-yellow-400 hover:shadow-lg hover:shadow-yellow-500/30 transition-all group cursor-pointer"
                                         >
-                                            <div
-                                                className="text-sm font-black text-yellow-400 mb-2 uppercase tracking-wider">Project {project.num}</div>
-                                            <h3 className="text-xl font-black text-gray-200 mb-3 group-hover:text-yellow-300 transition-colors">{project.title}</h3>
-                                            <p className="text-sm text-gray-400 mb-4">{project.desc}</p>
-                                            <div
-                                                className="flex flex-wrap gap-2 mb-4 pb-4 border-b border-yellow-500/20">
+                                            <div className="text-sm font-black text-yellow-400 mb-2 uppercase tracking-wider">
+                                                Project {project.num}
+                                            </div>
+
+                                            <h3 className="text-lg font-black text-gray-200 mb-3 group-hover:text-yellow-300 transition-colors">
+                                                {project.title}
+                                            </h3>
+
+                                            <p className="text-xs text-gray-400 mb-4">{project.desc}</p>
+
+                                            <div className="flex flex-wrap gap-2 mb-4 pb-4 border-b border-yellow-500/20">
                                                 {project.tags.map((tag, j) => (
-                                                    <span key={j}
-                                                          className="text-xs px-2 py-1 bg-yellow-500/20 text-yellow-200 rounded font-bold">
-                                                    {tag}
-                                                </span>
+                                                    <span key={j} className="text-[11px] px-2 py-1 bg-yellow-500/20 text-yellow-200 rounded font-bold">
+                                    {tag}
+                                </span>
                                                 ))}
                                             </div>
-                                            <div
-                                                className="text-xs text-yellow-300 font-bold tracking-wide">📊 {project.impact}</div>
+
+                                            <div className="text-xs text-yellow-300 font-bold tracking-wide">
+                                                📊 {project.impact}
+                                            </div>
                                         </motion.div>
                                     ))}
                                 </motion.div>
-
-                                {/* View More Button */}
                             </motion.div>
                         </div>
                     </CyberpunkSpotlight>
@@ -873,6 +894,7 @@ const CyberpunkMenu = () => {
                 return (
                     <CyberpunkSpotlight cornerBracketColor={page.bracketColor}>
                         <div className="md:p-8 p-6 relative">
+
                             {/* === SCANNER LINES === */}
                             {[0, 1].map((i) => (
                                 <motion.div
@@ -882,7 +904,7 @@ const CyberpunkMenu = () => {
                                             ? "bg-gradient-to-r from-transparent via-red-400/50 to-transparent"
                                             : "bg-gradient-to-r from-transparent via-red-300/30 to-transparent"
                                     }`}
-                                    animate={{x: ["-100%", "100%"]}}
+                                    animate={{ x: ["-100%", "100%"] }}
                                     transition={{
                                         duration: 3 + i,
                                         repeat: Infinity,
@@ -891,44 +913,46 @@ const CyberpunkMenu = () => {
                                 />
                             ))}
 
-                            <div
-                                className="absolute right-0 top-0 h-full w-[2px] bg-gradient-to-b from-red-500/50 via-red-400/20 to-transparent"/>
-                            <div
-                                className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-red-400/20 to-red-500/50"/>
+                            <div className="absolute right-0 top-0 h-full w-[2px] bg-gradient-to-b from-red-500/50 via-red-400/20 to-transparent"/>
+                            <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-red-400/20 to-red-500/50"/>
 
+                            {/* BACKGROUND NUMBER */}
                             <motion.h1
-                                className={`fixed right-4 bottom-4 ${page.text} opacity-30 font-cyber-outline leading-none text-[8rem] font-bold`}
+                                className={`fixed right-4 bottom-4 ${page.text} opacity-30 font-cyber-outline leading-none text-[5rem] md:text-[7rem] font-bold`}
                                 animate={{
-                                    textShadow: [`0 0 10px ${currentPage?.glowColor}, 0 0 30px ${currentPage?.glowColor}`, `0 0 20px ${currentPage?.glowColor}, 0 0 50px ${currentPage?.glowColor}`, `0 0 10px ${currentPage?.glowColor}, 0 0 30px ${currentPage?.glowColor}`],
+                                    textShadow: [
+                                        `0 0 10px ${currentPage?.glowColor}, 0 0 30px ${currentPage?.glowColor}`,
+                                        `0 0 20px ${currentPage?.glowColor}, 0 0 50px ${currentPage?.glowColor}`,
+                                        `0 0 10px ${currentPage?.glowColor}, 0 0 30px ${currentPage?.glowColor}`
+                                    ],
                                     scale: [1, 1.02, 1]
                                 }}
-                                transition={{duration: 3, repeat: Infinity}}
+                                transition={{ duration: 3, repeat: Infinity }}
                             >
                                 <GlitchText text="05" textColor={page.text}/>
                             </motion.h1>
 
-                            <motion.div
-                                initial="hidden"
-                                animate="visible"
-                                className="relative z-10 max-w-5xl"
-                            >
+                            <motion.div initial="hidden" animate="visible" className="relative z-10 max-w-5xl">
 
+                                {/* MAIN HEADING */}
                                 <motion.h1
                                     variants={textVariant}
                                     custom={0.2}
-                                    className={`text-5xl md:text-6xl font-black mb-2 font-cyber-outline z-10 ${page.text} bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent`}>
+                                    className={`text-4xl md:text-5xl font-black mb-2 font-cyber-outline z-10 ${page.text} bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent`}
+                                >
                                     <GlitchText text="Get In Touch" textColor={page.text}/>
                                 </motion.h1>
 
+                                {/* SUBTEXT */}
                                 <motion.p
                                     variants={textVariant}
                                     custom={0.3}
-                                    className="text-gray-400 mb-12 text-lg max-w-2xl"
+                                    className="text-gray-400 mb-12 text-base max-w-2xl"
                                 >
-                                    Have an exciting project? I'm always interested in hearing about new opportunities
-                                    and collaborations.
+                                    Have an exciting project? I'm always interested in hearing about new opportunities and collaborations.
                                 </motion.p>
 
+                                {/* CONTACT CARDS */}
                                 <motion.div
                                     variants={containerVariant}
                                     initial="hidden"
@@ -945,20 +969,20 @@ const CyberpunkMenu = () => {
                                             variants={itemVariant}
                                             className="border-2 border-red-500/50 rounded-xl p-6 text-center bg-gradient-to-br from-red-500/10 to-red-400/5 hover:border-red-400 hover:shadow-lg hover:shadow-red-500/30 transition-all group"
                                         >
-                                            <div
-                                                className="text-4xl mb-3 group-hover:scale-110 transition-transform">{contact.icon}</div>
+                                            <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">{contact.icon}</div>
                                             <p className="text-sm text-gray-400 uppercase font-bold tracking-wider mb-2">{contact.label}</p>
                                             <p className="text-lg font-black text-red-300">{contact.value}</p>
                                         </motion.div>
                                     ))}
                                 </motion.div>
 
-                                {/* Contact Form */}
-                                <motion.div variants={itemVariant}
-                                            className="border-2 border-red-500/50 rounded-xl p-8 bg-gradient-to-br from-red-500/10 to-red-400/5">
-                                    <h2 className="text-2xl font-black text-red-400 mb-6 uppercase tracking-wider">Send
-                                        Me a Message</h2>
-                                    <div className="grid md:grid-cols-2 gap-6 mb-6">
+                                {/* CONTACT FORM */}
+                                <motion.div
+                                    variants={itemVariant}
+                                    className="border-2 border-red-500/50 rounded-xl p-6 md:p-8 bg-gradient-to-br from-red-500/10 to-red-400/5"
+                                >
+                                    <h2 className="text-2xl font-black text-red-400 mb-6 uppercase tracking-wider">Send Me a Message</h2>
+                                    <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-6">
                                         <input
                                             type="text"
                                             placeholder="Your Full Name"
@@ -979,26 +1003,26 @@ const CyberpunkMenu = () => {
                                         placeholder="Tell me about your project..."
                                         rows={6}
                                         className="w-full bg-gray-900/50 border border-red-500/30 rounded-lg px-4 py-3 text-gray-300 placeholder-gray-600 focus:outline-none focus:border-red-400 focus:shadow-lg focus:shadow-red-500/20 transition-all resize-none mb-6 font-semibold"
-                                    ></textarea>
+                                    />
                                     <button
-                                        className="w-full px-8 py-4 rounded-lg border-2 border-red-500 text-red-300 font-black tracking-widest uppercase bg-gradient-to-r from-red-500/20 to-red-400/10 hover:from-red-500/40 hover:to-red-400/20 transition-all hover:scale-105 hover:shadow-lg hover:shadow-red-500/40 text-lg">
+                                        className="w-full px-8 py-4 rounded-lg border-2 border-red-500 text-red-300 font-black tracking-widest uppercase bg-gradient-to-r from-red-500/20 to-red-400/10 hover:from-red-500/40 hover:to-red-400/20 transition-all hover:scale-105 hover:shadow-lg hover:shadow-red-500/40 text-lg"
+                                    >
                                         Send Message →
                                     </button>
                                 </motion.div>
 
-                                {/* Additional Info */}
+                                {/* ADDITIONAL INFO */}
                                 <motion.div variants={itemVariant} className="grid md:grid-cols-2 gap-6 mt-8">
                                     <div className="border border-red-500/30 rounded-lg p-6 bg-red-500/5">
-                                        <p className="text-sm text-gray-400 uppercase font-bold tracking-wider mb-2">⚡
-                                            Response Time</p>
+                                        <p className="text-sm text-gray-400 uppercase font-bold tracking-wider mb-2">⚡ Response Time</p>
                                         <p className="text-2xl font-black text-red-300">Within 24 hours</p>
                                     </div>
                                     <div className="border border-red-500/30 rounded-lg p-6 bg-red-500/5">
-                                        <p className="text-sm text-gray-400 uppercase font-bold tracking-wider mb-2">📋
-                                            Availability</p>
+                                        <p className="text-sm text-gray-400 uppercase font-bold tracking-wider mb-2">📋 Availability</p>
                                         <p className="text-2xl font-black text-red-300">Open for New Projects</p>
                                     </div>
                                 </motion.div>
+
                             </motion.div>
                         </div>
                     </CyberpunkSpotlight>
