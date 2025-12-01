@@ -3,7 +3,7 @@ import React, {useEffect, useState} from 'react';
 import {motion, Variants} from 'framer-motion';
 import {useIsMobile} from "@/hooks/use-mobile";
 import CyberpunkSpotlight from "@/components/CyberpunkSpotlight";
-import {ChevronLeft, Github, Linkedin, Twitter} from "lucide-react";
+import {ChevronLeft, Github, Linkedin, LucideMailbox, Mail, Twitter, VoicemailIcon} from "lucide-react";
 import {GlitchText} from "@/components/GlitchText";
 
 const CyberpunkMenu = () => {
@@ -30,7 +30,7 @@ const CyberpunkMenu = () => {
             shadowColor: "shadow-blue-500/50",
         },
         {
-            id: 'about', title: 'About Us', color: 'to-green-500/20', text: 'text-green-500',
+            id: 'about', title: 'About', color: 'to-green-500/20', text: 'text-green-500',
             glowColor: '#10b981', particleColor: 'rgba(16, 185, 129, 0.6)',
             bracketColor: 'border-green-500',
             shadowColor: "shadow-green-500/50",
@@ -197,10 +197,9 @@ const CyberpunkMenu = () => {
                                 {/* Name */}
                                 <motion.h1
                                     variants={textVariant}
-                                    custom={0.1}
-                                    className={`text-5xl md:text-7xl font-black mb-2 font-cyber-outline z-10 ${page.text} bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent`}
-                                >
-                                    MALAK SAAD
+                                    custom={0.2}
+                                    className={`text-5xl md:text-6xl font-black mb-4 font-cyber-outline z-10 ${page.text} bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent`}>
+                                    <GlitchText text="Malak Saad" textColor={page.text}/>
                                 </motion.h1>
 
                                 {/* Subtitle */}
@@ -865,17 +864,6 @@ const CyberpunkMenu = () => {
                                 </motion.div>
 
                                 {/* View More Button */}
-                                <motion.div variants={itemVariant} className="text-center mt-12">
-                                    <button
-                                        className="px-8 sm:px-12 py-4 rounded-xl border-2 border-yellow-500 text-yellow-300 font-black uppercase tracking-widest text-sm sm:text-base bg-gradient-to-br from-yellow-600/30 to-yellow-500/10 hover:from-yellow-600/50 hover:to-yellow-500/30 transition-all hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/50 relative overflow-hidden group">
-                                    <span className="relative z-10 flex items-center justify-center gap-2">
-                                        Explore More Projects <span
-                                        className="group-hover:translate-x-1 transition-transform">→</span>
-                                    </span>
-                                        <div
-                                            className="absolute inset-0 bg-gradient-to-r from-yellow-600 to-yellow-400 opacity-0 group-hover:opacity-20 transition-opacity"></div>
-                                    </button>
-                                </motion.div>
                             </motion.div>
                         </div>
                     </CyberpunkSpotlight>
@@ -1021,9 +1009,8 @@ const CyberpunkMenu = () => {
         }
     };
     const socialLinks = [
-        {icon: <Github/>, url: "https://github.com/malaksaad"},
-        {icon: <Linkedin/>, url: "https://linkedin.com/in/malaksaad"},
-        {icon: <Twitter/>, url: "https://twitter.com/malaksaad"},
+        {icon: <Github/>, url: "https://github.com/malaksaad38"},
+        {icon: <Linkedin/>, url: "https://www.linkedin.com/in/malak-saad-354a0139a/"},
     ];
 
 
@@ -1160,7 +1147,20 @@ const CyberpunkMenu = () => {
                                     <div className={`absolute -right-8 rotate-90 text-sm font-cyber ${page.text}`}>
                                        Back Here
                                     </div>
-                                    <GlitchText text={<ChevronLeft/>} textColor={page.text}/>
+                                    <motion.div
+                                        animate={{
+                                            x: [-2, 2, -2],   // left → right → left
+                                        }}
+                                        transition={{
+                                            duration: 2,
+                                            repeat: Infinity,
+                                            ease: "easeInOut",
+                                        }}
+                                        className="inline-block"
+                                    >
+                                        <GlitchText text={<ChevronLeft />} textColor={page.text}/>
+
+                                    </motion.div>
 
 
                                 </button>
