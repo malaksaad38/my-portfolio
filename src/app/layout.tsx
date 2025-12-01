@@ -1,5 +1,5 @@
 import type {Metadata} from "next";
-import {Geist, Geist_Mono, Roboto} from "next/font/google";
+import {Geist, Geist_Mono, Roboto,Orbitron} from "next/font/google";
 import "./globals.css";
 import {ThemeProvider} from "next-themes";
 
@@ -17,6 +17,12 @@ const roboto = Roboto({
   variable: "--font-roboto",
   subsets: ["latin"]
 })
+const orbitron = Orbitron({
+  variable: "--font-orbitron",
+  subsets: ["latin"]
+})
+
+
 
 export const metadata: Metadata = {
   title: "dragondevs_ | Crafting Scalable & Innovative Web Applications",
@@ -30,10 +36,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-    <head/>
+    <head><title></title></head>
     <body
       // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      className={`${roboto.variable} font-roboto antialiased`}
+      className={`${orbitron.variable} font-orbitron antialiased`}
     >
     <ThemeProvider
       attribute="class"
