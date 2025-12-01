@@ -37,7 +37,6 @@ const BookPageNavigation = () => {
       case 'about':
         return (
           <ScrollArea className="w-full h-full">
-
             <div className="p-8">
               <h1 className={`absolute right-4 bottom-4 ${page.text} opacity-40 -z-20 font-cyber-outline leading-none text-[8rem]`}>02</h1>
               <h1 className={`text-4xl font-semibold mb-4 font-cyber-outline ${page.text}`}>About Us</h1>
