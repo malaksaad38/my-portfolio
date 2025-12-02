@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import {GlitchText} from "@/components/GlitchText";
 import ContactForm from "@/components/ContactForm";
+import ProjectCard from "@/components/ProjectCard";
 
 const CyberpunkMenu = () => {
     const [activePage, setActivePage] = useState(null);
@@ -875,91 +876,11 @@ const CyberpunkMenu = () => {
                                     animate="visible"
                                     className="grid md:grid-cols-2 gap-8 mb-12"
                                 >
-                                    {[
-                                        {
-                                            num: "01",
-                                            title: "E-Commerce Platform",
-                                            desc: "A full-featured e-commerce solution with advanced product filtering, shopping cart, secure payment processing, and inventory management.",
-                                            tags: ["Next.js", "MongoDB", "Stripe", "Tailwind CSS", "TypeScript"],
-                                            impact: "50K+ users • $2M+ GMV",
-                                            icon: <ShoppingCart className="w-6 h-6 text-yellow-400"/>,
-                                        },
-                                        {
-                                            num: "02",
-                                            title: "SaaS Analytics Dashboard",
-                                            desc: "Real-time analytics platform with interactive data visualization, user management, and customizable reporting features for enterprise clients.",
-                                            tags: ["React", "Node.js", "PostgreSQL", "Chart.js", "AWS"],
-                                            impact: "100+ companies • $1M ARR",
-                                            icon: <BarChart2 className="w-6 h-6 text-yellow-400"/>,
-                                        },
-                                        {
-                                            num: "03",
-                                            title: "Social Media Network",
-                                            desc: "Full-stack social networking application with real-time messaging, notifications, media sharing, and algorithmic feed generation.",
-                                            tags: ["Next.js", "Firebase", "WebSocket", "Framer Motion"],
-                                            impact: "30K+ active users",
-                                            icon: <Users className="w-6 h-6 text-yellow-400"/>,
-                                        },
-                                        {
-                                            num: "04",
-                                            title: "AI Content Generator",
-                                            desc: "Intelligent content creation tool powered by GPT integration with multiple templates, batch processing, and content optimization features.",
-                                            tags: ["Next.js", "OpenAI API", "Supabase", "Tailwind"],
-                                            impact: "5K+ monthly users",
-                                            icon: <Cpu className="w-6 h-6 text-yellow-400"/>,
-                                        },
-                                        {
-                                            num: "05",
-                                            title: "Project Management Suite",
-                                            desc: "Collaborative workspace with real-time updates, task management, team communication, and Gantt chart visualization.",
-                                            tags: ["React", "Express", "MongoDB", "Socket.io"],
-                                            impact: "1000+ teams",
-                                            icon: <ClipboardList className="w-6 h-6 text-yellow-400"/>,
-                                        },
-                                        {
-                                            num: "06",
-                                            title: "Portfolio Website",
-                                            desc: "Interactive 3D portfolio with smooth animations, scroll-triggered effects, and immersive user experience showcasing creative design.",
-                                            tags: ["Next.js", "Three.js", "Framer Motion", "GSAP"],
-                                            impact: "Industry recognition",
-                                            icon: <MonitorSmartphone className="w-6 h-6 text-yellow-400"/>,
-                                        },
-                                    ].map((project, i) => (
-                                        <motion.div
-                                            key={i}
-                                            variants={itemVariant}
-                                            className="border-2 border-yellow-500/50 rounded-xl p-6 bg-gradient-to-br from-yellow-500/10 to-yellow-400/5 hover:border-yellow-400 hover:shadow-lg hover:shadow-yellow-500/30 transition-all group cursor-pointer"
-                                        >
-
-                                            <div
-                                                className="text-sm font-black text-yellow-400 mb-2 uppercase tracking-wider">
-                                                Project {project.num}
-                                            </div>
-
-                                            <h3 className="text-lg flex gap-2 font-black text-gray-200 mb-3 group-hover:text-yellow-300 transition-colors">
-                                                {project.icon} {project.title}
-                                            </h3>
-
-                                            <p className="text-xs text-gray-400 mb-4">{project.desc}</p>
-
-                                            <div
-                                                className="flex flex-wrap gap-2 mb-4 pb-4 border-b border-yellow-500/20">
-                                                {project.tags.map((tag, j) => (
-                                                    <span key={j}
-                                                          className="text-[11px] px-2 py-1 bg-yellow-500/20 text-yellow-200 rounded font-bold">
-                                {tag}
-                            </span>
-                                                ))}
-                                            </div>
-
-                                            <div
-                                                className="flex items-center gap-2 text-xs text-yellow-300 font-bold tracking-wide">
-                                                <BarChart2 className="w-4 h-4"/>
-                                                {project.impact}
-                                            </div>
-                                        </motion.div>
+                                    {["01","02","03","04","05","06"].map((id) => (
+                                        <ProjectCard key={id} projectId={id} />
                                     ))}
                                 </motion.div>
+
                             </motion.div>
                         </div>
                     </CyberpunkSpotlight>
