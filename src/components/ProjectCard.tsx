@@ -61,7 +61,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({projectId}) => {
                 </h3>
 
                 {/* DESCRIPTION */}
-                <p className="text-xs md:text-sm text-gray-400 mb-4 flex-1">{project.desc}</p>
+                <p className="text-sm text-gray-400 mb-4 flex-1">{project.desc}</p>
 
                 {/* TAGS */}
                 <div className="flex flex-wrap gap-2 mb-4 pb-4 border-b border-yellow-500/20">

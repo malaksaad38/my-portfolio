@@ -30,7 +30,7 @@
     "num": "04",
     "title": "AI Content Generator",
     "desc": "Intelligent content creation tool powered by GPT integration with multiple templates, batch processing, and content optimization features.",
-    "tags": ["Next.js", "OpenAI API", "Supabase", "Tailwind"],
+    "tags": ["Next.js", "OpenAI API", "Firebase", "Tailwind"],
     "impact": "5K+ monthly users",
     "icon": "Cpu",
     "image": "/images/projects/ai.jpg"

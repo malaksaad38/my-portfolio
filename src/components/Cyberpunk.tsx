@@ -234,9 +234,9 @@ const CyberpunkMenu = () => {
                                     className="flex items-center gap-2 mb-6"
                                 >
                                     <Sparkles className="w-3 h-3 text-blue-500 animate-pulse"/>
-                                    <span className="text-xs tracking-widest opacity-70 text-blue-300 uppercase">
+                                    <h4 className="text-xs tracking-widest opacity-70 text-blue-300 uppercase">
                             Building the future of web
-                        </span>
+                        </h4>
                                 </motion.div>
 
                                 {/* Description */}
@@ -306,10 +306,10 @@ const CyberpunkMenu = () => {
 
                                 {/* Tech Stack */}
                                 <motion.div variants={textVariant} custom={0.7} className="mb-8">
-                                    <p className="text-xs text-gray-500 uppercase tracking-widest font-bold mb-3 flex items-center gap-2">
+                                    <h3 className="text-xs text-gray-500 uppercase tracking-widest font-bold mb-3 flex items-center gap-2">
                                         <Cpu className="w-4 h-4 text-blue-400"/>
                                         Tech Stack & Expertise
-                                    </p>
+                                    </h3>
 
                                     <div className="flex flex-wrap gap-2 sm:gap-3 opacity-90">
                                         {[

@@ -1,10 +1,14 @@
 import type {Metadata} from "next";
-import {Geist, Geist_Mono, Roboto,Orbitron} from "next/font/google";
+import {Geist, Geist_Mono, Roboto,Orbitron,Inter} from "next/font/google";
 import "./globals.css";
 import {ThemeProvider} from "next-themes";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -39,7 +43,7 @@ export default function RootLayout({
     <head><title></title></head>
     <body
       // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      className={`${orbitron.variable} font-orbitron antialiased`}
+      className={`${inter.variable} ${orbitron.variable} font-inter antialiased`}
     >
     <ThemeProvider
       attribute="class"
