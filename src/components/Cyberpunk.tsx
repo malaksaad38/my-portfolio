@@ -1026,16 +1026,21 @@ const CyberpunkMenu = () => {
                                 >
                                     Have an exciting project? I'm always interested in hearing about new opportunities and collaborations.
                                 </motion.p>
-                                <ContactForm />
 
                                 {/* CONTACT CARDS */}
+
+
+                                {/* CONTACT FORM */}
+                                   <div className={"mb-12"}>
+                                       <ContactForm/>
+                                   </div>
+
                                 <motion.div
                                     variants={containerVariant}
                                     initial="hidden"
                                     animate="visible"
                                     className="grid md:grid-cols-3 gap-6 mb-12"
                                 >
-
                                     {[
                                         { icon: <Mail className="w-10 h-10 text-red-400" />, label: "Email", value: "malak@example.com" },
                                         { icon: <Phone className="w-10 h-10 text-red-400" />, label: "Phone", value: "+1 (555) 123-4567" },
@@ -1065,9 +1070,6 @@ const CyberpunkMenu = () => {
                                         </motion.div>
                                     ))}
                                 </motion.div>
-
-
-                                {/* CONTACT FORM */}
 
                                 {/* ADDITIONAL INFO */}
                                 <motion.div variants={itemVariant} className="grid md:grid-cols-2 gap-6 mt-8">
