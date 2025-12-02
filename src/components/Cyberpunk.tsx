@@ -3,8 +3,20 @@ import React, {useEffect, useState} from 'react';
 import {motion, Variants} from 'framer-motion';
 import {useIsMobile} from "@/hooks/use-mobile";
 import CyberpunkSpotlight from "@/components/CyberpunkSpotlight";
-import {ChevronLeft, Github, Linkedin, LucideMailbox, Mail, Twitter, VoicemailIcon} from "lucide-react";
+import {
+    ChevronLeft,
+    Github,
+    Linkedin,
+    LucideMailbox,
+    Mail, MailCheck,
+    MapPin, Pencil,
+    Phone, Send,
+    Twitter,
+    User,
+    VoicemailIcon
+} from "lucide-react";
 import {GlitchText} from "@/components/GlitchText";
+import ContactForm from "@/components/ContactForm";
 
 const CyberpunkMenu = () => {
     const [activePage, setActivePage] = useState(null);
@@ -332,34 +344,31 @@ const CyberpunkMenu = () => {
                                 >
                                     <button
                                         className="px-6 sm:px-8 py-3 rounded-xl border-2 border-blue-500 text-blue-300 font-black uppercase tracking-widest text-[10px] sm:text-xs
-                    bg-gradient-to-br from-blue-600/30 to-blue-500/10 hover:from-blue-600/50 hover:to-blue-500/30
-                    shadow-lg shadow-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/60 transition-all duration-300 hover:scale-105
-                    relative overflow-hidden group flex-1 sm:flex-none"
+    bg-gradient-to-br from-blue-600/30 to-blue-500/10 hover:from-blue-600/50 hover:to-blue-500/30
+    shadow-lg shadow-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/60 transition-all duration-300 hover:scale-105
+    relative overflow-hidden group flex-1 sm:flex-none"
+                                        onClick={() => {
+                                            handlePageChange(page.id = "portfolio")
+                                        }}
                                     >
-                    <span className="relative z-10 flex items-center justify-center gap-2">
-                        View My Work <span className="group-hover:translate-x-1 transition-transform">→</span>
-                    </span>
+    <span className="relative z-10 flex items-center justify-center gap-2">
+        View My Work
+    </span>
                                         <div
                                             className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-400 opacity-0 group-hover:opacity-20 transition-opacity"></div>
                                     </button>
-
                                     <button
                                         className="px-6 sm:px-8 py-3 rounded-xl border-2 border-blue-400/50 text-blue-200 font-black uppercase tracking-widest text-[10px] sm:text-xs
                     bg-gradient-to-br from-blue-500/10 to-transparent hover:from-blue-500/30 hover:to-blue-400/10
                     shadow-lg shadow-blue-400/20 hover:shadow-xl hover:shadow-blue-400/40 transition-all duration-300 hover:scale-105
                     relative overflow-hidden group flex-1 sm:flex-none"
+                                        onClick={() => {
+                                            handlePageChange(page.id = "contact")
+                                        }}
                                     >
                     <span className="relative z-10 flex items-center justify-center gap-2">
-                        💬 Let's Talk
+                        Let's Talk
                     </span>
-                                    </button>
-
-                                    <button
-                                        className="px-6 sm:px-8 py-3 rounded-xl border-2 border-blue-300/30 text-blue-200/70 font-black uppercase tracking-widest text-[10px] sm:text-xs
-                    bg-gradient-to-br from-blue-400/5 to-transparent hover:from-blue-500/20 hover:to-blue-400/10 hover:text-blue-200
-                    transition-all duration-300 hover:scale-105 hover:border-blue-300/60 flex-1 sm:flex-none"
-                                    >
-                                        📥 Resume
                                     </button>
                                 </motion.div>
 
@@ -964,7 +973,7 @@ const CyberpunkMenu = () => {
                                             ? "bg-gradient-to-r from-transparent via-red-400/50 to-transparent"
                                             : "bg-gradient-to-r from-transparent via-red-300/30 to-transparent"
                                     }`}
-                                    animate={{x: ["-100%", "100%"]}}
+                                    animate={{ x: ["-100%", "100%"] }}
                                     transition={{
                                         duration: 3 + i,
                                         repeat: Infinity,
@@ -973,10 +982,12 @@ const CyberpunkMenu = () => {
                                 />
                             ))}
 
-                            <div
-                                className="absolute right-0 top-0 h-full w-[2px] bg-gradient-to-b from-red-500/50 via-red-400/20 to-transparent"/>
-                            <div
-                                className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-red-400/20 to-red-500/50"/>
+                            {/* RIGHT BORDER GLOW */}
+                            <div className="absolute right-0 top-0 h-full w-[2px] bg-gradient-to-b from-red-500/50 via-red-400/20 to-transparent" />
+
+                            {/* BOTTOM BORDER GLOW */}
+                            <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-red-400/20 to-red-500/50" />
+
 
                             {/* BACKGROUND NUMBER */}
                             <motion.h1
@@ -987,12 +998,13 @@ const CyberpunkMenu = () => {
                                         `0 0 20px ${currentPage?.glowColor}, 0 0 50px ${currentPage?.glowColor}`,
                                         `0 0 10px ${currentPage?.glowColor}, 0 0 30px ${currentPage?.glowColor}`
                                     ],
-                                    scale: [1, 1.02, 1]
+                                    scale: [1, 1.03, 1]
                                 }}
-                                transition={{duration: 3, repeat: Infinity}}
+                                transition={{ duration: 3, repeat: Infinity }}
                             >
-                                <GlitchText text="05" textColor={page.text}/>
+                                <GlitchText text="05" textColor={page.text} />
                             </motion.h1>
+
 
                             <motion.div initial="hidden" animate="visible" className="relative z-10 max-w-5xl">
 
@@ -1000,9 +1012,10 @@ const CyberpunkMenu = () => {
                                 <motion.h1
                                     variants={textVariant}
                                     custom={0.2}
-                                    className={`text-4xl md:text-5xl font-black mb-2 font-cyber-outline z-10 ${page.text} bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent`}
+                                    className={`text-4xl md:text-5xl font-black mb-2 font-cyber-outline z-10 ${page.text}
+                bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent`}
                                 >
-                                    <GlitchText text="Get In Touch" textColor={page.text}/>
+                                    <GlitchText text="Get In Touch" textColor={page.text} />
                                 </motion.h1>
 
                                 {/* SUBTEXT */}
@@ -1011,9 +1024,9 @@ const CyberpunkMenu = () => {
                                     custom={0.3}
                                     className="text-gray-400 mb-12 text-base max-w-2xl"
                                 >
-                                    Have an exciting project? I'm always interested in hearing about new opportunities
-                                    and collaborations.
+                                    Have an exciting project? I'm always interested in hearing about new opportunities and collaborations.
                                 </motion.p>
+                                <ContactForm />
 
                                 {/* CONTACT CARDS */}
                                 <motion.div
@@ -1022,78 +1035,55 @@ const CyberpunkMenu = () => {
                                     animate="visible"
                                     className="grid md:grid-cols-3 gap-6 mb-12"
                                 >
+
                                     {[
-                                        {icon: "✉️", label: "Email", value: "malak@example.com", color: "red"},
-                                        {icon: "📱", label: "Phone", value: "+1 (555) 123-4567", color: "red"},
-                                        {icon: "📍", label: "Location", value: "Lahore, Pakistan", color: "red"},
+                                        { icon: <Mail className="w-10 h-10 text-red-400" />, label: "Email", value: "malak@example.com" },
+                                        { icon: <Phone className="w-10 h-10 text-red-400" />, label: "Phone", value: "+1 (555) 123-4567" },
+                                        { icon: <MapPin className="w-10 h-10 text-red-400" />, label: "Location", value: "Lahore, Pakistan" },
                                     ].map((contact, i) => (
                                         <motion.div
                                             key={i}
                                             variants={itemVariant}
-                                            className="border-2 border-red-500/50 rounded-xl p-6 text-center bg-gradient-to-br from-red-500/10 to-red-400/5 hover:border-red-400 hover:shadow-lg hover:shadow-red-500/30 transition-all group"
+                                            whileHover={{ scale: 1.05, y: -3 }}
+                                            className="
+                            border-2 border-red-500/40 rounded-xl p-6 text-center
+                            bg-gradient-to-br from-red-500/10 to-red-400/5
+                            hover:border-red-400
+                            hover:shadow-lg hover:shadow-red-500/30
+                            transition-all group
+                        "
                                         >
-                                            <div
-                                                className="text-4xl mb-3 group-hover:scale-110 transition-transform">{contact.icon}</div>
-                                            <p className="text-sm text-gray-400 uppercase font-bold tracking-wider mb-2">{contact.label}</p>
+                                            <div className="mb-3 group-hover:scale-110 flex justify-center items-center transition-transform">
+                                                {contact.icon}
+                                            </div>
+
+                                            <p className="text-sm text-gray-400 uppercase font-bold tracking-wider mb-2">
+                                                {contact.label}
+                                            </p>
+
                                             <p className="text-lg font-black text-red-300">{contact.value}</p>
                                         </motion.div>
                                     ))}
                                 </motion.div>
 
+
                                 {/* CONTACT FORM */}
-                                <motion.div
-                                    variants={itemVariant}
-                                    className="border-2 border-red-500/50 rounded-xl p-6 md:p-8 bg-gradient-to-br from-red-500/10 to-red-400/5"
-                                >
-                                    <h2 className="text-2xl font-black text-red-400 mb-6 uppercase tracking-wider">Send
-                                        Me a Message</h2>
-                                    <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-6">
-                                        <input
-                                            type="text"
-                                            placeholder="Your Full Name"
-                                            className="w-full bg-gray-900/50 border border-red-500/30 rounded-lg px-4 py-3 text-gray-300 placeholder-gray-600 focus:outline-none focus:border-red-400 focus:shadow-lg focus:shadow-red-500/20 transition-all font-semibold"
-                                        />
-                                        <input
-                                            type="email"
-                                            placeholder="Your Email Address"
-                                            className="w-full bg-gray-900/50 border border-red-500/30 rounded-lg px-4 py-3 text-gray-300 placeholder-gray-600 focus:outline-none focus:border-red-400 focus:shadow-lg focus:shadow-red-500/20 transition-all font-semibold"
-                                        />
-                                    </div>
-                                    <input
-                                        type="text"
-                                        placeholder="Project Subject"
-                                        className="w-full bg-gray-900/50 border border-red-500/30 rounded-lg px-4 py-3 text-gray-300 placeholder-gray-600 focus:outline-none focus:border-red-400 focus:shadow-lg focus:shadow-red-500/20 transition-all mb-6 font-semibold"
-                                    />
-                                    <textarea
-                                        placeholder="Tell me about your project..."
-                                        rows={6}
-                                        className="w-full bg-gray-900/50 border border-red-500/30 rounded-lg px-4 py-3 text-gray-300 placeholder-gray-600 focus:outline-none focus:border-red-400 focus:shadow-lg focus:shadow-red-500/20 transition-all resize-none mb-6 font-semibold"
-                                    />
-                                    <button
-                                        className="w-full px-8 py-4 rounded-lg border-2 border-red-500 text-red-300 font-black tracking-widest uppercase bg-gradient-to-r from-red-500/20 to-red-400/10 hover:from-red-500/40 hover:to-red-400/20 transition-all hover:scale-105 hover:shadow-lg hover:shadow-red-500/40 text-lg"
-                                    >
-                                        Send Message →
-                                    </button>
-                                </motion.div>
 
                                 {/* ADDITIONAL INFO */}
                                 <motion.div variants={itemVariant} className="grid md:grid-cols-2 gap-6 mt-8">
                                     <div className="border border-red-500/30 rounded-lg p-6 bg-red-500/5">
-                                        <p className="text-sm text-gray-400 uppercase font-bold tracking-wider mb-2">⚡
-                                            Response Time</p>
-                                        <p className="text-2xl font-black text-red-300">Within 24 hours</p>
+                                        <p className="text-sm text-gray-400 uppercase font-bold tracking-wider mb-2">⚡ Response Time</p>
+                                        <p className="text-xl font-black text-red-300">Within 24 hours</p>
                                     </div>
                                     <div className="border border-red-500/30 rounded-lg p-6 bg-red-500/5">
-                                        <p className="text-sm text-gray-400 uppercase font-bold tracking-wider mb-2">📋
-                                            Availability</p>
-                                        <p className="text-2xl font-black text-red-300">Open for New Projects</p>
+                                        <p className="text-sm text-gray-400 uppercase font-bold tracking-wider mb-2">📋 Availability</p>
+                                        <p className="text-xl font-black text-red-300">Open for New Projects</p>
                                     </div>
                                 </motion.div>
 
                             </motion.div>
                         </div>
-                    </CyberpunkSpotlight>
-                );
+                    </CyberpunkSpotlight>                );
 
             default:
                 return null;
