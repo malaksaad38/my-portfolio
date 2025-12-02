@@ -25,8 +25,8 @@ const orbitron = Orbitron({
 
 
 export const metadata: Metadata = {
-  title: "dragondevs_ | Crafting Scalable & Innovative Web Applications",
-  description: "We are dragondevs_, a passionate team of software developers dedicated to building high-performance, user-friendly web applications. From concept to deployment, we turn ideas into digital solutions that drive growth and innovation.",
+  title: "Malak Saad | My Portfolio",
+  description: "I'm Malak Saad, a passionate  software developer dedicated to building high-performance, user-friendly web applications. From concept to deployment, we turn ideas into digital solutions that drive growth and innovation.",
 };
 
 export default function RootLayout({

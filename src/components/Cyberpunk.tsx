@@ -12,7 +12,6 @@ const CyberpunkMenu = () => {
     const [mousePosition, setMousePosition] = useState({x: 0, y: 0});
 
 
-
     // Track mouse position for dynamic effects
     useEffect(() => {
         const handleMouseMove = (e: any) => {
@@ -156,7 +155,7 @@ const CyberpunkMenu = () => {
                                             ? "bg-gradient-to-r from-transparent via-blue-400/50 to-transparent"
                                             : "bg-gradient-to-r from-transparent via-blue-300/30 to-transparent"
                                     }`}
-                                    animate={{ x: ["-100%", "100%"] }}
+                                    animate={{x: ["-100%", "100%"]}}
                                     transition={{
                                         duration: 3 + i,
                                         repeat: Infinity,
@@ -167,8 +166,10 @@ const CyberpunkMenu = () => {
                             ))}
 
                             {/* === NEON BORDERS === */}
-                            <div className="absolute right-0 top-0 h-full w-[2px] bg-gradient-to-b from-blue-500/50 via-blue-400/20 to-transparent" />
-                            <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-blue-400/20 to-blue-500/50" />
+                            <div
+                                className="absolute right-0 top-0 h-full w-[2px] bg-gradient-to-b from-blue-500/50 via-blue-400/20 to-transparent"/>
+                            <div
+                                className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-blue-400/20 to-blue-500/50"/>
 
                             {/* === BACKGROUND PAGE NUMBER === */}
                             <motion.h1
@@ -181,9 +182,9 @@ const CyberpunkMenu = () => {
                                     ],
                                     scale: [1, 1.02, 1],
                                 }}
-                                transition={{ duration: 3, repeat: Infinity }}
+                                transition={{duration: 3, repeat: Infinity}}
                             >
-                                <GlitchText text="01" textColor={page.text} />
+                                <GlitchText text="01" textColor={page.text}/>
                             </motion.h1>
 
                             {/* === HERO CONTENT === */}
@@ -199,7 +200,7 @@ const CyberpunkMenu = () => {
                                     custom={0.2}
                                     className={`text-4xl md:text-5xl font-black mb-4 font-cyber-outline z-10 ${page.text} bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent`}
                                 >
-                                    <GlitchText text="Malak Saad" textColor={page.text} />
+                                    <GlitchText text="Malak Saad" textColor={page.text}/>
                                 </motion.h1>
 
                                 {/* Subtitle */}
@@ -230,8 +231,10 @@ const CyberpunkMenu = () => {
                                     className="text-base md:text-lg leading-relaxed max-w-3xl opacity-85 text-gray-200 mb-2 font-light"
                                 >
                                     I transform ideas into powerful digital solutions. Specializing in{" "}
-                                    <span className="font-bold text-blue-400">Next.js, React, TypeScript,</span> and{" "}
-                                    <span className="font-bold text-blue-400">Node.js</span>, I craft scalable applications
+                                    <span
+                                        className="font-bold text-blue-400">Next.js, React, TypeScript,</span> and{" "}
+                                    <span className="font-bold text-blue-400">Node.js</span>, I craft scalable
+                                    applications
                                     with exceptional user experiences that make an impact.
                                 </motion.p>
 
@@ -252,28 +255,34 @@ const CyberpunkMenu = () => {
                                     className="grid grid-cols-3 gap-4 md:gap-8 py-6 mb-8 border-y border-blue-500/30"
                                 >
                                     <div className="text-center group">
-                                        <div className={`text-2xl md:text-3xl font-black ${page.text} group-hover:scale-110 transition-transform`}>
+                                        <div
+                                            className={`text-2xl md:text-3xl font-black ${page.text} group-hover:scale-110 transition-transform`}>
                                             50+
                                         </div>
-                                        <div className="text-xs text-gray-400 uppercase tracking-wider mt-2 font-semibold">
+                                        <div
+                                            className="text-xs text-gray-400 uppercase tracking-wider mt-2 font-semibold">
                                             Projects Delivered
                                         </div>
                                     </div>
 
                                     <div className="text-center group">
-                                        <div className={`text-2xl md:text-3xl font-black ${page.text} group-hover:scale-110 transition-transform`}>
+                                        <div
+                                            className={`text-2xl md:text-3xl font-black ${page.text} group-hover:scale-110 transition-transform`}>
                                             30+
                                         </div>
-                                        <div className="text-xs text-gray-400 uppercase tracking-wider mt-2 font-semibold">
+                                        <div
+                                            className="text-xs text-gray-400 uppercase tracking-wider mt-2 font-semibold">
                                             Happy Clients
                                         </div>
                                     </div>
 
                                     <div className="text-center group">
-                                        <div className={`text-2xl md:text-3xl font-black ${page.text} group-hover:scale-110 transition-transform`}>
+                                        <div
+                                            className={`text-2xl md:text-3xl font-black ${page.text} group-hover:scale-110 transition-transform`}>
                                             4+
                                         </div>
-                                        <div className="text-xs text-gray-400 uppercase tracking-wider mt-2 font-semibold">
+                                        <div
+                                            className="text-xs text-gray-400 uppercase tracking-wider mt-2 font-semibold">
                                             Years Experience
                                         </div>
                                     </div>
@@ -330,7 +339,8 @@ const CyberpunkMenu = () => {
                     <span className="relative z-10 flex items-center justify-center gap-2">
                         View My Work <span className="group-hover:translate-x-1 transition-transform">→</span>
                     </span>
-                                        <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-400 opacity-0 group-hover:opacity-20 transition-opacity"></div>
+                                        <div
+                                            className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-400 opacity-0 group-hover:opacity-20 transition-opacity"></div>
                                     </button>
 
                                     <button
@@ -360,9 +370,9 @@ const CyberpunkMenu = () => {
                                     className="grid md:grid-cols-3 gap-4 mb-8"
                                 >
                                     {[
-                                        { label: "Response Time", value: "< 24 hours" },
-                                        { label: "Project Completion", value: "99% On-time" },
-                                        { label: "Client Satisfaction", value: "100%" },
+                                        {label: "Response Time", value: "< 24 hours"},
+                                        {label: "Project Completion", value: "99% On-time"},
+                                        {label: "Client Satisfaction", value: "100%"},
                                     ].map((stat, i) => (
                                         <div
                                             key={i}
@@ -405,7 +415,7 @@ const CyberpunkMenu = () => {
                                             ? "bg-gradient-to-r from-transparent via-green-400/50 to-transparent"
                                             : "bg-gradient-to-r from-transparent via-green-300/30 to-transparent"
                                     }`}
-                                    animate={{ x: ["-100%", "100%"] }}
+                                    animate={{x: ["-100%", "100%"]}}
                                     transition={{
                                         duration: 3 + i,
                                         repeat: Infinity,
@@ -414,8 +424,10 @@ const CyberpunkMenu = () => {
                                 />
                             ))}
 
-                            <div className="absolute right-0 top-0 h-full w-[2px] bg-gradient-to-b from-green-500/50 via-green-400/20 to-transparent" />
-                            <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-green-400/20 to-green-500/50" />
+                            <div
+                                className="absolute right-0 top-0 h-full w-[2px] bg-gradient-to-b from-green-500/50 via-green-400/20 to-transparent"/>
+                            <div
+                                className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-green-400/20 to-green-500/50"/>
 
                             {/* === BACKGROUND NUMBER === */}
                             <motion.h1
@@ -428,9 +440,9 @@ const CyberpunkMenu = () => {
                                     ],
                                     scale: [1, 1.02, 1],
                                 }}
-                                transition={{ duration: 3, repeat: Infinity }}
+                                transition={{duration: 3, repeat: Infinity}}
                             >
-                                <GlitchText text="02" textColor={page.text} />
+                                <GlitchText text="02" textColor={page.text}/>
                             </motion.h1>
 
                             <motion.div
@@ -445,7 +457,7 @@ const CyberpunkMenu = () => {
                                     custom={0.2}
                                     className={`text-4xl md:text-5xl font-black mb-4 font-cyber-outline z-10 ${page.text} bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent`}
                                 >
-                                    <GlitchText text="Who I Am" textColor={page.text} />
+                                    <GlitchText text="Who I Am" textColor={page.text}/>
                                 </motion.h1>
 
                                 <motion.div
@@ -477,32 +489,58 @@ const CyberpunkMenu = () => {
                                     {/* EXPERTISE + ACHIEVEMENTS GRID */}
                                     <motion.div variants={itemVariant} className="grid md:grid-cols-2 gap-6">
                                         {/* Expertise */}
-                                        <div className="border-2 border-green-500/50 rounded-xl p-6 bg-gradient-to-br from-green-500/10 to-green-400/5 hover:border-green-400 hover:shadow-lg hover:shadow-green-500/20 transition-all">
+                                        <div
+                                            className="border-2 border-green-500/50 rounded-xl p-6 bg-gradient-to-br from-green-500/10 to-green-400/5 hover:border-green-400 hover:shadow-lg hover:shadow-green-500/20 transition-all">
                                             <h3 className="text-green-400 font-black mb-4 text-lg uppercase tracking-wider">
                                                 🎯 Expertise
                                             </h3>
                                             <ul className="text-gray-300 text-sm space-y-3 font-semibold">
-                                                <li className="flex items-center gap-2"><span className="text-green-400">▸</span> Full-Stack Web Development</li>
-                                                <li className="flex items-center gap-2"><span className="text-green-400">▸</span> React & Next.js Architecture</li>
-                                                <li className="flex items-center gap-2"><span className="text-green-400">▸</span> TypeScript & Modern JavaScript</li>
-                                                <li className="flex items-center gap-2"><span className="text-green-400">▸</span> Backend & Database Design</li>
-                                                <li className="flex items-center gap-2"><span className="text-green-400">▸</span> Performance Optimization</li>
-                                                <li className="flex items-center gap-2"><span className="text-green-400">▸</span> UI/UX Implementation</li>
+                                                <li className="flex items-center gap-2"><span
+                                                    className="text-green-400">▸</span> Full-Stack Web Development
+                                                </li>
+                                                <li className="flex items-center gap-2"><span
+                                                    className="text-green-400">▸</span> React & Next.js Architecture
+                                                </li>
+                                                <li className="flex items-center gap-2"><span
+                                                    className="text-green-400">▸</span> TypeScript & Modern JavaScript
+                                                </li>
+                                                <li className="flex items-center gap-2"><span
+                                                    className="text-green-400">▸</span> Backend & Database Design
+                                                </li>
+                                                <li className="flex items-center gap-2"><span
+                                                    className="text-green-400">▸</span> Performance Optimization
+                                                </li>
+                                                <li className="flex items-center gap-2"><span
+                                                    className="text-green-400">▸</span> UI/UX Implementation
+                                                </li>
                                             </ul>
                                         </div>
 
                                         {/* Achievements */}
-                                        <div className="border-2 border-green-500/50 rounded-xl p-6 bg-gradient-to-br from-green-500/10 to-green-400/5 hover:border-green-400 hover:shadow-lg hover:shadow-green-500/20 transition-all">
+                                        <div
+                                            className="border-2 border-green-500/50 rounded-xl p-6 bg-gradient-to-br from-green-500/10 to-green-400/5 hover:border-green-400 hover:shadow-lg hover:shadow-green-500/20 transition-all">
                                             <h3 className="text-green-400 font-black mb-4 text-lg uppercase tracking-wider">
                                                 🏆 Achievements
                                             </h3>
                                             <ul className="text-gray-300 text-sm space-y-3 font-semibold">
-                                                <li className="flex items-center gap-2"><span className="text-green-400">▸</span> 50+ Successful Projects</li>
-                                                <li className="flex items-center gap-2"><span className="text-green-400">▸</span> 30+ Global Clients</li>
-                                                <li className="flex items-center gap-2"><span className="text-green-400">▸</span> 99% On-time Delivery</li>
-                                                <li className="flex items-center gap-2"><span className="text-green-400">▸</span> Mentor to 10+ Developers</li>
-                                                <li className="flex items-center gap-2"><span className="text-green-400">▸</span> Open-source Contributor</li>
-                                                <li className="flex items-center gap-2"><span className="text-green-400">▸</span> Tech Community Speaker</li>
+                                                <li className="flex items-center gap-2"><span
+                                                    className="text-green-400">▸</span> 50+ Successful Projects
+                                                </li>
+                                                <li className="flex items-center gap-2"><span
+                                                    className="text-green-400">▸</span> 30+ Global Clients
+                                                </li>
+                                                <li className="flex items-center gap-2"><span
+                                                    className="text-green-400">▸</span> 99% On-time Delivery
+                                                </li>
+                                                <li className="flex items-center gap-2"><span
+                                                    className="text-green-400">▸</span> Mentor to 10+ Developers
+                                                </li>
+                                                <li className="flex items-center gap-2"><span
+                                                    className="text-green-400">▸</span> Open-source Contributor
+                                                </li>
+                                                <li className="flex items-center gap-2"><span
+                                                    className="text-green-400">▸</span> Tech Community Speaker
+                                                </li>
                                             </ul>
                                         </div>
                                     </motion.div>
@@ -519,7 +557,8 @@ const CyberpunkMenu = () => {
                                         <div className="grid md:grid-cols-2 gap-4">
                                             <div className="border-l-4 border-green-400 pl-4">
                                                 <p className="font-black text-gray-200">BS in Computer Science</p>
-                                                <p className="text-sm text-gray-400">University of Engineering & Technology • 2023</p>
+                                                <p className="text-sm text-gray-400">University of Engineering &
+                                                    Technology • 2023</p>
                                             </div>
                                             <div className="border-l-4 border-green-400 pl-4">
                                                 <p className="font-black text-gray-200">AWS Solutions Architect</p>
@@ -531,7 +570,8 @@ const CyberpunkMenu = () => {
                                             </div>
                                             <div className="border-l-4 border-green-400 pl-4">
                                                 <p className="font-black text-gray-200">Full-Stack Web Mastery</p>
-                                                <p className="text-sm text-gray-400">Comprehensive Training Program • 2021</p>
+                                                <p className="text-sm text-gray-400">Comprehensive Training Program •
+                                                    2021</p>
                                             </div>
                                         </div>
                                     </motion.div>
@@ -539,9 +579,9 @@ const CyberpunkMenu = () => {
                                     {/* STATS */}
                                     <motion.div variants={itemVariant} className="grid md:grid-cols-3 gap-4">
                                         {[
-                                            { num: "4+", label: "Years of Experience" },
-                                            { num: "100%", label: "Client Satisfaction Rate" },
-                                            { num: "24/7", label: "Development Support" },
+                                            {num: "4+", label: "Years of Experience"},
+                                            {num: "100%", label: "Client Satisfaction Rate"},
+                                            {num: "24/7", label: "Development Support"},
                                         ].map((item, i) => (
                                             <div
                                                 key={i}
@@ -550,7 +590,8 @@ const CyberpunkMenu = () => {
                                                 <div className="text-2xl md:text-3xl font-black text-green-400 mb-1">
                                                     {item.num}
                                                 </div>
-                                                <div className="text-xs text-gray-400 uppercase font-bold tracking-wider">
+                                                <div
+                                                    className="text-xs text-gray-400 uppercase font-bold tracking-wider">
                                                     {item.label}
                                                 </div>
                                             </div>
@@ -586,7 +627,7 @@ const CyberpunkMenu = () => {
                                             ? "bg-gradient-to-r from-transparent via-purple-400/50 to-transparent"
                                             : "bg-gradient-to-r from-transparent via-purple-300/30 to-transparent"
                                     }`}
-                                    animate={{ x: ["-100%", "100%"] }}
+                                    animate={{x: ["-100%", "100%"]}}
                                     transition={{
                                         duration: 3 + i,
                                         repeat: Infinity,
@@ -595,8 +636,10 @@ const CyberpunkMenu = () => {
                                 />
                             ))}
 
-                            <div className="absolute right-0 top-0 h-full w-[2px] bg-gradient-to-b from-purple-500/50 via-purple-400/20 to-transparent"/>
-                            <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-purple-400/20 to-purple-500/50"/>
+                            <div
+                                className="absolute right-0 top-0 h-full w-[2px] bg-gradient-to-b from-purple-500/50 via-purple-400/20 to-transparent"/>
+                            <div
+                                className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-purple-400/20 to-purple-500/50"/>
 
                             {/* BACKGROUND NUMBER */}
                             <motion.h1
@@ -609,7 +652,7 @@ const CyberpunkMenu = () => {
                                     ],
                                     scale: [1, 1.02, 1],
                                 }}
-                                transition={{ duration: 3, repeat: Infinity }}
+                                transition={{duration: 3, repeat: Infinity}}
                             >
                                 <GlitchText text="03" textColor={page.text}/>
                             </motion.h1>
@@ -688,7 +731,8 @@ const CyberpunkMenu = () => {
                                             variants={itemVariant}
                                             className="border-2 border-purple-500/50 rounded-xl p-6 bg-gradient-to-br from-purple-500/10 to-purple-400/5 hover:border-purple-400 hover:shadow-lg hover:shadow-purple-500/30 transition-all group"
                                         >
-                                            <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">{service.icon}</div>
+                                            <div
+                                                className="text-4xl mb-4 group-hover:scale-110 transition-transform">{service.icon}</div>
 
                                             <h3 className="text-base font-black text-purple-300 mb-2 uppercase tracking-wider">
                                                 {service.title}
@@ -721,14 +765,24 @@ const CyberpunkMenu = () => {
 
                                     <div className="grid md:grid-cols-4 gap-4">
                                         {[
-                                            { num: "01", title: "Discovery", desc: "Understand your vision and requirements" },
-                                            { num: "02", title: "Planning", desc: "Strategy and technical architecture" },
-                                            { num: "03", title: "Development", desc: "Building with excellence and precision" },
-                                            { num: "04", title: "Delivery", desc: "Launch and continuous support" },
+                                            {
+                                                num: "01",
+                                                title: "Discovery",
+                                                desc: "Understand your vision and requirements"
+                                            },
+                                            {num: "02", title: "Planning", desc: "Strategy and technical architecture"},
+                                            {
+                                                num: "03",
+                                                title: "Development",
+                                                desc: "Building with excellence and precision"
+                                            },
+                                            {num: "04", title: "Delivery", desc: "Launch and continuous support"},
                                         ].map((step, i) => (
                                             <div key={i} className="relative">
-                                                <div className="border border-purple-500/30 rounded-lg p-4 text-center hover:bg-purple-500/10 transition-all">
-                                                    <div className="text-xl font-black text-purple-400 mb-2">{step.num}</div>
+                                                <div
+                                                    className="border border-purple-500/30 rounded-lg p-4 text-center hover:bg-purple-500/10 transition-all">
+                                                    <div
+                                                        className="text-xl font-black text-purple-400 mb-2">{step.num}</div>
 
                                                     <p className="font-bold text-gray-300 text-xs mb-1">{step.title}</p>
 
@@ -757,7 +811,7 @@ const CyberpunkMenu = () => {
                                             ? "bg-gradient-to-r from-transparent via-yellow-400/50 to-transparent"
                                             : "bg-gradient-to-r from-transparent via-yellow-300/30 to-transparent"
                                     }`}
-                                    animate={{ x: ["-100%", "100%"] }}
+                                    animate={{x: ["-100%", "100%"]}}
                                     transition={{
                                         duration: 3 + i,
                                         repeat: Infinity,
@@ -766,8 +820,10 @@ const CyberpunkMenu = () => {
                                 />
                             ))}
 
-                            <div className="absolute right-0 top-0 h-full w-[2px] bg-gradient-to-b from-yellow-500/50 via-yellow-400/20 to-transparent"/>
-                            <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-yellow-400/20 to-yellow-500/50"/>
+                            <div
+                                className="absolute right-0 top-0 h-full w-[2px] bg-gradient-to-b from-yellow-500/50 via-yellow-400/20 to-transparent"/>
+                            <div
+                                className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-yellow-400/20 to-yellow-500/50"/>
 
                             {/* BACKGROUND NUMBER */}
                             <motion.h1
@@ -780,7 +836,7 @@ const CyberpunkMenu = () => {
                                     ],
                                     scale: [1, 1.02, 1],
                                 }}
-                                transition={{ duration: 3, repeat: Infinity }}
+                                transition={{duration: 3, repeat: Infinity}}
                             >
                                 <GlitchText text="04" textColor={page.text}/>
                             </motion.h1>
@@ -802,7 +858,8 @@ const CyberpunkMenu = () => {
                                     custom={0.3}
                                     className="text-gray-400 mb-12 text-base max-w-2xl"
                                 >
-                                    Showcasing some of my best projects that demonstrate expertise in modern web development
+                                    Showcasing some of my best projects that demonstrate expertise in modern web
+                                    development
                                 </motion.p>
 
                                 {/* PROJECT GRID */}
@@ -861,7 +918,8 @@ const CyberpunkMenu = () => {
                                             variants={itemVariant}
                                             className="border-2 border-yellow-500/50 rounded-xl p-6 bg-gradient-to-br from-yellow-500/10 to-yellow-400/5 hover:border-yellow-400 hover:shadow-lg hover:shadow-yellow-500/30 transition-all group cursor-pointer"
                                         >
-                                            <div className="text-sm font-black text-yellow-400 mb-2 uppercase tracking-wider">
+                                            <div
+                                                className="text-sm font-black text-yellow-400 mb-2 uppercase tracking-wider">
                                                 Project {project.num}
                                             </div>
 
@@ -871,9 +929,11 @@ const CyberpunkMenu = () => {
 
                                             <p className="text-xs text-gray-400 mb-4">{project.desc}</p>
 
-                                            <div className="flex flex-wrap gap-2 mb-4 pb-4 border-b border-yellow-500/20">
+                                            <div
+                                                className="flex flex-wrap gap-2 mb-4 pb-4 border-b border-yellow-500/20">
                                                 {project.tags.map((tag, j) => (
-                                                    <span key={j} className="text-[11px] px-2 py-1 bg-yellow-500/20 text-yellow-200 rounded font-bold">
+                                                    <span key={j}
+                                                          className="text-[11px] px-2 py-1 bg-yellow-500/20 text-yellow-200 rounded font-bold">
                                     {tag}
                                 </span>
                                                 ))}
@@ -904,7 +964,7 @@ const CyberpunkMenu = () => {
                                             ? "bg-gradient-to-r from-transparent via-red-400/50 to-transparent"
                                             : "bg-gradient-to-r from-transparent via-red-300/30 to-transparent"
                                     }`}
-                                    animate={{ x: ["-100%", "100%"] }}
+                                    animate={{x: ["-100%", "100%"]}}
                                     transition={{
                                         duration: 3 + i,
                                         repeat: Infinity,
@@ -913,8 +973,10 @@ const CyberpunkMenu = () => {
                                 />
                             ))}
 
-                            <div className="absolute right-0 top-0 h-full w-[2px] bg-gradient-to-b from-red-500/50 via-red-400/20 to-transparent"/>
-                            <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-red-400/20 to-red-500/50"/>
+                            <div
+                                className="absolute right-0 top-0 h-full w-[2px] bg-gradient-to-b from-red-500/50 via-red-400/20 to-transparent"/>
+                            <div
+                                className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-red-400/20 to-red-500/50"/>
 
                             {/* BACKGROUND NUMBER */}
                             <motion.h1
@@ -927,7 +989,7 @@ const CyberpunkMenu = () => {
                                     ],
                                     scale: [1, 1.02, 1]
                                 }}
-                                transition={{ duration: 3, repeat: Infinity }}
+                                transition={{duration: 3, repeat: Infinity}}
                             >
                                 <GlitchText text="05" textColor={page.text}/>
                             </motion.h1>
@@ -949,7 +1011,8 @@ const CyberpunkMenu = () => {
                                     custom={0.3}
                                     className="text-gray-400 mb-12 text-base max-w-2xl"
                                 >
-                                    Have an exciting project? I'm always interested in hearing about new opportunities and collaborations.
+                                    Have an exciting project? I'm always interested in hearing about new opportunities
+                                    and collaborations.
                                 </motion.p>
 
                                 {/* CONTACT CARDS */}
@@ -969,7 +1032,8 @@ const CyberpunkMenu = () => {
                                             variants={itemVariant}
                                             className="border-2 border-red-500/50 rounded-xl p-6 text-center bg-gradient-to-br from-red-500/10 to-red-400/5 hover:border-red-400 hover:shadow-lg hover:shadow-red-500/30 transition-all group"
                                         >
-                                            <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">{contact.icon}</div>
+                                            <div
+                                                className="text-4xl mb-3 group-hover:scale-110 transition-transform">{contact.icon}</div>
                                             <p className="text-sm text-gray-400 uppercase font-bold tracking-wider mb-2">{contact.label}</p>
                                             <p className="text-lg font-black text-red-300">{contact.value}</p>
                                         </motion.div>
@@ -981,7 +1045,8 @@ const CyberpunkMenu = () => {
                                     variants={itemVariant}
                                     className="border-2 border-red-500/50 rounded-xl p-6 md:p-8 bg-gradient-to-br from-red-500/10 to-red-400/5"
                                 >
-                                    <h2 className="text-2xl font-black text-red-400 mb-6 uppercase tracking-wider">Send Me a Message</h2>
+                                    <h2 className="text-2xl font-black text-red-400 mb-6 uppercase tracking-wider">Send
+                                        Me a Message</h2>
                                     <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-6">
                                         <input
                                             type="text"
@@ -1014,11 +1079,13 @@ const CyberpunkMenu = () => {
                                 {/* ADDITIONAL INFO */}
                                 <motion.div variants={itemVariant} className="grid md:grid-cols-2 gap-6 mt-8">
                                     <div className="border border-red-500/30 rounded-lg p-6 bg-red-500/5">
-                                        <p className="text-sm text-gray-400 uppercase font-bold tracking-wider mb-2">⚡ Response Time</p>
+                                        <p className="text-sm text-gray-400 uppercase font-bold tracking-wider mb-2">⚡
+                                            Response Time</p>
                                         <p className="text-2xl font-black text-red-300">Within 24 hours</p>
                                     </div>
                                     <div className="border border-red-500/30 rounded-lg p-6 bg-red-500/5">
-                                        <p className="text-sm text-gray-400 uppercase font-bold tracking-wider mb-2">📋 Availability</p>
+                                        <p className="text-sm text-gray-400 uppercase font-bold tracking-wider mb-2">📋
+                                            Availability</p>
                                         <p className="text-2xl font-black text-red-300">Open for New Projects</p>
                                     </div>
                                 </motion.div>
@@ -1107,17 +1174,17 @@ const CyberpunkMenu = () => {
                                     className="h-full bg-background transition-all duration-500 ease-in font-cyber hover:font-cyber-outline w-full flex items-center justify-center overflow-hidden"
                                 >
                                     {/* Glow line effect */}
-                                    <motion.div
-                                        className="absolute left-0 top-0 w-1 h-full"
-                                        style={{
-                                            background: `linear-gradient(to bottom, ${page.glowColor}60, transparent)`
-                                        }}
-                                        animate={{
-                                            opacity: [0.2, 0.8, 0.2],
-                                            boxShadow: [`0 0 5px ${page.glowColor}`, `0 0 20px ${page.glowColor}`, `0 0 5px ${page.glowColor}`],
-                                        }}
-                                        transition={{duration: 2.5, repeat: Infinity, delay: index * 0.3}}
-                                    />
+                                    {/*<motion.div*/}
+                                    {/*    className="absolute left-0 top-0 w-1 h-full"*/}
+                                    {/*    style={{*/}
+                                    {/*        background: `linear-gradient(to bottom, ${page.glowColor}60, transparent)`*/}
+                                    {/*    }}*/}
+                                    {/*    animate={{*/}
+                                    {/*        opacity: [0.2, 0.8, 0.2],*/}
+                                    {/*        boxShadow: [`0 0 5px ${page.glowColor}`, `0 0 20px ${page.glowColor}`, `0 0 5px ${page.glowColor}`],*/}
+                                    {/*    }}*/}
+                                    {/*    transition={{duration: 2.5, repeat: Infinity, delay: index * 0.3}}*/}
+                                    {/*/>*/}
 
                                     {/* Tab label */}
                                     <motion.div
@@ -1163,57 +1230,57 @@ const CyberpunkMenu = () => {
                 >
                     {pages.map((page, i) => (
                         page.id === activePage &&
-                            <div>
-                                <button
-                                    onClick={() => handlePageChange(null)}
-                                    className="fixed right-6 top-0 h-full md:w-24 flex justify-end items-center px-5"
-                                >
-                                    <div className={`absolute -right-8 rotate-90 text-sm font-cyber ${page.text}`}>
-                                       Back Here
-                                    </div>
-                                    <motion.div
-                                        animate={{
-                                            x: [-2, 2, -2],   // left → right → left
-                                        }}
-                                        transition={{
-                                            duration: 2,
-                                            repeat: Infinity,
-                                            ease: "easeInOut",
-                                        }}
-                                        className="inline-block"
-                                    >
-                                        <GlitchText text={<ChevronLeft />} textColor={page.text}/>
-
-                                    </motion.div>
-
-
-                                </button>
-
-                                <div className="fixed right-6 bottom-4 font-cyber-outline text-xl font-bold">
-                                    <GlitchText text={page.title} textColor={page.text}/>
+                        <div>
+                            <button
+                                onClick={() => handlePageChange(null)}
+                                className="fixed right-6 top-0 h-full md:w-24 flex justify-end items-center px-5"
+                            >
+                                <div className={`absolute -right-8 rotate-90 text-sm font-cyber ${page.text}`}>
+                                    Back Here
                                 </div>
                                 <motion.div
-                                    className="fixed top-6 right-6 flex flex-col gap-3 z-50"
-                                    initial={{opacity: 0, x: -20}}
-                                    animate={{opacity: 1, x: 0}}
-                                    transition={{delay: 1.2}}
+                                    animate={{
+                                        x: [-2, 2, -2],   // left → right → left
+                                    }}
+                                    transition={{
+                                        duration: 2,
+                                        repeat: Infinity,
+                                        ease: "easeInOut",
+                                    }}
+                                    className="inline-block"
                                 >
-                                    {socialLinks.map((s, i) => (
-                                        <motion.a
-                                            key={i}
-                                            href={s.url}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            whileHover={{scale: 1.3, rotate: 5}}
-                                            whileTap={{scale: 0.95}}
-                                            className={`w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full border-2 ${page.bracketColor} ${page.text} transition-all duration-300 shadow-lg ${page.shadowColor}`}
-                                        >
-                                            {s.icon}
-                                        </motion.a>
-                                    ))}
+                                    <GlitchText text={<ChevronLeft/>} textColor={page.text}/>
+
                                 </motion.div>
 
+
+                            </button>
+
+                            <div className="fixed right-6 bottom-4 font-cyber-outline text-xl font-bold">
+                                <GlitchText text={page.title} textColor={page.text}/>
                             </div>
+                            <motion.div
+                                className="fixed top-6 right-6 flex flex-col gap-3 z-50"
+                                initial={{opacity: 0, x: -20}}
+                                animate={{opacity: 1, x: 0}}
+                                transition={{delay: 1.2}}
+                            >
+                                {socialLinks.map((s, i) => (
+                                    <motion.a
+                                        key={i}
+                                        href={s.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        whileHover={{scale: 1.3, rotate: 5}}
+                                        whileTap={{scale: 0.95}}
+                                        className={`w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full border-2 ${page.bracketColor} ${page.text} transition-all duration-300 shadow-lg ${page.shadowColor}`}
+                                    >
+                                        {s.icon}
+                                    </motion.a>
+                                ))}
+                            </motion.div>
+
+                        </div>
 
 
                     ))}
