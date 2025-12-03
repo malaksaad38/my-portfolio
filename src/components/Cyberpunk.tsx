@@ -4,17 +4,42 @@ import {motion, Variants} from 'framer-motion';
 import {useIsMobile} from "@/hooks/use-mobile";
 import CyberpunkSpotlight from "@/components/CyberpunkSpotlight";
 import {
-    Atom, Award, BarChart2, BookOpen,
-    ChevronLeft, ClipboardList, Clock, Cloud, Code, Cpu, Database, ExternalLink, FolderKanban, Gauge,
-    Github, Globe, GraduationCap, Layers, Lightbulb,
+    Atom,
+    Award,
+    BookOpen,
+    ChevronLeft,
+    Clock,
+    Cloud,
+    Code,
+    Cpu,
+    Database,
+    ExternalLink,
+    FolderKanban,
+    Gauge,
+    Github,
+    Globe,
+    GraduationCap,
+    Layers,
+    Lightbulb,
     Linkedin,
-    LucideMailbox,
-    Mail, MailCheck,
-    MapPin, MessageSquare, Monitor, MonitorSmartphone, Palette, PanelsTopLeft, Pencil,
-    Phone, Rocket, SearchCheck, Send, Server, ShoppingCart, Smartphone, Smile, Sparkles, TerminalSquare, TrendingUp,
-    Twitter,
-    User, Users,
-    VoicemailIcon, Workflow
+    Mail,
+    MapPin,
+    MessageSquare,
+    MonitorSmartphone,
+    Palette,
+    PanelsTopLeft,
+    Phone,
+    Rocket,
+    SearchCheck,
+    Server,
+    Smartphone,
+    Smile,
+    Sparkles,
+    TerminalSquare,
+    TrendingUp,
+    User,
+    Users,
+    Workflow
 } from "lucide-react";
 import {GlitchText} from "@/components/GlitchText";
 import ContactForm from "@/components/ContactForm";
@@ -158,8 +183,7 @@ const CyberpunkMenu = () => {
             case 'home':
                 return (
                     <CyberpunkSpotlight cornerBracketColor={page.bracketColor}>
-                        <div className="md:p-8 p-6 relative">
-
+                        <div className="md:p-8 p-6">
                             {/* === ANIMATED SCANNER LINES === */}
                             {[0, 1].map((i) => (
                                 <motion.div
@@ -180,14 +204,12 @@ const CyberpunkMenu = () => {
                             ))}
 
                             {/* === NEON BORDERS === */}
-                            <div
-                                className="absolute right-0 top-0 h-full w-[2px] bg-gradient-to-b from-blue-500/50 via-blue-400/20 to-transparent"></div>
-                            <div
-                                className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-blue-400/20 to-blue-500/50"></div>
+                            <div className="absolute right-0 top-0 h-full w-[2px] bg-gradient-to-b from-blue-500/50 via-blue-400/20 to-transparent"></div>
+                            <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-blue-400/20 to-blue-500/50"></div>
 
                             {/* === PAGE NUMBER BG === */}
                             <motion.h1
-                                className={`fixed right-4 bottom-4 ${page.text} opacity-30 font-cyber-outline leading-none text-[5rem] md:text-[7rem] font-bold`}
+                                className={`fixed right-4 top-2 ${page.text} opacity-30 font-cyber-outline leading-none text-[5rem] md:text-[7rem] font-bold`}
                                 animate={{
                                     textShadow: [
                                         `0 0 10px ${currentPage?.glowColor}, 0 0 30px ${currentPage?.glowColor}`,
@@ -205,9 +227,8 @@ const CyberpunkMenu = () => {
                             <motion.div
                                 initial="hidden"
                                 animate="visible"
-                                className="relative z-10 max-w-4xl"
+                                className="max-w-7xl px-4 md:px-8"
                             >
-
                                 {/* Name */}
                                 <motion.h1
                                     variants={textVariant}
@@ -235,8 +256,8 @@ const CyberpunkMenu = () => {
                                 >
                                     <Sparkles className="w-3 h-3 text-blue-500 animate-pulse"/>
                                     <h4 className="text-xs tracking-widest opacity-70 text-blue-300 uppercase">
-                            Building the future of web
-                        </h4>
+                                        Building the future of web
+                                    </h4>
                                 </motion.div>
 
                                 {/* Description */}
@@ -399,7 +420,7 @@ const CyberpunkMenu = () => {
             case 'about':
                 return (
                     <CyberpunkSpotlight cornerBracketColor={page.bracketColor}>
-                        <div className="md:p-8 p-6 relative">
+                        <div className="md:p-8 p-6">
 
                             {/* === SCANNER LINES === */}
                             {[0, 1].map((i) => (
@@ -426,7 +447,7 @@ const CyberpunkMenu = () => {
 
                             {/* === BACKGROUND NUMBER === */}
                             <motion.h1
-                                className={`fixed right-4 bottom-4 ${page.text} opacity-30 font-cyber-outline leading-none text-[5rem] md:text-[7rem] font-bold`}
+                                className={`fixed right-4 top-2 ${page.text} opacity-30 font-cyber-outline leading-none text-[5rem] md:text-[7rem] font-bold`}
                                 animate={{
                                     textShadow: [
                                         `0 0 10px ${currentPage?.glowColor}, 0 0 30px ${currentPage?.glowColor}`,
@@ -443,7 +464,7 @@ const CyberpunkMenu = () => {
                             <motion.div
                                 initial="hidden"
                                 animate="visible"
-                                className="relative z-10 max-w-5xl"
+                                className="max-w-7xl px-4 md:px-8"
                             >
 
                                 {/* TITLE */}
@@ -620,7 +641,7 @@ const CyberpunkMenu = () => {
             case 'services':
                 return (
                     <CyberpunkSpotlight cornerBracketColor={page.bracketColor}>
-                        <div className="md:p-8 p-6 relative">
+                        <div className="md:p-8 p-6">
 
                             {/* === SCANNER LINES === */}
                             {[0, 1].map((i) => (
@@ -644,7 +665,7 @@ const CyberpunkMenu = () => {
 
                             {/* BACKGROUND NUMBER */}
                             <motion.h1
-                                className={`fixed right-4 bottom-4 ${page.text} opacity-30 font-cyber-outline leading-none text-[5rem] md:text-[7rem] font-bold`}
+                                className={`fixed right-4 top-2 ${page.text} opacity-30 font-cyber-outline leading-none text-[5rem] md:text-[7rem] font-bold`}
                                 animate={{
                                     textShadow: [
                                         `0 0 10px ${currentPage?.glowColor}, 0 0 30px ${currentPage?.glowColor}`,
@@ -658,7 +679,7 @@ const CyberpunkMenu = () => {
                                 <GlitchText text="03" textColor={page.text}/>
                             </motion.h1>
 
-                            <motion.div initial="hidden" animate="visible" className="relative z-10 max-w-6xl">
+                            <motion.div initial="hidden" animate="visible" className="max-w-7xl px-4 md:px-8">
 
                                 {/* MAIN HEADING */}
                                 <motion.h1
@@ -811,7 +832,7 @@ const CyberpunkMenu = () => {
             case 'portfolio':
                 return (
                     <CyberpunkSpotlight cornerBracketColor={page.bracketColor}>
-                        <div className="md:p-8 p-6 relative">
+                        <div className="md:p-8 p-6">
 
                             {/* === SCANNER LINES === */}
                             {[0, 1].map((i) => (
@@ -834,7 +855,7 @@ const CyberpunkMenu = () => {
 
                             {/* BACKGROUND NUMBER */}
                             <motion.h1
-                                className={`fixed right-4 bottom-4 ${page.text} opacity-30 font-cyber-outline leading-none text-[5rem] md:text-[7rem] font-bold`}
+                                className={`fixed right-4 top-2 ${page.text} opacity-30 font-cyber-outline leading-none text-[5rem] md:text-[7rem] font-bold`}
                                 animate={{
                                     textShadow: [
                                         `0 0 10px ${currentPage?.glowColor}, 0 0 30px ${currentPage?.glowColor}`,
@@ -876,8 +897,8 @@ const CyberpunkMenu = () => {
                                     animate="visible"
                                     className="grid md:grid-cols-2 gap-8 mb-12"
                                 >
-                                    {["01","02","03","04","05","06"].map((id) => (
-                                        <ProjectCard key={id} projectId={id} />
+                                    {["01", "02", "03", "04", "05", "06"].map((id) => (
+                                        <ProjectCard key={id} projectId={id}/>
                                     ))}
                                 </motion.div>
 
@@ -889,7 +910,7 @@ const CyberpunkMenu = () => {
             case 'contact':
                 return (
                     <CyberpunkSpotlight cornerBracketColor={page.bracketColor}>
-                        <div className="md:p-8 p-6 relative">
+                        <div className="md:p-8 p-6">
 
                             {/* === SCANNER LINES === */}
                             {[0, 1].map((i) => (
@@ -920,7 +941,7 @@ const CyberpunkMenu = () => {
 
                             {/* BACKGROUND NUMBER */}
                             <motion.h1
-                                className={`fixed right-4 bottom-4 ${page.text} opacity-30 font-cyber-outline leading-none text-[5rem] md:text-[7rem] font-bold`}
+                                className={`fixed right-4 top-2 ${page.text} opacity-30 font-cyber-outline leading-none text-[5rem] md:text-[7rem] font-bold`}
                                 animate={{
                                     textShadow: [
                                         `0 0 10px ${currentPage?.glowColor}, 0 0 30px ${currentPage?.glowColor}`,
@@ -1138,14 +1159,6 @@ const CyberpunkMenu = () => {
                                         </motion.span>
                                     </motion.div>
 
-                                    {/* Hover indicator */}
-                                    <motion.div
-                                        className="absolute bottom-4 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity"
-                                        animate={{y: [0, 5, 0]}}
-                                        transition={{duration: 1, repeat: Infinity}}
-                                    >
-                                        <p className="text-xs text-gray-500">CLICK</p>
-                                    </motion.div>
                                 </motion.div>
                             )}
                         </motion.div>
@@ -1166,34 +1179,24 @@ const CyberpunkMenu = () => {
                         <div>
                             <button
                                 onClick={() => handlePageChange(null)}
-                                className="fixed right-6 top-0 h-full md:w-24 flex justify-end items-center px-5"
+                                className="fixed right-0 top-0 h-full md:w-20 flex justify-end items-center pr-8 pl-2"
                             >
-                                <div className={`absolute -right-8 rotate-90 text-sm font-cyber ${page.text}`}>
-                                    Back Here
+                                <div className={`absolute -right-5 rotate-90 text-sm font-cyber ${page.text}`}>
+                                    <GlitchText text={"Back here"} textColor={page.text}/>
                                 </div>
                                 <motion.div
-                                    animate={{
-                                        x: [-2, 2, -2],   // left → right → left
-                                    }}
-                                    transition={{
-                                        duration: 2,
-                                        repeat: Infinity,
-                                        ease: "easeInOut",
-                                    }}
-                                    className="inline-block"
+                                    animate={{x: [0, 5, 0]}}
+                                    transition={{duration: 1.5, repeat: Infinity, ease: "linear"}}
                                 >
-                                    <GlitchText text={<ChevronLeft/>} textColor={page.text}/>
-
+                                    <ChevronLeft color={page.glowColor}/>
                                 </motion.div>
-
-
                             </button>
 
-                            <div className="fixed right-6 bottom-4 font-cyber-outline text-xl font-bold">
+                            <div className="fixed right-5 bottom-3 font-cyber-outline text-xl font-bold">
                                 <GlitchText text={page.title} textColor={page.text}/>
                             </div>
                             <motion.div
-                                className="fixed top-6 right-6 flex flex-col gap-3 z-50"
+                                className="fixed md:bottom-6 bottom-4 md:left-6 left-4 flex flex-col gap-3 z-50"
                                 initial={{opacity: 0, x: -20}}
                                 animate={{opacity: 1, x: 0}}
                                 transition={{delay: 1.2}}
@@ -1206,7 +1209,7 @@ const CyberpunkMenu = () => {
                                         rel="noopener noreferrer"
                                         whileHover={{scale: 1.3, rotate: 5}}
                                         whileTap={{scale: 0.95}}
-                                        className={`w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full border-2 ${page.bracketColor} ${page.text} transition-all duration-300 shadow-lg ${page.shadowColor}`}
+                                        className={`w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full border-2 ${page.bracketColor} ${page.text} transition-all duration-300 shadow-lg ${page.shadowColor}`}
                                     >
                                         {s.icon}
                                     </motion.a>
