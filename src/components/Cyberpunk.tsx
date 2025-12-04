@@ -13,12 +13,12 @@ import {
     Code,
     Cpu,
     Database,
-    ExternalLink,
+    ExternalLink, Folder,
     FolderKanban,
     Gauge,
     Github,
     Globe,
-    GraduationCap,
+    GraduationCap, Home,
     Layers,
     Lightbulb,
     Linkedin,
@@ -31,7 +31,7 @@ import {
     Phone,
     Rocket,
     SearchCheck,
-    Server,
+    Server, Settings,
     Smartphone,
     Smile,
     Sparkles,
@@ -44,6 +44,7 @@ import {
 import {GlitchText} from "@/components/GlitchText";
 import ContactForm from "@/components/ContactForm";
 import ProjectCard from "@/components/ProjectCard";
+import CyberpunkSideNavbar from "@/components/CyberpunkSideNavbar";
 
 const CyberpunkMenu = () => {
     const [activePage, setActivePage] = useState(null);
@@ -68,7 +69,7 @@ const CyberpunkMenu = () => {
             shadowColor: "shadow-blue-500/50",
         },
         {
-            id: 'about', title: 'About', color: 'to-green-500/20', text: 'text-green-500',
+            id: 'about', title: 'About Us', color: 'to-green-500/20', text: 'text-green-500',
             glowColor: '#10b981', particleColor: 'rgba(16, 185, 129, 0.6)',
             bracketColor: 'border-green-500',
             shadowColor: "shadow-green-500/50",
@@ -204,12 +205,14 @@ const CyberpunkMenu = () => {
                             ))}
 
                             {/* === NEON BORDERS === */}
-                            <div className="absolute right-0 top-0 h-full w-[2px] bg-gradient-to-b from-blue-500/50 via-blue-400/20 to-transparent"></div>
-                            <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-blue-400/20 to-blue-500/50"></div>
+                            <div
+                                className="absolute right-0 top-0 h-full w-[2px] bg-gradient-to-b from-blue-500/50 via-blue-400/20 to-transparent"></div>
+                            <div
+                                className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-blue-400/20 to-blue-500/50"></div>
 
                             {/* === PAGE NUMBER BG === */}
                             <motion.h1
-                                className={`fixed right-4 top-2 ${page.text} opacity-30 font-cyber-outline leading-none text-[5rem] md:text-[7rem] font-bold`}
+                                className={`fixed right-4 bottom-2 ${page.text} opacity-30 font-cyber-outline leading-none text-[5rem] md:text-[7rem] font-bold`}
                                 animate={{
                                     textShadow: [
                                         `0 0 10px ${currentPage?.glowColor}, 0 0 30px ${currentPage?.glowColor}`,
@@ -447,7 +450,7 @@ const CyberpunkMenu = () => {
 
                             {/* === BACKGROUND NUMBER === */}
                             <motion.h1
-                                className={`fixed right-4 top-2 ${page.text} opacity-30 font-cyber-outline leading-none text-[5rem] md:text-[7rem] font-bold`}
+                                className={`fixed right-4 bottom-2 ${page.text} opacity-30 font-cyber-outline leading-none text-[5rem] md:text-[7rem] font-bold`}
                                 animate={{
                                     textShadow: [
                                         `0 0 10px ${currentPage?.glowColor}, 0 0 30px ${currentPage?.glowColor}`,
@@ -665,7 +668,7 @@ const CyberpunkMenu = () => {
 
                             {/* BACKGROUND NUMBER */}
                             <motion.h1
-                                className={`fixed right-4 top-2 ${page.text} opacity-30 font-cyber-outline leading-none text-[5rem] md:text-[7rem] font-bold`}
+                                className={`fixed right-4 bottom-2 ${page.text} opacity-30 font-cyber-outline leading-none text-[5rem] md:text-[7rem] font-bold`}
                                 animate={{
                                     textShadow: [
                                         `0 0 10px ${currentPage?.glowColor}, 0 0 30px ${currentPage?.glowColor}`,
@@ -855,7 +858,7 @@ const CyberpunkMenu = () => {
 
                             {/* BACKGROUND NUMBER */}
                             <motion.h1
-                                className={`fixed right-4 top-2 ${page.text} opacity-30 font-cyber-outline leading-none text-[5rem] md:text-[7rem] font-bold`}
+                                className={`fixed right-4 bottom-2 ${page.text} opacity-30 font-cyber-outline leading-none text-[5rem] md:text-[7rem] font-bold`}
                                 animate={{
                                     textShadow: [
                                         `0 0 10px ${currentPage?.glowColor}, 0 0 30px ${currentPage?.glowColor}`,
@@ -869,7 +872,7 @@ const CyberpunkMenu = () => {
                                 <GlitchText text="04" textColor={page.text}/>
                             </motion.h1>
 
-                            <motion.div initial="hidden" animate="visible" className="relative z-10 max-w-6xl">
+                            <motion.div initial="hidden" animate="visible" className="max-w-7xl px-4 md:px-8">
 
                                 {/* MAIN HEADING */}
                                 <motion.h1
@@ -941,7 +944,7 @@ const CyberpunkMenu = () => {
 
                             {/* BACKGROUND NUMBER */}
                             <motion.h1
-                                className={`fixed right-4 top-2 ${page.text} opacity-30 font-cyber-outline leading-none text-[5rem] md:text-[7rem] font-bold`}
+                                className={`fixed right-4 bottom-2 ${page.text} opacity-30 font-cyber-outline leading-none text-[5rem] md:text-[7rem] font-bold`}
                                 animate={{
                                     textShadow: [
                                         `0 0 10px ${currentPage?.glowColor}, 0 0 30px ${currentPage?.glowColor}`,
@@ -956,7 +959,7 @@ const CyberpunkMenu = () => {
                             </motion.h1>
 
 
-                            <motion.div initial="hidden" animate="visible" className="relative z-10 max-w-5xl">
+                            <motion.div initial="hidden" animate="visible" className="max-w-7xl px-4 md:px-8">
 
                                 {/* MAIN HEADING */}
                                 <motion.h1
@@ -1058,7 +1061,13 @@ const CyberpunkMenu = () => {
         {icon: <Linkedin/>, url: "https://www.linkedin.com/in/malak-saad-354a0139a/"},
     ];
 
-
+    const items = [
+        {id: "home", label: "Home", icon: <Home size={18}/>},
+        {id: "about", label: "About", icon: <User size={18}/>},
+        {id: "projects", label: "Projects", icon: <Folder size={18}/>},
+        {id: "contact", label: "Contact", icon: <Mail size={18}/>},
+        {id: "settings", label: "Settings", icon: <Settings size={18}/>},
+    ];
     return (
         <div className="flex bg-background w-full h-screen relative overflow-hidden">
 
@@ -1068,6 +1077,7 @@ const CyberpunkMenu = () => {
                     const isActive = activePage === page.id;
                     const totalTabs = pages.length;
                     const tabWidth = 100 / totalTabs;
+
 
                     return (
                         <motion.div
@@ -1168,6 +1178,7 @@ const CyberpunkMenu = () => {
 
             {/* Bottom Navigation Indicator */}
             {activePage !== null && (
+
                 <motion.div
                     className="fixed right-0 z-10 h-full  flex items-center shadow-lg"
                     initial={{opacity: 0, x: 20}}
@@ -1192,11 +1203,33 @@ const CyberpunkMenu = () => {
                                 </motion.div>
                             </button>
 
-                            <div className="fixed right-5 bottom-3 font-cyber-outline text-xl font-bold">
-                                <GlitchText text={page.title} textColor={page.text}/>
+
+                            <div className="fixed left-0 -top-10 h-full md:w-14 w-10 flex flex-col items-center justify-center">
+
+                                <div className="flex flex-col items-center justify-center space-y-18">
+                                    {[
+                                        {label: "Home", action: () => handlePageChange('home')},
+                                        {label: "About Us", action: () => handlePageChange('about')},
+                                        {label: "Services", action: () => handlePageChange('services')},
+                                        {label: "Portfolio", action: () => handlePageChange('portfolio')},
+                                        {label: "Contact", action: () => handlePageChange('contact')},
+                                    ].map((item, index) => (
+                                        <button
+                                            key={index}
+                                            onClick={item.action}
+                                            className={`rotate-90 text-sm font-cyber font-bold  ${page.title === item.label && page.text}  hover:font-cyber-outline `}
+                                        >
+                                            {item.label}
+                                        </button>
+                                    ))}
+                                </div>
+
+                                <div className="fixed bottom-14 md:-left-4 -left-[22px] w-[90px]  flex justify-end items-center rotate-90 font-cyber-outline font-bold">
+                                    <GlitchText text={page.title} textColor={page.text}/>
+                                </div>
                             </div>
                             <motion.div
-                                className="fixed md:bottom-6 bottom-4 md:left-6 left-4 flex flex-col gap-3 z-50"
+                                className="fixed top-6 md:right-6 right-4 flex flex-col gap-3 z-50"
                                 initial={{opacity: 0, x: -20}}
                                 animate={{opacity: 1, x: 0}}
                                 transition={{delay: 1.2}}
