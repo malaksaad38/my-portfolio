@@ -244,7 +244,10 @@ const CyberpunkMenu = () => {
                                     />
                                 </motion.div>
                                 {/* content section */}
-                                <div className={"mt-72 sm:mt-0 backdrop-opacity-50"}>
+                                <div className={"relative mt-72 sm:mt-0 backdrop-opacity-50"}>
+                                    <div className="sm:hidden block absolute bg-slate-900 w-full text-blue-500 blur-lg h-48 m-0 p-0  -z-20 ">
+                                        asdfklasjdlf asdfaklsdjf lkasdjfkla jsdlkf
+                                    </div>
                                     <motion.h1
                                         variants={textVariant}
                                         custom={0.2}
@@ -280,7 +283,7 @@ const CyberpunkMenu = () => {
                                     <motion.p
                                         variants={textVariant}
                                         custom={0.4}
-                                        className="text-base md:text-lg leading-relaxed max-w-3xl opacity-85 text-gray-200 mb-2 font-light "
+                                        className="text-base md:text-lg leading-relaxed max-w-3xl opacity-85 text-gray-200 mb-2 font-light"
                                     >
                                         I transform ideas into powerful digital solutions. Specializing in{" "}
                                         <span className="font-bold text-blue-400">Next.js, React, TypeScript</span> and{" "}
@@ -292,7 +295,7 @@ const CyberpunkMenu = () => {
                                     <motion.p
                                         variants={textVariant}
                                         custom={0.45}
-                                        className="text-sm md:text-base opacity-70 text-gray-400 max-w-3xl mb-8"
+                                        className="text-sm md:text-base opacity-70 text-gray-300 max-w-3xl mb-8"
                                     >
                                         With 4+ years of hands-on experience, I've helped 30+ companies achieve their
                                         digital goals through cutting-edge technology and creative problem-solving.
@@ -1201,8 +1204,8 @@ const CyberpunkMenu = () => {
                                 onClick={() => handlePageChange(null)}
                                 className="fixed right-0 top-0 h-full md:w-20 flex justify-end items-center pr-8 pl-2"
                             >
-                                <div className={`absolute -right-5 rotate-90 text-sm font-cyber ${page.text}`}>
-                                    <GlitchText text={"Back here"} textColor={page.text}/>
+                                <div className={`absolute right-0 rotate-90 text-sm font-cyber ${page.text}`}>
+                                    <GlitchText text={"Menu"} textColor={page.text}/>
                                 </div>
                                 <motion.div
                                     animate={{x: [0, 5, 0]}}
