@@ -47,7 +47,7 @@ import ProjectCard from "@/components/ProjectCard";
 import CyberpunkSideNavbar from "@/components/CyberpunkSideNavbar";
 
 const CyberpunkMenu = () => {
-    const [activePage, setActivePage] = useState(null);
+    const [activePage, setActivePage] = useState('home');
     const isMobile = useIsMobile();
     const [mousePosition, setMousePosition] = useState({x: 0, y: 0});
 
@@ -1061,13 +1061,13 @@ const CyberpunkMenu = () => {
         {icon: <Linkedin/>, url: "https://www.linkedin.com/in/malak-saad-354a0139a/"},
     ];
 
-    const items = [
-        {id: "home", label: "Home", icon: <Home size={18}/>},
-        {id: "about", label: "About", icon: <User size={18}/>},
-        {id: "projects", label: "Projects", icon: <Folder size={18}/>},
-        {id: "contact", label: "Contact", icon: <Mail size={18}/>},
-        {id: "settings", label: "Settings", icon: <Settings size={18}/>},
-    ];
+    const NavLinks = [
+        {label: "Home", action: () => handlePageChange('home')},
+        {label: "About Us", action: () => handlePageChange('about')},
+        {label: "Services", action: () => handlePageChange('services')},
+        {label: "Portfolio", action: () => handlePageChange('portfolio')},
+        {label: "Contact", action: () => handlePageChange('contact')},
+    ]
     return (
         <div className="flex bg-background w-full h-screen relative overflow-hidden">
 
@@ -1077,7 +1077,6 @@ const CyberpunkMenu = () => {
                     const isActive = activePage === page.id;
                     const totalTabs = pages.length;
                     const tabWidth = 100 / totalTabs;
-
 
                     return (
                         <motion.div
@@ -1129,7 +1128,6 @@ const CyberpunkMenu = () => {
 
                                         />
                                     </div>
-
                                     {getPageContent(page)}
                                 </motion.div>
                             ) : (
@@ -1204,35 +1202,52 @@ const CyberpunkMenu = () => {
                             </button>
 
 
-                            <div className="fixed left-0 -top-10 h-full md:w-14 w-10 flex flex-col items-center justify-center">
-
-                                <div className="flex flex-col items-center justify-center space-y-18">
-                                    {[
-                                        {label: "Home", action: () => handlePageChange('home')},
-                                        {label: "About Us", action: () => handlePageChange('about')},
-                                        {label: "Services", action: () => handlePageChange('services')},
-                                        {label: "Portfolio", action: () => handlePageChange('portfolio')},
-                                        {label: "Contact", action: () => handlePageChange('contact')},
-                                    ].map((item, index) => (
-                                        <button
+                            <div
+                                className="fixed left-0 -top-10 h-full md:w-14 w-10 flex flex-col items-center justify-center">
+                                {/* MAIN NAV BUTTONS */}
+                                <motion.div
+                                    className="flex flex-col items-center justify-center space-y-18"
+                                    initial={{opacity: 0, y: 20}}
+                                    animate={{opacity: 1, y: 0}}
+                                    transition={{duration: 0.6, ease: "easeOut"}}
+                                >
+                                    {NavLinks.map((item, index) => (
+                                        <motion.button
                                             key={index}
                                             onClick={item.action}
-                                            className={`rotate-90 text-sm font-cyber font-bold  ${page.title === item.label && page.text}  hover:font-cyber-outline `}
+                                            className={`rotate-90 text-sm font-normal  font-cyber tracking-wide   ${page.title === item.label ? page.text : ""}  transition-all duration-300 hover:tracking-wider hover:font-cyber-outline hover:font-bold `}
+                                            whileHover={{opacity: 1}}
+                                            whileTap={{scale: 0.9}}
+                                            initial={{opacity: 0, y: 10}}
+                                            animate={{opacity: 1, y: 0}}
+                                            transition={{duration: 0.4, delay: index * 0.1}}
                                         >
                                             {item.label}
-                                        </button>
+                                        </motion.button>
                                     ))}
-                                </div>
+                                </motion.div>
 
-                                <div className="fixed bottom-14 md:-left-4 -left-[22px] w-[90px]  flex justify-end items-center rotate-90 font-cyber-outline font-bold">
-                                    <GlitchText text={page.title} textColor={page.text}/>
-                                </div>
+                                {/* CURRENT PAGE TEXT (GLITCH) */}
+                                <motion.div
+                                    className="fixed bottom-14 md:-left-4 -left-[22px] w-[90px] flex justify-end items-center rotate-90 font-cyber-outline font-bold"
+                                    initial={{opacity: 0, y: 20}}
+                                    animate={{opacity: 1, y: 0}}
+                                    transition={{duration: 0.8, delay: 0.5}}
+                                >
+                                    <motion.div
+                                        animate={{opacity: [1, 0.6, 1]}}
+                                        transition={{duration: 2, repeat: Infinity}}
+                                    >
+                                        <GlitchText text={page.title} textColor={page.text}/>
+                                    </motion.div>
+                                </motion.div>
+
                             </div>
                             <motion.div
                                 className="fixed top-6 md:right-6 right-4 flex flex-col gap-3 z-50"
                                 initial={{opacity: 0, x: -20}}
                                 animate={{opacity: 1, x: 0}}
-                                transition={{delay: 1.2}}
+                                transition={{delay: 1.5}}
                             >
                                 {socialLinks.map((s, i) => (
                                     <motion.a
