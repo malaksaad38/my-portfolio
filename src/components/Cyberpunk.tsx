@@ -246,7 +246,6 @@ const CyberpunkMenu = () => {
                                 {/* content section */}
                                 <div className={"relative mt-72 sm:mt-0 backdrop-opacity-50"}>
                                     <div className="sm:hidden block absolute bg-slate-900 w-full text-blue-500 blur-lg h-48 m-0 p-0  -z-20 ">
-                                        asdfklasjdlf asdfaklsdjf lkasdjfkla jsdlkf
                                     </div>
                                     <motion.h1
                                         variants={textVariant}
