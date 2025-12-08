@@ -13,12 +13,12 @@ import {
     Code,
     Cpu,
     Database,
-    ExternalLink, Folder,
+    ExternalLink,
     FolderKanban,
     Gauge,
     Github,
     Globe,
-    GraduationCap, Home,
+    GraduationCap,
     Layers,
     Lightbulb,
     Linkedin,
@@ -31,7 +31,7 @@ import {
     Phone,
     Rocket,
     SearchCheck,
-    Server, Settings,
+    Server,
     Smartphone,
     Smile,
     Sparkles,
@@ -44,7 +44,6 @@ import {
 import {GlitchText} from "@/components/GlitchText";
 import ContactForm from "@/components/ContactForm";
 import ProjectCard from "@/components/ProjectCard";
-import CyberpunkSideNavbar from "@/components/CyberpunkSideNavbar";
 
 const CyberpunkMenu = () => {
     const [activePage, setActivePage] = useState('home');
@@ -230,192 +229,204 @@ const CyberpunkMenu = () => {
                             <motion.div
                                 initial="hidden"
                                 animate="visible"
-                                className="max-w-7xl px-4 md:px-8"
+                                className="relative max-w-7xl px-4 md:px-8"
                             >
-                                {/* Name */}
-                                <motion.h1
-                                    variants={textVariant}
-                                    custom={0.2}
-                                    className={`text-4xl md:text-5xl font-black mb-4 font-cyber-outline flex items-center gap-3 ${page.text} bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent`}
-                                >
-                                    <GlitchText text="Malak Saad" textColor={page.text}/>
-                                </motion.h1>
-
-                                {/* Subtitle */}
-                                <motion.h2
-                                    variants={textVariant}
-                                    custom={0.25}
-                                    className="text-xl md:text-2xl font-bold text-gray-300 mb-2 flex items-center gap-2"
-                                >
-                                    <TerminalSquare className="hidden md:block w-6 h-6 text-blue-400"/>
-                                    Full-Stack Developer & UI Specialist
-                                </motion.h2>
-
-                                {/* Cyber Label */}
                                 <motion.div
-                                    variants={textVariant}
-                                    custom={0.3}
-                                    className="flex items-center gap-2 mb-6"
+                                    initial={{ opacity: 0, x: -40 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 0.8, ease: "easeOut" }}
+                                    className="absolute right-0 -top-72 sm:top-0 px-4 md:px-8"
                                 >
-                                    <Sparkles className="w-3 h-3 text-blue-500 animate-pulse"/>
-                                    <h4 className="text-xs tracking-widest opacity-70 text-blue-300 uppercase">
-                                        Building the future of web
-                                    </h4>
+                                    <img
+                                        src="/my-image.png"
+                                        alt="Profile"
+                                        className="w-full h-[52vh] md:w-[70vh] md:h-[80vh] -mt-10 sm:mt-0 opacity-80 object-cover object-center"
+                                    />
                                 </motion.div>
+                                {/* content section */}
+                                <div className={"mt-72 sm:mt-0 backdrop-opacity-50"}>
+                                    <motion.h1
+                                        variants={textVariant}
+                                        custom={0.2}
+                                        className={`text-4xl md:text-5xl text-shadow-md text-shadow-black font-black mb-4 font-cyber-outline flex items-center gap-3 ${page.text} bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent`}
+                                    >
+                                        <GlitchText text="Malak Saad" textColor={page.text}/>
+                                    </motion.h1>
 
-                                {/* Description */}
-                                <motion.p
-                                    variants={textVariant}
-                                    custom={0.4}
-                                    className="text-base md:text-lg leading-relaxed max-w-3xl opacity-85 text-gray-200 mb-2 font-light"
-                                >
-                                    I transform ideas into powerful digital solutions. Specializing in{" "}
-                                    <span className="font-bold text-blue-400">Next.js, React, TypeScript</span> and{" "}
-                                    <span className="font-bold text-blue-400">Node.js</span>, I craft scalable
-                                    applications with exceptional user experiences.
-                                </motion.p>
+                                    {/* Subtitle */}
+                                    <motion.h2
+                                        variants={textVariant}
+                                        custom={0.25}
+                                        className="text-xl md:text-2xl font-bold text-gray-300 mb-2 flex items-center gap-2"
+                                    >
+                                        <TerminalSquare className="hidden md:block w-6 h-6 text-blue-400"/>
+                                        Full-Stack Developer & UI Specialist
+                                    </motion.h2>
 
-                                {/* Sub Description */}
-                                <motion.p
-                                    variants={textVariant}
-                                    custom={0.45}
-                                    className="text-sm md:text-base opacity-70 text-gray-400 max-w-3xl mb-8"
-                                >
-                                    With 4+ years of hands-on experience, I've helped 30+ companies achieve their
-                                    digital goals through cutting-edge technology and creative problem-solving.
-                                </motion.p>
 
-                                {/* Stats Section */}
-                                <motion.div
-                                    variants={textVariant}
-                                    custom={0.55}
-                                    className="grid grid-cols-3 gap-4 md:gap-8 py-6 mb-8 border-y border-blue-500/30"
-                                >
-                                    <div className="text-center group">
-                                        <FolderKanban className="mx-auto mb-2 w-6 h-6 text-blue-400"/>
-                                        <div
-                                            className={`text-2xl md:text-3xl font-black ${page.text} group-hover:scale-110 transition-transform`}>
-                                            12+
+                                    {/* Cyber Label */}
+                                    <motion.div
+                                        variants={textVariant}
+                                        custom={0.3}
+                                        className="flex items-center gap-2 mb-6"
+                                    >
+                                        <Sparkles className="w-3 h-3 text-blue-500 animate-pulse"/>
+                                        <h4 className="text-xs tracking-widest opacity-70 text-blue-300 uppercase">
+                                            Building the future of web
+                                        </h4>
+                                    </motion.div>
+
+                                    {/* Description */}
+                                    <motion.p
+                                        variants={textVariant}
+                                        custom={0.4}
+                                        className="text-base md:text-lg leading-relaxed max-w-3xl opacity-85 text-gray-200 mb-2 font-light "
+                                    >
+                                        I transform ideas into powerful digital solutions. Specializing in{" "}
+                                        <span className="font-bold text-blue-400">Next.js, React, TypeScript</span> and{" "}
+                                        <span className="font-bold text-blue-400">Node.js</span>, I craft scalable
+                                        applications with exceptional user experiences.
+                                    </motion.p>
+
+                                    {/* Sub Description */}
+                                    <motion.p
+                                        variants={textVariant}
+                                        custom={0.45}
+                                        className="text-sm md:text-base opacity-70 text-gray-400 max-w-3xl mb-8"
+                                    >
+                                        With 4+ years of hands-on experience, I've helped 30+ companies achieve their
+                                        digital goals through cutting-edge technology and creative problem-solving.
+                                    </motion.p>
+
+                                    {/* Stats Section */}
+                                    <motion.div
+                                        variants={textVariant}
+                                        custom={0.55}
+                                        className="grid grid-cols-3 md:grid-cols-5  gap-4 md:gap-8 py-6 mb-8"
+                                    >
+                                        <div className="text-center group">
+                                            <div
+                                                className={`text-2xl md:text-3xl font-black ${page.text} group-hover:scale-110 transition-transform`}>
+                                                12+
+                                            </div>
+                                            <div
+                                                className="text-xs text-gray-400 uppercase tracking-wider mt-2 font-semibold">
+                                                Projects Delivered
+                                            </div>
                                         </div>
-                                        <div
-                                            className="text-xs text-gray-400 uppercase tracking-wider mt-2 font-semibold">
-                                            Projects Delivered
-                                        </div>
-                                    </div>
 
-                                    <div className="text-center group">
-                                        <Smile className="mx-auto mb-2 w-6 h-6 text-blue-400"/>
-                                        <div
-                                            className={`text-2xl md:text-3xl font-black ${page.text} group-hover:scale-110 transition-transform`}>
-                                            08+
+                                        <div className="text-center group">
+                                            <div
+                                                className={`text-2xl md:text-3xl font-black ${page.text} group-hover:scale-110 transition-transform`}>
+                                                08+
+                                            </div>
+                                            <div
+                                                className="text-xs text-gray-400 uppercase tracking-wider mt-2 font-semibold">
+                                                Happy Clients
+                                            </div>
                                         </div>
-                                        <div
-                                            className="text-xs text-gray-400 uppercase tracking-wider mt-2 font-semibold">
-                                            Happy Clients
+
+                                        <div className="text-center group">
+                                            <div
+                                                className={`text-2xl md:text-3xl font-black ${page.text} group-hover:scale-110 transition-transform`}>
+                                                04+
+                                            </div>
+                                            <div
+                                                className="text-xs text-gray-400 uppercase tracking-wider mt-2 font-semibold">
+                                                Years Experience
+                                            </div>
                                         </div>
-                                    </div>
+                                    </motion.div>
 
-                                    <div className="text-center group">
-                                        <Clock className="mx-auto mb-2 w-6 h-6 text-blue-400"/>
-                                        <div
-                                            className={`text-2xl md:text-3xl font-black ${page.text} group-hover:scale-110 transition-transform`}>
-                                            4+
+                                    {/* Tech Stack */}
+                                    <motion.div variants={textVariant} custom={0.7} className="mb-8">
+                                        <h3 className="text-xs text-gray-500 uppercase tracking-widest font-bold mb-3 flex items-center gap-2">
+                                            <Cpu className="w-4 h-4 text-blue-400"/>
+                                            Tech Stack & Expertise
+                                        </h3>
+
+                                        <div className="flex flex-wrap gap-2 sm:gap-3 opacity-90">
+                                            {[
+                                                "React",
+                                                "Next.js",
+                                                "TypeScript",
+                                                "JavaScript",
+                                                "Node.js",
+                                                "MongoDB",
+                                                "Tailwind CSS",
+                                            ].map((tag, i) => (
+                                                <motion.span
+                                                    key={i}
+                                                    variants={itemVariant}
+                                                    className={`px-3 py-2 border ${colors.border} bg-blue-500/10 rounded-lg text-xs font-semibold text-blue-300 hover:bg-blue-500/20 hover:shadow-lg transition-all duration-300 cursor-default flex items-center gap-2`}
+                                                >
+                                                    <Atom className="w-3 h-3"/>
+                                                    {tag}
+                                                </motion.span>
+                                            ))}
                                         </div>
-                                        <div
-                                            className="text-xs text-gray-400 uppercase tracking-wider mt-2 font-semibold">
-                                            Years Experience
-                                        </div>
-                                    </div>
-                                </motion.div>
+                                    </motion.div>
 
-                                {/* Tech Stack */}
-                                <motion.div variants={textVariant} custom={0.7} className="mb-8">
-                                    <h3 className="text-xs text-gray-500 uppercase tracking-widest font-bold mb-3 flex items-center gap-2">
-                                        <Cpu className="w-4 h-4 text-blue-400"/>
-                                        Tech Stack & Expertise
-                                    </h3>
-
-                                    <div className="flex flex-wrap gap-2 sm:gap-3 opacity-90">
-                                        {[
-                                            "React",
-                                            "Next.js",
-                                            "TypeScript",
-                                            "JavaScript",
-                                            "Node.js",
-                                            "MongoDB",
-                                            "Tailwind CSS",
-                                        ].map((tag, i) => (
-                                            <motion.span
-                                                key={i}
-                                                variants={itemVariant}
-                                                className={`px-3 py-2 border ${colors.border} bg-blue-500/10 rounded-lg text-xs font-semibold text-blue-300 hover:bg-blue-500/20 hover:shadow-lg transition-all duration-300 cursor-default flex items-center gap-2`}
-                                            >
-                                                <Atom className="w-3 h-3"/>
-                                                {tag}
-                                            </motion.span>
-                                        ))}
-                                    </div>
-                                </motion.div>
-
-                                {/* CTA Buttons */}
-                                <motion.div
-                                    variants={textVariant}
-                                    custom={0.9}
-                                    className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 mb-10"
-                                >
-                                    <button
-                                        className="px-6 sm:px-8 py-3 rounded-xl border-2 border-blue-500 text-blue-300 font-black uppercase tracking-widest text-[10px] sm:text-xs
+                                    {/* CTA Buttons */}
+                                    <motion.div
+                                        variants={textVariant}
+                                        custom={0.9}
+                                        className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 mb-10"
+                                    >
+                                        <button
+                                            className="px-6 sm:px-8 py-3 rounded-xl border-2 border-blue-500 text-blue-300 font-black uppercase tracking-widest text-[10px] sm:text-xs
                             bg-gradient-to-br from-blue-600/30 to-blue-500/10 hover:from-blue-600/50 hover:to-blue-500/30
                             shadow-lg shadow-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/60 transition-all duration-300 hover:scale-105
                             relative overflow-hidden group flex-1 sm:flex-none flex items-center justify-center gap-2"
-                                        onClick={() => handlePageChange("portfolio")}
-                                    >
-                                        <ExternalLink className="w-4 h-4"/>
-                                        View My Work
-                                    </button>
+                                            onClick={() => handlePageChange("portfolio")}
+                                        >
+                                            <ExternalLink className="w-4 h-4"/>
+                                            View My Work
+                                        </button>
 
-                                    <button
-                                        className="px-6 sm:px-8 py-3 rounded-xl border-2 border-blue-400/50 text-blue-200 font-black uppercase tracking-widest text-[10px] sm:text-xs
+                                        <button
+                                            className="px-6 sm:px-8 py-3 rounded-xl border-2 border-blue-400/50 text-blue-200 font-black uppercase tracking-widest text-[10px] sm:text-xs
                             bg-gradient-to-br from-blue-500/10 to-transparent hover:from-blue-500/30 hover:to-blue-400/10
                             shadow-lg shadow-blue-400/20 hover:shadow-xl hover:shadow-blue-400/40 transition-all duration-300 hover:scale-105
                             relative overflow-hidden group flex-1 sm:flex-none flex items-center justify-center gap-2"
-                                        onClick={() => handlePageChange("contact")}
-                                    >
-                                        <MessageSquare className="w-4 h-4"/>
-                                        Let’s Talk
-                                    </button>
-                                </motion.div>
-
-                                {/* Quick Stats */}
-                                <motion.div
-                                    variants={textVariant}
-                                    custom={1.0}
-                                    className="grid md:grid-cols-3 gap-4 mb-8"
-                                >
-                                    {[
-                                        {label: "Response Time", value: "< 24 hours", icon: Clock},
-                                        {label: "Project Completion", value: "99% On-time", icon: FolderKanban},
-                                        {label: "Client Satisfaction", value: "100%", icon: Smile},
-                                    ].map((stat, i) => (
-                                        <div
-                                            key={i}
-                                            className="border border-blue-500/30 rounded-lg p-3 bg-blue-500/5 text-center flex flex-col items-center gap-2"
+                                            onClick={() => handlePageChange("contact")}
                                         >
-                                            <stat.icon className="w-5 h-5 text-blue-400"/>
-                                            <p className="text-xs text-gray-400 uppercase tracking-wider">{stat.label}</p>
-                                            <p className="text-base md:text-lg font-black text-blue-300">{stat.value}</p>
-                                        </div>
-                                    ))}
-                                </motion.div>
+                                            <MessageSquare className="w-4 h-4"/>
+                                            Let’s Talk
+                                        </button>
+                                    </motion.div>
 
-                                {/* Signature */}
-                                <motion.div
-                                    variants={textVariant}
-                                    custom={1.1}
-                                    className="opacity-40 font-cyber-outline tracking-widest text-[10px] md:text-xs text-gray-500 border-t border-blue-500/20 pt-6"
-                                >
-                                    ▸ CRAFTING DIGITAL EXCELLENCE SINCE 2020 ▸
-                                </motion.div>
+                                    {/* Quick Stats */}
+                                    <motion.div
+                                        variants={textVariant}
+                                        custom={1.0}
+                                        className="grid md:grid-cols-3 gap-4 mb-8"
+                                    >
+                                        {[
+                                            {label: "Response Time", value: "< 24 hours", icon: Clock},
+                                            {label: "Project Completion", value: "99% On-time", icon: FolderKanban},
+                                            {label: "Client Satisfaction", value: "100%", icon: Smile},
+                                        ].map((stat, i) => (
+                                            <div
+                                                key={i}
+                                                className="border border-blue-500/30 rounded-lg p-3 bg-blue-500/5 text-center flex flex-col items-center gap-2"
+                                            >
+                                                <stat.icon className="w-5 h-5 text-blue-400"/>
+                                                <p className="text-xs text-gray-400 uppercase tracking-wider">{stat.label}</p>
+                                                <p className="text-base md:text-lg font-black text-blue-300">{stat.value}</p>
+                                            </div>
+                                        ))}
+                                    </motion.div>
+
+                                    {/* Signature */}
+                                    <motion.div
+                                        variants={textVariant}
+                                        custom={1.1}
+                                        className="opacity-40 font-cyber-outline tracking-widest text-[10px] md:text-xs text-gray-500 border-t border-blue-500/20 pt-6"
+                                    >
+                                        ▸ CRAFTING DIGITAL EXCELLENCE SINCE 2020 ▸
+                                    </motion.div>
+                                </div>
                             </motion.div>
                         </div>
                     </CyberpunkSpotlight>);
@@ -489,7 +500,7 @@ const CyberpunkMenu = () => {
                                     {/* ABOUT TEXT */}
                                     <motion.div
                                         variants={itemVariant}
-                                        className="text-base md:text-lg leading-relaxed text-gray-300 border-l-4 border-green-500 pl-6 py-4 bg-green-500/5 rounded-r-lg"
+                                        className="text-base md:text-lg leading-relaxed text-gray-300 border-l-4 border-green-500 pl-6 py-4 px-4 bg-green-500/5 rounded-r-lg"
                                     ><p className="mb-4"> I'm <span
                                         className="font-black text-green-400">Malak Saad</span>, a passionate full-stack
                                         developer and creative problem solver with a mission to build digital products
@@ -1081,7 +1092,7 @@ const CyberpunkMenu = () => {
                     return (
                         <motion.div
                             key={page.id}
-                            className="h-full text-foreground bg-background cursor-pointer absolute overflow-hidden"
+                            className="h-full text-foreground bg-background absolute overflow-hidden"
                             animate={{
                                 left: isActive ? 0 : (
                                     activePage === null ? `${index * tabWidth}%` : (
@@ -1133,7 +1144,7 @@ const CyberpunkMenu = () => {
                             ) : (
                                 /* Tab content - Inactive Page */
                                 <motion.div
-                                    className="h-full bg-background transition-all duration-500 ease-in font-cyber hover:font-cyber-outline w-full flex items-center justify-center overflow-hidden"
+                                    className="h-full bg-background cursor-pointer transition-all duration-500 ease-in font-cyber hover:font-cyber-outline w-full flex items-center justify-center overflow-hidden"
                                 >
                                     {/* Glow line effect */}
                                     <motion.div

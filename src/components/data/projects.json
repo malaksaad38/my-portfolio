@@ -3,7 +3,13 @@
     "num": "01",
     "title": "E-Commerce Platform",
     "desc": "A full-featured e-commerce solution with advanced product filtering, shopping cart, secure payment processing, and inventory management.",
-    "tags": ["Next.js", "MongoDB", "Stripe", "Tailwind CSS", "TypeScript"],
+    "tags": [
+      "Next.js",
+      "MongoDB",
+      "Stripe",
+      "Tailwind CSS",
+      "TypeScript"
+    ],
     "impact": "50K+ users • $2M+ GMV",
     "icon": "ShoppingCart",
     "image": "/images/projects/ecommerce.jpg"
@@ -12,7 +18,13 @@
     "num": "02",
     "title": "SaaS Analytics Dashboard",
     "desc": "Real-time analytics platform with interactive data visualization, user management, and customizable reporting features for enterprise clients.",
-    "tags": ["React", "Node.js", "PostgreSQL", "Chart.js", "AWS"],
+    "tags": [
+      "React",
+      "Node.js",
+      "PostgreSQL",
+      "Chart.js",
+      "AWS"
+    ],
     "impact": "100+ companies • $1M ARR",
     "icon": "BarChart2",
     "image": "/images/projects/dashboard.jpg"
@@ -21,7 +33,12 @@
     "num": "03",
     "title": "Social Media Network",
     "desc": "Full-stack social networking application with real-time messaging, notifications, media sharing, and algorithmic feed generation.",
-    "tags": ["Next.js", "Firebase", "WebSocket", "Framer Motion"],
+    "tags": [
+      "Next.js",
+      "Firebase",
+      "WebSocket",
+      "Framer Motion"
+    ],
     "impact": "30K+ active users",
     "icon": "Users",
     "image": "/images/projects/social.jpg"
@@ -30,7 +47,12 @@
     "num": "04",
     "title": "AI Content Generator",
     "desc": "Intelligent content creation tool powered by GPT integration with multiple templates, batch processing, and content optimization features.",
-    "tags": ["Next.js", "OpenAI API", "Firebase", "Tailwind"],
+    "tags": [
+      "Next.js",
+      "OpenAI API",
+      "Firebase",
+      "Tailwind"
+    ],
     "impact": "5K+ monthly users",
     "icon": "Cpu",
     "image": "/images/projects/ai.jpg"
@@ -39,7 +61,12 @@
     "num": "05",
     "title": "Project Management Suite",
     "desc": "Collaborative workspace with real-time updates, task management, team communication, and Gantt chart visualization.",
-    "tags": ["React", "Express", "MongoDB", "Socket.io"],
+    "tags": [
+      "React",
+      "Express",
+      "MongoDB",
+      "Socket.io"
+    ],
     "impact": "1000+ teams",
     "icon": "ClipboardList",
     "image": "/images/projects/pm.jpg"
@@ -48,7 +75,12 @@
     "num": "06",
     "title": "Portfolio Website",
     "desc": "Interactive 3D portfolio with smooth animations, scroll-triggered effects, and immersive user experience showcasing creative design.",
-    "tags": ["Next.js", "Three.js", "Framer Motion", "GSAP"],
+    "tags": [
+      "Next.js",
+      "Three.js",
+      "Framer Motion",
+      "GSAP"
+    ],
     "impact": "Industry recognition",
     "icon": "MonitorSmartphone",
     "image": "/images/projects/portfolio.jpg"

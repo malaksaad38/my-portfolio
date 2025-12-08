@@ -30,7 +30,9 @@ const orbitron = Orbitron({
 
 export const metadata: Metadata = {
   title: "Malak Saad | My Portfolio",
-  description: "I'm Malak Saad, a passionate  software developer dedicated to building high-performance, user-friendly web applications. From concept to deployment, we turn ideas into digital solutions that drive growth and innovation.",
+  description: "I'm Malak Saad, a passionate  software developer dedicated to building " +
+      "high-performance, user-friendly web applications. From concept to deployment, we turn ideas into " +
+      "digital solutions that drive growth and innovation.",
 };
 
 export default function RootLayout({
@@ -42,7 +44,6 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
     <head><title></title></head>
     <body
-      // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       className={`${inter.variable} ${orbitron.variable} font-inter antialiased`}
     >
     <ThemeProvider

@@ -1,8 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useState } from "react";
-import { User, MailCheck, Pencil, Send } from "lucide-react";
+import {motion} from "framer-motion";
+import {useState} from "react";
+import {MailCheck, Pencil, Send, User} from "lucide-react";
 
 export default function ContactForm() {
     const [formData, setFormData] = useState({
@@ -44,7 +44,7 @@ export default function ContactForm() {
         try {
             const res = await fetch("/api/contact", {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
+                headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(formData),
             });
 
@@ -52,7 +52,7 @@ export default function ContactForm() {
 
             if (data.success) {
                 setStatus("success");
-                setFormData({ name: "", email: "", subject: "", message: "" });
+                setFormData({name: "", email: "", subject: "", message: ""});
                 setErrors({});
             } else {
                 setStatus("error");
@@ -70,9 +70,9 @@ export default function ContactForm() {
                 bg-gradient-to-br from-red-500/10 to-red-400/5
                 backdrop-blur-md
             "
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={{opacity: 0, y: 20}}
+            animate={{opacity: 1, y: 0}}
+            transition={{duration: 0.5}}
         >
             <h2 className="font-black text-red-400 mb-6 uppercase tracking-wider">
                 Send Me a Message
@@ -81,13 +81,13 @@ export default function ContactForm() {
             <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-6">
                 {/* NAME */}
                 <div className="relative">
-                    <User className="absolute left-3 top-3 w-5 h-5 text-red-400/60" />
+                    <User className="absolute left-3 top-3 w-5 h-5 text-red-400/60"/>
                     <input
                         type="text"
                         placeholder="Your Full Name"
                         value={formData.name}
                         onChange={(e) =>
-                            setFormData({ ...formData, name: e.target.value })
+                            setFormData({...formData, name: e.target.value})
                         }
                         className="w-full pl-10 bg-gray-900/50 border border-red-500/30 rounded-lg px-4 py-3
                         text-gray-300 placeholder-gray-600 focus:outline-none focus:border-red-400
@@ -98,13 +98,13 @@ export default function ContactForm() {
 
                 {/* EMAIL */}
                 <div className="relative">
-                    <MailCheck className="absolute left-3 top-3 w-5 h-5 text-red-400/60" />
+                    <MailCheck className="absolute left-3 top-3 w-5 h-5 text-red-400/60"/>
                     <input
                         type="email"
                         placeholder="Your Email Address"
                         value={formData.email}
                         onChange={(e) =>
-                            setFormData({ ...formData, email: e.target.value })
+                            setFormData({...formData, email: e.target.value})
                         }
                         className="w-full pl-10 bg-gray-900/50 border border-red-500/30 rounded-lg px-4 py-3
                         text-gray-300 placeholder-gray-600 focus:outline-none focus:border-red-400
@@ -116,13 +116,13 @@ export default function ContactForm() {
 
             {/* SUBJECT */}
             <div className="relative mb-6">
-                <Pencil className="absolute left-3 top-3 w-5 h-5 text-red-400/60" />
+                <Pencil className="absolute left-3 top-3 w-5 h-5 text-red-400/60"/>
                 <input
                     type="text"
                     placeholder="Project Subject"
                     value={formData.subject}
                     onChange={(e) =>
-                        setFormData({ ...formData, subject: e.target.value })
+                        setFormData({...formData, subject: e.target.value})
                     }
                     className="w-full pl-10 bg-gray-900/50 border border-red-500/30 rounded-lg px-4 py-3
                     text-gray-300 placeholder-gray-600 focus:outline-none focus:border-red-400
@@ -133,13 +133,13 @@ export default function ContactForm() {
 
             {/* MESSAGE */}
             <div className="relative mb-6">
-                <Pencil className="absolute left-3 top-3 w-5 h-5 text-red-400/60" />
+                <Pencil className="absolute left-3 top-3 w-5 h-5 text-red-400/60"/>
                 <textarea
                     placeholder="Tell me about your project..."
                     rows={6}
                     value={formData.message}
                     onChange={(e) =>
-                        setFormData({ ...formData, message: e.target.value })
+                        setFormData({...formData, message: e.target.value})
                     }
                     className="w-full pl-10 bg-gray-900/50 border border-red-500/30 rounded-lg px-4 py-3
                     text-gray-300 placeholder-gray-600 focus:outline-none focus:border-red-400
@@ -158,7 +158,7 @@ export default function ContactForm() {
                 hover:shadow-lg hover:shadow-red-500/40 flex items-center justify-center gap-3
             "
             >
-                <Send className="w-6 h-6 text-red-300" />
+                <Send className="w-6 h-6 text-red-300"/>
                 {status === "sending" ? "Sending..." : "Send Message"}
             </button>
 
