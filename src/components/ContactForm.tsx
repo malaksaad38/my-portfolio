@@ -66,9 +66,10 @@ export default function ContactForm() {
         <motion.form
             onSubmit={handleSubmit}
             className="
-                border-2 border-red-500/50 rounded-xl p-6 md:p-8
+                border-2 border-red-500/50 rounded-xl p-6 md:p-8 px-4 md:px-6
                 bg-gradient-to-br from-red-500/10 to-red-400/5
                 backdrop-blur-md
+
             "
             initial={{opacity: 0, y: 20}}
             animate={{opacity: 1, y: 0}}
@@ -78,7 +79,7 @@ export default function ContactForm() {
                 Send Me a Message
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-6">
+            <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-4">
                 {/* NAME */}
                 <div className="relative">
                     <User className="absolute left-3 top-3 w-5 h-5 text-red-400/60"/>
@@ -91,7 +92,7 @@ export default function ContactForm() {
                         }
                         className="w-full pl-10 bg-gray-900/50 border border-red-500/30 rounded-lg px-4 py-3
                         text-gray-300 placeholder-gray-600 focus:outline-none focus:border-red-400
-                        focus:shadow-lg focus:shadow-red-500/20 transition-all font-semibold"
+                        focus:shadow-lg focus:shadow-red-500/20 transition-all font-semibold text-sm md:text-base"
                     />
                     {errors.name && <p className="text-red-400 mt-1 text-sm">{errors.name}</p>}
                 </div>
@@ -108,14 +109,14 @@ export default function ContactForm() {
                         }
                         className="w-full pl-10 bg-gray-900/50 border border-red-500/30 rounded-lg px-4 py-3
                         text-gray-300 placeholder-gray-600 focus:outline-none focus:border-red-400
-                        focus:shadow-lg focus:shadow-red-500/20 transition-all font-semibold"
+                        focus:shadow-lg focus:shadow-red-500/20 transition-all font-semibold text-sm md:text-base"
                     />
                     {errors.email && <p className="text-red-400 mt-1 text-sm">{errors.email}</p>}
                 </div>
             </div>
 
             {/* SUBJECT */}
-            <div className="relative mb-6">
+            <div className="relative mb-4">
                 <Pencil className="absolute left-3 top-3 w-5 h-5 text-red-400/60"/>
                 <input
                     type="text"
@@ -126,13 +127,13 @@ export default function ContactForm() {
                     }
                     className="w-full pl-10 bg-gray-900/50 border border-red-500/30 rounded-lg px-4 py-3
                     text-gray-300 placeholder-gray-600 focus:outline-none focus:border-red-400
-                    focus:shadow-lg focus:shadow-red-500/20 transition-all font-semibold"
+                    focus:shadow-lg focus:shadow-red-500/20 transition-all font-semibold text-sm md:text-base"
                 />
                 {errors.subject && <p className="text-red-400 mt-1 text-sm">{errors.subject}</p>}
             </div>
 
             {/* MESSAGE */}
-            <div className="relative mb-6">
+            <div className="relative mb-4">
                 <Pencil className="absolute left-3 top-3 w-5 h-5 text-red-400/60"/>
                 <textarea
                     placeholder="Tell me about your project..."
@@ -141,9 +142,9 @@ export default function ContactForm() {
                     onChange={(e) =>
                         setFormData({...formData, message: e.target.value})
                     }
-                    className="w-full pl-10 bg-gray-900/50 border border-red-500/30 rounded-lg px-4 py-3
+                    className="w-full md:h-72 pl-10 bg-gray-900/50 border border-red-500/30 rounded-lg px-4 py-3
                     text-gray-300 placeholder-gray-600 focus:outline-none focus:border-red-400
-                    focus:shadow-lg focus:shadow-red-500/20 transition-all resize-none font-semibold"
+                    focus:shadow-lg focus:shadow-red-500/20 transition-all resize-none font-semibold text-sm md:text-base"
                 />
                 {errors.message && <p className="text-red-400 mt-1 text-sm">{errors.message}</p>}
             </div>
@@ -152,15 +153,17 @@ export default function ContactForm() {
             <button
                 type="submit"
                 className="
-                w-full px-6 py-4 rounded-lg border-2 border-red-500 text-red-300 font-black
+                w-full md:px-6 px-4 py-4 rounded-lg border border-red-500 text-red-300 font-black
                 tracking-widest uppercase bg-gradient-to-r from-red-500/20 to-red-400/10
-                hover:from-red-500/40 hover:to-red-400/20 transition-all hover:scale-105
+                hover:from-red-500/40 hover:to-red-400/20 transition-all hover:scale-102
                 hover:shadow-lg hover:shadow-red-500/40 flex items-center justify-center gap-3
+                text-sm md:text-base
             "
             >
-                <Send className="w-6 h-6 text-red-300"/>
+                <Send className="w-5 h-5 text-red-300"/>
                 {status === "sending" ? "Sending..." : "Send Message"}
             </button>
+
 
             {/* STATUS MESSAGE */}
             {status === "success" && (

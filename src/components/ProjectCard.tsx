@@ -1,12 +1,11 @@
 "use client";
-
 import {useEffect, useState} from "react";
-import {motion} from "framer-motion";
-import projectsData from "@/components/data/projects.json"; // adjust path
-import {BarChart2,} from "lucide-react";
+import projectsData from "@/components/data/projects.json";
+import {ExternalLink, Github} from "lucide-react";
+import { motion } from "motion/react";
 
 interface ProjectCardProps {
-    projectId: string; // ID or num from JSON
+    projectId: string;
 }
 
 interface Project {
@@ -17,6 +16,8 @@ interface Project {
     impact: string;
     icon: string;
     image?: string;
+    github?: string;
+    live?: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({projectId}) => {
@@ -33,8 +34,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({projectId}) => {
         <motion.div
             whileHover={{scale: 1.03}}
             whileTap={{scale: 0.97}}
-            className="group border-2 border-yellow-500/50 rounded-xl overflow-hidden bg-gradient-to-br from-yellow-500/10 to-yellow-400/5 hover:border-yellow-400 hover:shadow-xl hover:shadow-yellow-500/40 transition-all cursor-pointer flex flex-col"
+            className="group border-2 border-yellow-500/50 rounded-xl overflow-hidden
+            bg-gradient-to-br from-yellow-500/10 to-yellow-400/5
+            hover:border-yellow-400 hover:shadow-xl hover:shadow-yellow-500/40
+            transition-all cursor-pointer flex flex-col"
         >
+
             {/* IMAGE */}
             {project.image && (
                 <div className="relative w-full h-48 overflow-hidden">
@@ -47,18 +52,31 @@ const ProjectCard: React.FC<ProjectCardProps> = ({projectId}) => {
                 </div>
             )}
 
-            <div className="p-6 flex flex-col flex-1 justify-between">
+            <div className="p-6 px-4 md:px-6 flex flex-col flex-1 justify-between">
+
                 {/* ICON & NUMBER */}
-                <div className="flex items-center justify-between mb-3">
-                    <div className="text-sm font-bold text-yellow-400 uppercase tracking-wider">
-                        Project {project.num}
-                    </div>
-                </div>
+                {/*<div className="flex items-center justify-between mb-3">*/}
+                {/*    <div className="text-sm font-bold text-yellow-400 uppercase tracking-wider">*/}
+                {/*        Project {project.num}*/}
+                {/*    </div>*/}
+                {/*</div>*/}
 
                 {/* TITLE */}
-                <h3 className="text-lg md:text-xl font-extrabold text-gray-200 mb-2 group-hover:text-yellow-300 transition-colors">
+                {project.live ? (
+                    <motion.a
+                        href={project.live}
+                        target="_blank"
+                    >
+                        <h3 className="text-lg md:text-xl font-extrabold text-gray-200 mb-2
+                        group-hover:text-yellow-300 transition-colors">
+                            {project.title}
+                        </h3>
+                    </motion.a>
+                ) : <h3 className="text-lg md:text-xl font-extrabold text-gray-200 mb-2
+                        group-hover:text-yellow-300 transition-colors">
                     {project.title}
-                </h3>
+                </h3>}
+
 
                 {/* DESCRIPTION */}
                 <p className="text-sm text-gray-400 mb-4 flex-1">{project.desc}</p>
@@ -68,19 +86,60 @@ const ProjectCard: React.FC<ProjectCardProps> = ({projectId}) => {
                     {project.tags.map((tag, i) => (
                         <span
                             key={i}
-                            className="text-[11px] md:text-xs px-2 py-1 bg-yellow-500/20 text-yellow-200 rounded font-semibold"
+                            className="text-[11px] md:text-xs px-2 py-1 bg-yellow-500/20
+                            text-yellow-200 rounded font-semibold"
                         >
-              {tag}
-            </span>
+                            {tag}
+                        </span>
                     ))}
                 </div>
 
                 {/* IMPACT */}
-                <div className="flex items-center gap-2 text-xs md:text-sm text-yellow-300 font-bold">
-                    <BarChart2 className="w-4 h-4 md:w-5 md:h-5"/>
-                    {project.impact}
+                {/*<div className="flex items-center gap-2 text-xs md:text-sm text-yellow-300 font-bold mb-4">*/}
+                {/*    <BarChart2 className="w-4 h-4 md:w-5 md:h-5"/>*/}
+                {/*    {project.impact}*/}
+                {/*</div>*/}
+
+                {/* BUTTONS */}
+                <div className="grid grid-cols-2 md:gap-6 gap-4 mt-auto">
+
+                    {/* GitHub Button */}
+                    {project.github && (
+                        <motion.a
+                            whileHover={{scale: 1.07}}
+                            href={project.github}
+                            target="_blank"
+                            className="flex items-center justify-center gap-2 px-3 py-2 border border-yellow-400/40
+                            rounded-md text-yellow-300 text-xs font-bold
+                            hover:border-yellow-300 hover:text-yellow-200
+                            hover:shadow-yellow-400/40 hover:shadow-md
+                            transition-all cyberpunk-btn"
+                        >
+                            <Github className="w-4 h-4"/>
+                            GitHub
+                        </motion.a>
+                    )}
+
+                    {/* Live Demo Button */}
+                    {project.live && (
+                        <motion.a
+                            whileHover={{scale: 1.07}}
+                            href={project.live}
+                            target="_blank"
+                            className="flex items-center justify-center gap-2 px-3 py-2 border border-yellow-400/40
+                            rounded-md text-yellow-300 text-xs font-bold
+                            hover:border-yellow-300 hover:text-yellow-200
+                            hover:shadow-yellow-400/40 hover:shadow-md
+                            transition-all cyberpunk-btn"
+                        >
+                            <ExternalLink className="w-4 h-4"/>
+                            View Live
+                        </motion.a>
+                    )}
+
                 </div>
             </div>
+
         </motion.div>
     );
 };

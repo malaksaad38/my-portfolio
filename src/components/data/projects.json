@@ -10,9 +10,10 @@
       "Tailwind CSS",
       "TypeScript"
     ],
-    "impact": "50K+ users • $2M+ GMV",
     "icon": "ShoppingCart",
-    "image": "/images/projects/ecommerce.jpg"
+    "image": "/images/projects/ecommerce.jpg",
+    "github": "https://github.com/yourname/ecommerce-platform",
+    "live": "https://yourdomain.com/ecommerce"
   },
   {
     "num": "02",
@@ -25,9 +26,10 @@
       "Chart.js",
       "AWS"
     ],
-    "impact": "100+ companies • $1M ARR",
     "icon": "BarChart2",
-    "image": "/images/projects/dashboard.jpg"
+    "image": "/images/projects/dashboard.jpg",
+    "github": "https://github.com/yourname/saas-dashboard",
+    "live": "https://yourdomain.com/dashboard"
   },
   {
     "num": "03",
@@ -39,9 +41,10 @@
       "WebSocket",
       "Framer Motion"
     ],
-    "impact": "30K+ active users",
     "icon": "Users",
-    "image": "/images/projects/social.jpg"
+    "image": "/images/projects/social.jpg",
+    "github": "https://github.com/yourname/social-network",
+    "live": "https://yourdomain.com/social"
   },
   {
     "num": "04",
@@ -53,9 +56,10 @@
       "Firebase",
       "Tailwind"
     ],
-    "impact": "5K+ monthly users",
     "icon": "Cpu",
-    "image": "/images/projects/ai.jpg"
+    "image": "/images/projects/ai.jpg",
+    "github": "https://github.com/yourname/ai-generator",
+    "live": "https://yourdomain.com/ai"
   },
   {
     "num": "05",
@@ -67,9 +71,10 @@
       "MongoDB",
       "Socket.io"
     ],
-    "impact": "1000+ teams",
     "icon": "ClipboardList",
-    "image": "/images/projects/pm.jpg"
+    "image": "/images/projects/pm.jpg",
+    "github": "https://github.com/yourname/project-management",
+    "live": "https://yourdomain.com/pm"
   },
   {
     "num": "06",
@@ -81,8 +86,9 @@
       "Framer Motion",
       "GSAP"
     ],
-    "impact": "Industry recognition",
     "icon": "MonitorSmartphone",
-    "image": "/images/projects/portfolio.jpg"
+    "image": "/images/projects/portfolio.jpg",
+    "github": "https://github.com/yourname/portfolio",
+    "live": "https://yourdomain.com"
   }
 ]

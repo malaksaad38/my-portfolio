@@ -30,7 +30,7 @@ import {
     PanelsTopLeft,
     Phone,
     Rocket,
-    SearchCheck,
+    SearchCheck, Send,
     Server,
     Smartphone,
     Smile,
@@ -45,6 +45,7 @@ import {GlitchText} from "@/components/GlitchText";
 import ContactForm from "@/components/ContactForm";
 import ProjectCard from "@/components/ProjectCard";
 import {CyberpunkGrid} from "@/components/CyberpunkGrid";
+import WhatsAppButton from "@/components/WhatsappButton";
 
 const CyberpunkMenu = () => {
     const [activePage, setActivePage] = useState('home');
@@ -207,7 +208,8 @@ const CyberpunkMenu = () => {
                             {/* === NEON BORDERS === */}
                             <div
                                 className="absolute right-0 top-0 h-full w-[2px] bg-gradient-to-b from-blue-500/50 via-blue-400/20 to-transparent"></div>
-                            <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-blue-400/20 to-blue-500/50"></div>
+                            <div
+                                className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-blue-400/20 to-blue-500/50"></div>
 
                             {/* === PAGE NUMBER BG === */}
                             <motion.h1
@@ -234,9 +236,9 @@ const CyberpunkMenu = () => {
 
 
                                 <motion.div
-                                    initial={{ opacity: 0, x: -40 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    transition={{ duration: 0.8, ease: "easeOut" }}
+                                    initial={{opacity: 0, x: -40}}
+                                    animate={{opacity: 1, x: 0}}
+                                    transition={{duration: 0.8, ease: "easeOut"}}
                                     className="absolute md:right-0 right-6 top-0 px-4 md:px-8"
                                 >
                                     <img
@@ -252,7 +254,7 @@ const CyberpunkMenu = () => {
                                                     ? "bg-gradient-to-b from-transparent via-blue-400/50 to-transparent"
                                                     : "bg-gradient-to-b from-transparent via-blue-300/30 to-transparent"
                                             }`}
-                                            animate={{ y: ["40%", "-80%"] }}
+                                            animate={{y: ["20%", "-80%"]}}
                                             transition={{
                                                 duration: 2,
                                                 repeat: Infinity,
@@ -261,7 +263,8 @@ const CyberpunkMenu = () => {
                                             }}
                                         />
                                     ))}
-                                    <div className={"absolute top-64 -right-12 md:top-5/6 md:-right-16 font-cyber text-[8px] md:text-xs rotate-90"}>
+                                    <div
+                                        className={"absolute top-64 -right-12 md:top-5/6 md:-right-16 font-cyber text-[8px] md:text-xs rotate-90"}>
                                         <GlitchText text="Malak Saad - Developer" textColor={page.text}/>
 
                                     </div>
@@ -270,7 +273,8 @@ const CyberpunkMenu = () => {
                                 </motion.div>
                                 {/* content section */}
                                 <div className={"relative pt-80 sm:pt-0 backdrop-opacity-50"}>
-                                    <div className="sm:hidden block absolute top-72 left-4 bg-slate-900 w-full text-blue-500 blur-lg h-48 m-0 p-0 -z-20 overflow-visible">
+                                    <div
+                                        className="sm:hidden block absolute top-72 left-4 bg-slate-900 w-full text-blue-500 blur-lg h-48 m-0 p-0 -z-20 overflow-visible">
                                     </div>
                                     <motion.h1
                                         variants={textVariant}
@@ -310,7 +314,8 @@ const CyberpunkMenu = () => {
                                         className="text-base md:text-lg leading-relaxed max-w-3xl opacity-85 text-gray-200 mb-2 font-light"
                                     >
                                         I transform ideas into powerful digital solutions. Specializing in{" "}
-                                        <span className="font-bold text-blue-400">Next.js, React, TypeScript</span> and{" "}
+                                        <span
+                                            className="font-bold text-blue-400">Next.js, React, TypeScript</span> and{" "}
                                         <span className="font-bold text-blue-400">Node.js</span>, I craft scalable
                                         applications with exceptional user experiences.
                                     </motion.p>
@@ -527,7 +532,7 @@ const CyberpunkMenu = () => {
                                     {/* ABOUT TEXT */}
                                     <motion.div
                                         variants={itemVariant}
-                                        className="text-base md:text-lg leading-relaxed text-gray-300 border-l-4 border-green-500 pl-6 py-4 px-4 bg-green-500/5 rounded-r-lg"
+                                        className="text-base md:text-lg leading-relaxed text-gray-300 border-l-4 border-green-500 md:px-6 py-4 px-4 bg-green-500/5 rounded-r-lg"
                                     ><p className="mb-4"> I'm <span
                                         className="font-black text-green-400">Malak Saad</span>, a passionate full-stack
                                         developer and creative problem solver with a mission to build digital products
@@ -542,7 +547,7 @@ const CyberpunkMenu = () => {
 
                                         {/* Expertise */}
                                         <div
-                                            className="border-2 border-green-500/50 rounded-xl p-6 bg-gradient-to-br from-green-500/10 to-green-400/5 hover:border-green-400 hover:shadow-lg hover:shadow-green-500/20 transition-all">
+                                            className="border-2 border-green-500/50 rounded-xl p-6  px-4 md:px-6 bg-gradient-to-br from-green-500/10 to-green-400/5 hover:border-green-400 hover:shadow-lg hover:shadow-green-500/20 transition-all">
                                             <h3 className="text-green-400 font-black mb-4 text-lg uppercase tracking-wider flex items-center gap-2">
                                                 <Layers className="w-6 h-6"/>
                                                 Expertise
@@ -571,7 +576,7 @@ const CyberpunkMenu = () => {
 
                                         {/* Achievements */}
                                         <div
-                                            className="border-2 border-green-500/50 rounded-xl p-6 bg-gradient-to-br from-green-500/10 to-green-400/5 hover:border-green-400 hover:shadow-lg hover:shadow-green-500/20 transition-all">
+                                            className="border-2 border-green-500/50 rounded-xl p-6  px-4 md:px-6 bg-gradient-to-br from-green-500/10 to-green-400/5 hover:border-green-400 hover:shadow-lg hover:shadow-green-500/20 transition-all">
                                             <h3 className="text-green-400 font-black mb-4 text-lg uppercase tracking-wider flex items-center gap-2">
                                                 <Award className="w-6 h-6"/>
                                                 Achievements
@@ -602,7 +607,7 @@ const CyberpunkMenu = () => {
                                     {/* EDUCATION */}
                                     <motion.div
                                         variants={itemVariant}
-                                        className="border-2 border-green-500/50 rounded-xl p-6 bg-gradient-to-br from-green-500/10 to-green-400/5 hover:border-green-400 hover:shadow-lg hover:shadow-green-500/20 transition-all"
+                                        className="border-2 border-green-500/50 rounded-xl p-6  px-4 md:px-6 bg-gradient-to-br from-green-500/10 to-green-400/5 hover:border-green-400 hover:shadow-lg hover:shadow-green-500/20 transition-all"
                                     >
                                         <h3 className="text-green-400 font-black mb-4 text-lg uppercase tracking-wider flex items-center gap-2">
                                             <GraduationCap className="w-6 h-6 hidden md:block"/>
@@ -781,7 +786,7 @@ const CyberpunkMenu = () => {
                                         <motion.div
                                             key={i}
                                             variants={itemVariant}
-                                            className="border-2 border-purple-500/50 rounded-xl p-6 bg-gradient-to-br from-purple-500/10 to-purple-400/5
+                                            className="border-2 border-purple-500/50 rounded-xl p-6 px-4 md:px-6 bg-gradient-to-br from-purple-500/10 to-purple-400/5
                                hover:border-purple-400 hover:shadow-lg hover:shadow-purple-500/30 transition-all group"
                                         >
                                             <div
@@ -850,7 +855,7 @@ const CyberpunkMenu = () => {
                                                 className="relative"
                                             >
                                                 <div
-                                                    className="border border-purple-500/30 rounded-xl p-6 text-center bg-purple-500/5 hover:bg-purple-500/10 transition-all duration-300 shadow-sm">
+                                                    className="border border-purple-500/30 rounded-xl p-6 px-4 md:px-6 text-center bg-purple-500/5 hover:bg-purple-500/10 transition-all duration-300 shadow-sm">
                                                     <div className="flex justify-center mb-3">{step.icon}</div>
                                                     <div
                                                         className="text-xl md:text-2xl font-bold text-purple-400 mb-2">{step.num}</div>
@@ -1016,67 +1021,76 @@ const CyberpunkMenu = () => {
                                 </motion.p>
 
                                 {/* CONTACT FORM */}
-                                <div className={"mb-8"}>
-                                    <ContactForm/>
-                                </div>
 
-                                <motion.div
-                                    variants={containerVariant}
-                                    initial="hidden"
-                                    animate="visible"
-                                    className="grid md:grid-cols-3 gap-6 mb-8"
-                                >
-                                    {[
-                                        {
-                                            icon: <Mail className="w-10 h-10 text-red-400"/>,
-                                            label: "Email",
-                                            value: "saad@dragondevs.co"
-                                        },
-                                        {
-                                            icon: <Phone className="w-10 h-10 text-red-400"/>,
-                                            label: "Phone",
-                                            value: "+923015488577"
-                                        },
-                                        {
-                                            icon: <MapPin className="w-10 h-10 text-red-400"/>,
-                                            label: "Location",
-                                            value: "Peshawar, Pakistan"
-                                        },
-                                    ].map((contact, i) => (
+                                <div className={"grid md:grid-cols-2 gap-8"}>
+                                    <ContactForm/>
+                                    <div className={"space-y-6 flex flex-col justify-between"}>
                                         <motion.div
-                                            key={i}
-                                            variants={itemVariant}
-                                            whileHover={{scale: 1.05, y: -3}}
-                                            className="
-                            border-2 border-red-500/40 rounded-xl p-6 text-center
+                                            variants={containerVariant}
+                                            initial="hidden"
+                                            animate="visible"
+                                            className="grid md:grid-cols-1 grid-rows-3 gap-6 mb-8"
+                                        >
+                                            {[
+                                                {
+                                                    icon: <Mail className="w-10 h-10 text-red-400"/>,
+                                                    label: "Email",
+                                                    value: "saad@dragondevs.co"
+                                                },
+                                                {
+                                                    icon: <Phone className="w-10 h-10 text-red-400"/>,
+                                                    label: "Phone",
+                                                    value: "+923015488577"
+                                                },
+                                                {
+                                                    icon: <MapPin className="w-10 h-10 text-red-400"/>,
+                                                    label: "Location",
+                                                    value: "Peshawar, Pakistan"
+                                                },
+                                            ].map((contact, i) => (
+                                                <motion.div
+                                                    key={i}
+                                                    variants={itemVariant}
+                                                    whileHover={{scale: 1.05, y: -3}}
+                                                    className="
+                            border-2 border-red-500/40 rounded-xl p-6 px-4 md:px-6 text-center
                             bg-gradient-to-br from-red-500/10 to-red-400/5
                             hover:border-red-400
                             hover:shadow-lg hover:shadow-red-500/30
                             transition-all group
                         "
-                                        >
-                                            <div
-                                                className="mb-3 group-hover:scale-110 flex justify-center items-center transition-transform">
-                                                {contact.icon}
-                                            </div>
+                                                >
+                                                    <div
+                                                        className="mb-3 group-hover:scale-110 flex justify-center items-center transition-transform">
+                                                        {contact.icon}
+                                                    </div>
 
-                                            <p className="text-sm text-gray-400 uppercase font-bold tracking-wider mb-2">
-                                                {contact.label}
-                                            </p>
+                                                    <p className="text-sm text-gray-400 uppercase font-bold tracking-wider mb-2">
+                                                        {contact.label}
+                                                    </p>
 
-                                            <p className="text-lg font-black text-red-300">{contact.value}</p>
+                                                    <p className="text-lg font-black text-red-300">{contact.value}</p>
+                                                </motion.div>
+                                            ))}
                                         </motion.div>
-                                    ))}
-                                </motion.div>
+                                        <WhatsAppButton
+                                            phone="03015488577"
+                                            message="Hi! I visited your website."
+                                        />
+
+                                    </div>
+
+                                </div>
+
 
                                 {/* ADDITIONAL INFO */}
                                 <motion.div variants={itemVariant} className="grid md:grid-cols-2 gap-6 mt-8">
-                                    <div className="border border-red-500/30 rounded-lg p-6 bg-red-500/5">
+                                    <div className="border border-red-500/30 rounded-lg p-6 px-4 md:px-6 bg-red-500/5">
                                         <p className="text-sm text-gray-400 uppercase font-bold tracking-wider mb-2">Response
                                             Time</p>
                                         <p className="text-xl font-black text-red-300">Within 24 hours</p>
                                     </div>
-                                    <div className="border border-red-500/30 rounded-lg p-6 bg-red-500/5">
+                                    <div className="border border-red-500/30 rounded-lg p-6 px-4 md:px-6 bg-red-500/5">
                                         <p className="text-sm text-gray-400 uppercase font-bold tracking-wider mb-2">Availability</p>
                                         <p className="text-xl font-black text-red-300">Open for New Projects</p>
                                     </div>
