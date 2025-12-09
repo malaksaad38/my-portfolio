@@ -1,94 +1,18 @@
 [
   {
     "num": "01",
-    "title": "E-Commerce Platform",
-    "desc": "A full-featured e-commerce solution with advanced product filtering, shopping cart, secure payment processing, and inventory management.",
-    "tags": [
-      "Next.js",
-      "MongoDB",
-      "Stripe",
-      "Tailwind CSS",
-      "TypeScript"
-    ],
-    "icon": "ShoppingCart",
-    "image": "/images/projects/ecommerce.jpg",
-    "github": "https://github.com/yourname/ecommerce-platform",
-    "live": "https://yourdomain.com/ecommerce"
-  },
-  {
-    "num": "02",
-    "title": "SaaS Analytics Dashboard",
-    "desc": "Real-time analytics platform with interactive data visualization, user management, and customizable reporting features for enterprise clients.",
+    "title": "Digital Diary",
+    "desc": "A feature-rich digital diary application with prayer tracking, prayer timings, a personalized dashboard with analytics, daily diary entries, and more.",
     "tags": [
       "React",
-      "Node.js",
-      "PostgreSQL",
-      "Chart.js",
-      "AWS"
-    ],
-    "icon": "BarChart2",
-    "image": "/images/projects/dashboard.jpg",
-    "github": "https://github.com/yourname/saas-dashboard",
-    "live": "https://yourdomain.com/dashboard"
-  },
-  {
-    "num": "03",
-    "title": "Social Media Network",
-    "desc": "Full-stack social networking application with real-time messaging, notifications, media sharing, and algorithmic feed generation.",
-    "tags": [
       "Next.js",
-      "Firebase",
-      "WebSocket",
-      "Framer Motion"
-    ],
-    "icon": "Users",
-    "image": "/images/projects/social.jpg",
-    "github": "https://github.com/yourname/social-network",
-    "live": "https://yourdomain.com/social"
-  },
-  {
-    "num": "04",
-    "title": "AI Content Generator",
-    "desc": "Intelligent content creation tool powered by GPT integration with multiple templates, batch processing, and content optimization features.",
-    "tags": [
-      "Next.js",
-      "OpenAI API",
-      "Firebase",
-      "Tailwind"
-    ],
-    "icon": "Cpu",
-    "image": "/images/projects/ai.jpg",
-    "github": "https://github.com/yourname/ai-generator",
-    "live": "https://yourdomain.com/ai"
-  },
-  {
-    "num": "05",
-    "title": "Project Management Suite",
-    "desc": "Collaborative workspace with real-time updates, task management, team communication, and Gantt chart visualization.",
-    "tags": [
-      "React",
-      "Express",
       "MongoDB",
-      "Socket.io"
+      "Auth.js",
+      "Tailwind CSS"
     ],
-    "icon": "ClipboardList",
-    "image": "/images/projects/pm.jpg",
-    "github": "https://github.com/yourname/project-management",
-    "live": "https://yourdomain.com/pm"
-  },
-  {
-    "num": "06",
-    "title": "Portfolio Website",
-    "desc": "Interactive 3D portfolio with smooth animations, scroll-triggered effects, and immersive user experience showcasing creative design.",
-    "tags": [
-      "Next.js",
-      "Three.js",
-      "Framer Motion",
-      "GSAP"
-    ],
-    "icon": "MonitorSmartphone",
-    "image": "/images/projects/portfolio.jpg",
-    "github": "https://github.com/yourname/portfolio",
-    "live": "https://yourdomain.com"
+    "icon": "BookOpen",
+    "image": "/digital-diary.png",
+    "github": "https://github.com/malaksaad38/digital-diary",
+    "live": "https://digital-diary-free.vercel.app/"
   }
 ]

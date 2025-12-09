@@ -42,7 +42,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({projectId}) => {
 
             {/* IMAGE */}
             {project.image && (
-                <div className="relative w-full h-48 overflow-hidden">
+                <div className="relative w-full h-48 md:h-64 overflow-hidden">
                     <img
                         src={project.image}
                         alt={project.title}
