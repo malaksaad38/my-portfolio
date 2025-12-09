@@ -237,7 +237,7 @@ const CyberpunkMenu = () => {
                                     initial={{ opacity: 0, x: -40 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.8, ease: "easeOut" }}
-                                    className="absolute md:right-0 right-10 top-0 px-4 md:px-8"
+                                    className="absolute md:right-0 right-6 top-0 px-4 md:px-8"
                                 >
                                     <img
                                         src="/my-image.png"
@@ -261,7 +261,7 @@ const CyberpunkMenu = () => {
                                             }}
                                         />
                                     ))}
-                                    <div className={"absolute top-60 -right-[78px] md:top-5/6 md:-right-16 font-cyber text-xs rotate-90"}>
+                                    <div className={"absolute top-60 -right-12 md:top-5/6 md:-right-16 font-cyber text-[8px] md:text-xs rotate-90"}>
                                         <GlitchText text="Malak Saad - Developer" textColor={page.text}/>
 
                                     </div>
@@ -270,7 +270,7 @@ const CyberpunkMenu = () => {
                                 </motion.div>
                                 {/* content section */}
                                 <div className={"relative pt-80 sm:pt-0 backdrop-opacity-50"}>
-                                    <div className="sm:hidden block absolute bg-slate-900 w-full text-blue-500 blur-lg h-48 m-0 p-0 -z-20 overflow-visible">
+                                    <div className="sm:hidden block absolute top-72 left-4 bg-slate-900 w-full text-blue-500 blur-lg h-48 m-0 p-0 -z-20 overflow-visible">
                                     </div>
                                     <motion.h1
                                         variants={textVariant}
