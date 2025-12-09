@@ -15,4 +15,38 @@
     "github": "https://github.com/malaksaad38/digital-diary",
     "live": "https://digital-diary-free.vercel.app/"
   }
+  ,{
+  "num": "02",
+  "title": "Tech Shop",
+  "desc": "An e-commerce web application for a modern tech shop, offering laptops, smartphones, accessories, and gadgets with a smooth shopping experience, secure checkout, and responsive design.",
+  "tags": [
+    "React",
+    "Next.js",
+    "MongoDB",
+    "Auth.js",
+    "Tailwind CSS",
+    "ShadCN UI"
+  ],
+  "icon": "DeviceLaptop",
+  "image": "/images/projects/tech-shop.jpg",
+  "github": "https://github.com/malaksaad38/tech-shop",
+  "live": "https://tech-shop-01.vercel.app/"
+}
+,{
+  "num": "03",
+  "title": "Chat App",
+  "desc": "A simple realtime chat app built with Next.js 15, TailwindCSS, ShadCN UI, and Pusher. Features include realtime messaging, dark/light mode, responsive design, and clean UI components.",
+  "tags": [
+    "Next.js",
+    "Tailwind CSS",
+    "ShadCN UI",
+    "Pusher",
+    "TypeScript"
+  ],
+  "icon": "ChatBubbleLeftRight",
+  "image": "/images/projects/chat-app.jpg",
+  "github": "https://github.com/malaksaad38/chat-app",
+  "live": "https://chat-app-orcin-sigma.vercel.app/"
+}
+
 ]
