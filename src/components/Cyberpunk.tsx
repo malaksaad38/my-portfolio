@@ -261,7 +261,7 @@ const CyberpunkMenu = () => {
                                             }}
                                         />
                                     ))}
-                                    <div className={"absolute top-60 -right-12 md:top-5/6 md:-right-16 font-cyber text-[8px] md:text-xs rotate-90"}>
+                                    <div className={"absolute top-64 -right-12 md:top-5/6 md:-right-16 font-cyber text-[8px] md:text-xs rotate-90"}>
                                         <GlitchText text="Malak Saad - Developer" textColor={page.text}/>
 
                                     </div>
