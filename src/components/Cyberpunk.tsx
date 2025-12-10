@@ -30,7 +30,7 @@ import {
     PanelsTopLeft,
     Phone,
     Rocket,
-    SearchCheck, Send,
+    SearchCheck,
     Server,
     Smartphone,
     Smile,
@@ -44,7 +44,6 @@ import {
 import {GlitchText} from "@/components/GlitchText";
 import ContactForm from "@/components/ContactForm";
 import ProjectCard from "@/components/ProjectCard";
-import {CyberpunkGrid} from "@/components/CyberpunkGrid";
 import WhatsAppButton from "@/components/WhatsappButton";
 
 const CyberpunkMenu = () => {

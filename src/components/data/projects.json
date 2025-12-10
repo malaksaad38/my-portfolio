@@ -28,7 +28,7 @@
     "ShadCN UI"
   ],
   "icon": "DeviceLaptop",
-  "image": "/images/projects/tech-shop.jpg",
+  "image": "/tech-shop.png",
   "github": "https://github.com/malaksaad38/tech-shop",
   "live": "https://tech-shop-01.vercel.app/"
 }
@@ -44,7 +44,7 @@
     "TypeScript"
   ],
   "icon": "ChatBubbleLeftRight",
-  "image": "/images/projects/chat-app.jpg",
+  "image": "/chat-app.png",
   "github": "https://github.com/malaksaad38/chat-app",
   "live": "https://chat-app-orcin-sigma.vercel.app/"
 }
