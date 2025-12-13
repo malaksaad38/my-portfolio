@@ -32,11 +32,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({projectId}) => {
 
     return (
         <motion.div
-            whileHover={{scale: 1.03}}
-            whileTap={{scale: 0.97}}
+            whileHover={{scale: 1.01}}
+            whileTap={{scale: 0.01}}
             className="group border-2 border-yellow-500/50 rounded-xl overflow-hidden
             bg-gradient-to-br from-yellow-500/10 to-yellow-400/5
-            hover:border-yellow-400 hover:shadow-xl hover:shadow-yellow-500/40
+            hover:border-yellow-400 hover:shadow-md hover:shadow-yellow-500/40
             transition-all cursor-pointer flex flex-col"
         >
 

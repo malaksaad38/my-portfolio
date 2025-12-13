@@ -45,6 +45,8 @@ import {GlitchText} from "@/components/GlitchText";
 import ContactForm from "@/components/ContactForm";
 import ProjectCard from "@/components/ProjectCard";
 import WhatsAppButton from "@/components/WhatsappButton";
+import Button from "@/components/CyberButton";
+import CyberButton from "@/components/CyberButton";
 
 const CyberpunkMenu = () => {
     const [activePage, setActivePage] = useState('home');
@@ -325,7 +327,7 @@ const CyberpunkMenu = () => {
                                         custom={0.45}
                                         className="text-sm md:text-base opacity-70 text-gray-300 max-w-3xl mb-8"
                                     >
-                                        With 4+ years of hands-on experience, I've helped 30+ companies achieve their
+                                        With 4+ years of hands-on experience, I've helped 12+ companies achieve their
                                         digital goals through cutting-edge technology and creative problem-solving.
                                     </motion.p>
 
@@ -402,29 +404,10 @@ const CyberpunkMenu = () => {
                                     <motion.div
                                         variants={textVariant}
                                         custom={0.9}
-                                        className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 mb-10"
+                                        className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-14 mb-10 px-10 md:px-6"
                                     >
-                                        <button
-                                            className="px-6 sm:px-8 py-3 rounded-xl border-2 border-blue-500 text-blue-300 font-black uppercase tracking-widest text-[10px] sm:text-xs
-                            bg-gradient-to-br from-blue-600/30 to-blue-500/10 hover:from-blue-600/50 hover:to-blue-500/30
-                            shadow-lg shadow-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/60 transition-all duration-300 hover:scale-105
-                            relative overflow-hidden group flex-1 sm:flex-none flex items-center justify-center gap-2"
-                                            onClick={() => handlePageChange("portfolio")}
-                                        >
-                                            <ExternalLink className="w-4 h-4"/>
-                                            View My Work
-                                        </button>
-
-                                        <button
-                                            className="px-6 sm:px-8 py-3 rounded-xl border-2 border-blue-400/50 text-blue-200 font-black uppercase tracking-widest text-[10px] sm:text-xs
-                            bg-gradient-to-br from-blue-500/10 to-transparent hover:from-blue-500/30 hover:to-blue-400/10
-                            shadow-lg shadow-blue-400/20 hover:shadow-xl hover:shadow-blue-400/40 transition-all duration-300 hover:scale-105
-                            relative overflow-hidden group flex-1 sm:flex-none flex items-center justify-center gap-2"
-                                            onClick={() => handlePageChange("contact")}
-                                        >
-                                            <MessageSquare className="w-4 h-4"/>
-                                            Let’s Talk
-                                        </button>
+                                        <CyberButton label={"View My Work"} primaryColor={page.glowColor} accentColor={page.particleColor}   onClick={() => handlePageChange("portfolio")}/>
+                                        <CyberButton label={"Let’s Talk"} primaryColor={page.glowColor} accentColor={page.particleColor}   onClick={() => handlePageChange("contact")}/>
                                     </motion.div>
 
                                     {/* Quick Stats */}
@@ -434,7 +417,7 @@ const CyberpunkMenu = () => {
                                         className="grid md:grid-cols-3 gap-4 mb-8"
                                     >
                                         {[
-                                            {label: "Response Time", value: "< 24 hours", icon: Clock},
+                                            {label: "Response Time", value: "Less than 12 hours", icon: Clock},
                                             {label: "Project Completion", value: "99% On-time", icon: FolderKanban},
                                             {label: "Client Satisfaction", value: "100%", icon: Smile},
                                         ].map((stat, i) => (
@@ -1050,7 +1033,6 @@ const CyberpunkMenu = () => {
                                                 <motion.div
                                                     key={i}
                                                     variants={itemVariant}
-                                                    whileHover={{scale: 1.05, y: -3}}
                                                     className="
                             border-2 border-red-500/40 rounded-xl p-6 px-4 md:px-6 text-center
                             bg-gradient-to-br from-red-500/10 to-red-400/5
@@ -1087,7 +1069,7 @@ const CyberpunkMenu = () => {
                                     <div className="border border-red-500/30 rounded-lg p-6 px-4 md:px-6 bg-red-500/5">
                                         <p className="text-sm text-gray-400 uppercase font-bold tracking-wider mb-2">Response
                                             Time</p>
-                                        <p className="text-xl font-black text-red-300">Within 24 hours</p>
+                                        <p className="text-xl font-black text-red-300">Within 12 hours</p>
                                     </div>
                                     <div className="border border-red-500/30 rounded-lg p-6 px-4 md:px-6 bg-red-500/5">
                                         <p className="text-sm text-gray-400 uppercase font-bold tracking-wider mb-2">Availability</p>
