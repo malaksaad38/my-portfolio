@@ -417,7 +417,7 @@ const CyberpunkMenu = () => {
                                         className="grid md:grid-cols-3 gap-4 mb-8"
                                     >
                                         {[
-                                            {label: "Response Time", value: "Less than 12 hours", icon: Clock},
+                                            {label: "Response Time", value: "Less than 12 minutes", icon: Clock},
                                             {label: "Project Completion", value: "99% On-time", icon: FolderKanban},
                                             {label: "Client Satisfaction", value: "100%", icon: Smile},
                                         ].map((stat, i) => (
@@ -436,7 +436,7 @@ const CyberpunkMenu = () => {
                                     <motion.div
                                         variants={textVariant}
                                         custom={1.1}
-                                        className="opacity-40 font-cyber-outline tracking-widest text-[10px] md:text-xs text-gray-500 border-t border-blue-500/20 pt-6"
+                                        className="opacity-40 font-cyber tracking-widest text-[10px] md:text-xs text-gray-500 border-t border-blue-500/20 pt-6"
                                     >
                                         ▸ CRAFTING DIGITAL EXCELLENCE SINCE 2020 ▸
                                     </motion.div>
@@ -600,7 +600,7 @@ const CyberpunkMenu = () => {
                                             <div className="border-l-4 border-green-400 pl-4 flex items-start gap-2">
                                                 <div>
                                                     <p className="font-black text-gray-200">BS in Computer Science</p>
-                                                    <p className="text-sm text-gray-400">UET • 2023</p>
+                                                    <p className="text-sm text-gray-400">UET • 2022</p>
                                                 </div>
                                             </div>
 
@@ -614,7 +614,7 @@ const CyberpunkMenu = () => {
                                             <div className="border-l-4 border-green-400 pl-4 flex items-start gap-2">
                                                 <div>
                                                     <p className="font-black text-gray-200">Advanced React Developer</p>
-                                                    <p className="text-sm text-gray-400">Meta • 2022</p>
+                                                    <p className="text-sm text-gray-400">Meta • 2024</p>
                                                 </div>
                                             </div>
 
@@ -622,7 +622,7 @@ const CyberpunkMenu = () => {
                                                 <div>
                                                     <p className="font-black text-gray-200">Full-Stack Web Mastery</p>
                                                     <p className="text-sm text-gray-400">Comprehensive Program •
-                                                        2021</p>
+                                                        2025</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -814,7 +814,7 @@ const CyberpunkMenu = () => {
                                             {
                                                 num: "02",
                                                 title: "Planning",
-                                                desc: "Strategy and technical architecture",
+                                                desc: "Strategy and technical architecture and design",
                                                 icon: <Layers className="w-6 h-6 text-purple-300"/>,
                                             },
                                             {
@@ -1069,7 +1069,7 @@ const CyberpunkMenu = () => {
                                     <div className="border border-red-500/30 rounded-lg p-6 px-4 md:px-6 bg-red-500/5">
                                         <p className="text-sm text-gray-400 uppercase font-bold tracking-wider mb-2">Response
                                             Time</p>
-                                        <p className="text-xl font-black text-red-300">Within 12 hours</p>
+                                        <p className="text-xl font-black text-red-300">Within 12 minutes</p>
                                     </div>
                                     <div className="border border-red-500/30 rounded-lg p-6 px-4 md:px-6 bg-red-500/5">
                                         <p className="text-sm text-gray-400 uppercase font-bold tracking-wider mb-2">Availability</p>
