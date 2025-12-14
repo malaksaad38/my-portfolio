@@ -85,10 +85,10 @@ const CyberpunkMenu = () => {
 
         },
         {
-            id: 'portfolio', title: 'Portfolio', color: 'to-yellow-500/20', text: 'text-yellow-500',
+            id: 'portfolio', title: 'Portfolio', color: 'to-amber-500/20', text: 'text-amber-500',
             glowColor: '#f59e0b', particleColor: 'rgba(245, 158, 11, 0.6)',
-            bracketColor: 'border-yellow-500',
-            shadowColor: "shadow-yellow-500/50",
+            bracketColor: 'border-amber-500',
+            shadowColor: "shadow-amber-500/50",
         },
         {
             id: 'contact', title: 'Contact', color: 'to-red-500/20', text: 'text-red-500',
@@ -161,12 +161,12 @@ const CyberpunkMenu = () => {
                     card: 'hover:shadow-purple-500/20'
                 },
                 'portfolio': {
-                    border: 'border-yellow-500',
-                    text: 'text-yellow-500',
-                    bg: 'from-yellow-500/10',
-                    hover: 'hover:border-yellow-400 hover:shadow-yellow-500/30',
-                    badge: 'bg-yellow-500/20 text-yellow-200',
-                    card: 'hover:shadow-yellow-500/20'
+                    border: 'border-amber-500',
+                    text: 'text-amber-500',
+                    bg: 'from-amber-500/10',
+                    hover: 'hover:border-amber-400 hover:shadow-amber-500/30',
+                    badge: 'bg-amber-500/20 text-amber-200',
+                    card: 'hover:shadow-amber-500/20'
                 },
                 'contact': {
                     border: 'border-red-500',
@@ -864,8 +864,8 @@ const CyberpunkMenu = () => {
                                     key={i}
                                     className={`absolute top-0 left-0 w-full h-[1px] ${
                                         i === 0
-                                            ? "bg-gradient-to-r from-transparent via-yellow-400/50 to-transparent"
-                                            : "bg-gradient-to-r from-transparent via-yellow-300/30 to-transparent"
+                                            ? "bg-gradient-to-r from-transparent via-amber-400/50 to-transparent"
+                                            : "bg-gradient-to-r from-transparent via-amber-300/30 to-transparent"
                                     }`}
                                     animate={{x: ["-100%", "100%"]}}
                                     transition={{duration: 3 + i, repeat: Infinity, ease: "linear"}}
@@ -873,9 +873,9 @@ const CyberpunkMenu = () => {
                             ))}
 
                             <div
-                                className="absolute right-0 top-0 h-full w-[2px] bg-gradient-to-b from-yellow-500/50 via-yellow-400/20 to-transparent"/>
+                                className="absolute right-0 top-0 h-full w-[2px] bg-gradient-to-b from-amber-500/50 via-amber-400/20 to-transparent"/>
                             <div
-                                className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-yellow-400/20 to-yellow-500/50"/>
+                                className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-amber-400/20 to-amber-500/50"/>
 
                             {/* BACKGROUND NUMBER */}
                             <motion.h1
@@ -899,7 +899,7 @@ const CyberpunkMenu = () => {
                                 <motion.h1
                                     variants={textVariant}
                                     custom={0.2}
-                                    className={`text-4xl md:text-5xl font-black mb-2 font-cyber-outline z-10 ${page.text} bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent flex items-center gap-2`}
+                                    className={`text-4xl md:text-5xl font-black mb-2 font-cyber-outline z-10 ${page.text} bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent flex items-center gap-2`}
                                 >
                                     <GlitchText text="My Projects" textColor={page.text}/>
                                 </motion.h1>

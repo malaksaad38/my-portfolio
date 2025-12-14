@@ -33,9 +33,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({projectId}) => {
     return (
         <motion.div
             whileHover={{scale: 1.01}}
-            className="relative group border-2 border-yellow-500/50 rounded-xl overflow-hidden
-            bg-gradient-to-br from-yellow-500/10 to-yellow-400/5
-            hover:border-yellow-400 hover:shadow-md hover:shadow-yellow-500/40
+            className="relative group border-2 border-amber-500/50 rounded-xl overflow-hidden
+            bg-gradient-to-br from-amber-500/10 to-amber-400/5
+            hover:border-amber-400 hover:shadow-md hover:shadow-amber-500/40
             transition-all cursor-pointer flex flex-col"
         >
 
@@ -55,7 +55,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({projectId}) => {
 
                 {/* ICON & NUMBER */}
                 <div className="absolute right-2 md:right-4 top-40 md:top-52 flex items-center justify-between opacity-60">
-                    <div className="text-2xl md:text-3xl font-bold text-yellow-400 uppercase tracking-wider font-cyber-outline">
+                    <div className="text-2xl md:text-3xl font-bold text-amber-400 uppercase tracking-wider font-cyber-outline">
                         {project.num}
                     </div>
                 </div>
@@ -67,12 +67,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({projectId}) => {
                         target="_blank"
                     >
                         <h3 className="text-lg md:text-xl font-extrabold text-gray-200 mb-2
-                        group-hover:text-yellow-300 transition-colors">
+                        group-hover:text-amber-300 transition-colors">
                             {project.title}
                         </h3>
                     </motion.a>
                 ) : <h3 className="text-lg md:text-xl font-extrabold text-gray-200 mb-2
-                        group-hover:text-yellow-300 transition-colors">
+                        group-hover:text-amber-300 transition-colors">
                     {project.title}
                 </h3>}
 
@@ -81,12 +81,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({projectId}) => {
                 <p className="text-sm text-gray-400 mb-4 flex-1">{project.desc}</p>
 
                 {/* TAGS */}
-                <div className="flex flex-wrap gap-2 mb-4 pb-4 border-b border-yellow-500/20">
+                <div className="flex flex-wrap gap-2 mb-4 pb-4 border-b border-amber-500/20">
                     {project.tags.map((tag, i) => (
                         <span
                             key={i}
-                            className="text-[11px] md:text-xs px-2 py-1 bg-yellow-500/20
-                            text-yellow-200 rounded font-semibold"
+                            className="text-[11px] md:text-xs px-2 py-1 bg-amber-500/20
+                            text-amber-200 rounded font-semibold"
                         >
                             {tag}
                         </span>
@@ -102,10 +102,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({projectId}) => {
                             whileHover={{scale: 1.07}}
                             href={project.github}
                             target="_blank"
-                            className="flex items-center justify-center gap-2 px-3 py-2 border border-yellow-400/40
-                            rounded-md text-yellow-300 text-xs font-bold
-                            hover:border-yellow-300 hover:text-yellow-200
-                            hover:shadow-yellow-400/40 hover:shadow-md
+                            className="flex items-center justify-center gap-2 px-3 py-2 border border-amber-400/40
+                            rounded-md text-amber-300 text-xs font-bold
+                            hover:border-amber-300 hover:text-amber-200
+                            hover:shadow-amber-400/40 hover:shadow-md
                             transition-all cyberpunk-btn"
                         >
                             <Github className="w-4 h-4"/>
@@ -119,10 +119,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({projectId}) => {
                             whileHover={{scale: 1.07}}
                             href={project.live}
                             target="_blank"
-                            className="flex items-center justify-center gap-2 px-3 py-2 border border-yellow-400/40
-                            rounded-md text-yellow-300 text-xs font-bold
-                            hover:border-yellow-300 hover:text-yellow-200
-                            hover:shadow-yellow-400/40 hover:shadow-md
+                            className="flex items-center justify-center gap-2 px-3 py-2 border border-amber-400/40
+                            rounded-md text-amber-300 text-xs font-bold
+                            hover:border-amber-300 hover:text-amber-200
+                            hover:shadow-amber-400/40 hover:shadow-md
                             transition-all cyberpunk-btn"
                         >
                             <ExternalLink className="w-4 h-4"/>
