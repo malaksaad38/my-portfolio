@@ -826,7 +826,7 @@ const CyberpunkMenu = () => {
                                             {
                                                 num: "04",
                                                 title: "Delivery",
-                                                desc: "Launch and continuous support",
+                                                desc: "Launch and continuous support and more",
                                                 icon: <SearchCheck className="w-6 h-6 text-purple-300"/>,
                                             },
                                         ].map((step, i) => (
