@@ -33,7 +33,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({projectId}) => {
     return (
         <motion.div
             whileHover={{scale: 1.01}}
-            className="group border-2 border-yellow-500/50 rounded-xl overflow-hidden
+            className="relative group border-2 border-yellow-500/50 rounded-xl overflow-hidden
             bg-gradient-to-br from-yellow-500/10 to-yellow-400/5
             hover:border-yellow-400 hover:shadow-md hover:shadow-yellow-500/40
             transition-all cursor-pointer flex flex-col"
@@ -54,11 +54,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({projectId}) => {
             <div className="p-6 px-4 md:px-6 flex flex-col flex-1 justify-between">
 
                 {/* ICON & NUMBER */}
-                {/*<div className="flex items-center justify-between mb-3">*/}
-                {/*    <div className="text-sm font-bold text-yellow-400 uppercase tracking-wider">*/}
-                {/*        Project {project.num}*/}
-                {/*    </div>*/}
-                {/*</div>*/}
+                <div className="absolute right-2 md:right-4 top-40 md:top-52 flex items-center justify-between opacity-60">
+                    <div className="text-2xl md:text-3xl font-bold text-yellow-400 uppercase tracking-wider font-cyber-outline">
+                        {project.num}
+                    </div>
+                </div>
 
                 {/* TITLE */}
                 {project.live ? (
@@ -92,12 +92,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({projectId}) => {
                         </span>
                     ))}
                 </div>
-
-                {/* IMPACT */}
-                {/*<div className="flex items-center gap-2 text-xs md:text-sm text-yellow-300 font-bold mb-4">*/}
-                {/*    <BarChart2 className="w-4 h-4 md:w-5 md:h-5"/>*/}
-                {/*    {project.impact}*/}
-                {/*</div>*/}
 
                 {/* BUTTONS */}
                 <div className="grid grid-cols-2 md:gap-6 gap-4 mt-auto">
