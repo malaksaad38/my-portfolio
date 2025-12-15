@@ -13,7 +13,6 @@ import {
     Code,
     Cpu,
     Database,
-    ExternalLink,
     FolderKanban,
     Gauge,
     Github,
@@ -24,7 +23,6 @@ import {
     Linkedin,
     Mail,
     MapPin,
-    MessageSquare,
     MonitorSmartphone,
     Palette,
     PanelsTopLeft,
@@ -45,7 +43,6 @@ import {GlitchText} from "@/components/GlitchText";
 import ContactForm from "@/components/ContactForm";
 import ProjectCard from "@/components/ProjectCard";
 import WhatsAppButton from "@/components/WhatsappButton";
-import Button from "@/components/CyberButton";
 import CyberButton from "@/components/CyberButton";
 
 const CyberpunkMenu = () => {
@@ -133,54 +130,6 @@ const CyberpunkMenu = () => {
                 transition: {duration: 0.6},
             },
         };
-
-        const getColorClasses = () => {
-            const colorMap: any = {
-                'home': {
-                    border: 'border-blue-500',
-                    text: 'text-blue-500',
-                    bg: 'from-blue-500/10',
-                    hover: 'hover:border-blue-400 hover:shadow-blue-500/30',
-                    badge: 'bg-blue-500/20 text-blue-200',
-                    card: 'hover:shadow-blue-500/20'
-                },
-                'about': {
-                    border: 'border-green-500',
-                    text: 'text-green-500',
-                    bg: 'from-green-500/10',
-                    hover: 'hover:border-green-400 hover:shadow-green-500/30',
-                    badge: 'bg-green-500/20 text-green-200',
-                    card: 'hover:shadow-green-500/20'
-                },
-                'services': {
-                    border: 'border-purple-500',
-                    text: 'text-purple-500',
-                    bg: 'from-purple-500/10',
-                    hover: 'hover:border-purple-400 hover:shadow-purple-500/30',
-                    badge: 'bg-purple-500/20 text-purple-200',
-                    card: 'hover:shadow-purple-500/20'
-                },
-                'portfolio': {
-                    border: 'border-amber-500',
-                    text: 'text-amber-500',
-                    bg: 'from-amber-500/10',
-                    hover: 'hover:border-amber-400 hover:shadow-amber-500/30',
-                    badge: 'bg-amber-500/20 text-amber-200',
-                    card: 'hover:shadow-amber-500/20'
-                },
-                'contact': {
-                    border: 'border-red-500',
-                    text: 'text-red-500',
-                    bg: 'from-red-500/10',
-                    hover: 'hover:border-red-400 hover:shadow-red-500/30',
-                    badge: 'bg-red-500/20 text-red-200',
-                    card: 'hover:shadow-red-500/20'
-                },
-            };
-            return colorMap[page.id] || colorMap['home'];
-        };
-
-        const colors = getColorClasses();
 
         switch (page.id) {
             case 'home':
@@ -406,8 +355,12 @@ const CyberpunkMenu = () => {
                                         custom={0.9}
                                         className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-14 mb-10 px-10 md:px-6"
                                     >
-                                        <CyberButton label={"View My Work"} primaryColor={page.glowColor} accentColor={page.particleColor}   onClick={() => handlePageChange("portfolio")}/>
-                                        <CyberButton label={"Let’s Talk"} primaryColor={page.glowColor} accentColor={page.particleColor}   onClick={() => handlePageChange("contact")}/>
+                                        <CyberButton label={"View My Work"} primaryColor={page.glowColor}
+                                                     accentColor={page.particleColor}
+                                                     onClick={() => handlePageChange("portfolio")}/>
+                                        <CyberButton label={"Let’s Talk"} primaryColor={page.glowColor}
+                                                     accentColor={page.particleColor}
+                                                     onClick={() => handlePageChange("contact")}/>
                                     </motion.div>
 
                                     {/* Quick Stats */}
@@ -425,7 +378,8 @@ const CyberpunkMenu = () => {
                                                 key={i}
                                                 className="relative border border-blue-500/30 rounded-lg p-3 overflow-hidden bg-blue-500/5 flex flex-col gap-2"
                                             >
-                                                <stat.icon className="w-20 h-20 absolute opacity-15 right-0  text-blue-400"/>
+                                                <stat.icon
+                                                    className="w-20 h-20 absolute opacity-15 right-0  text-blue-400"/>
                                                 <p className="text-xs text-gray-400 uppercase tracking-wider">{stat.label}</p>
                                                 <p className="text-base md:text-lg font-black text-blue-300">{stat.value}</p>
                                             </div>
@@ -637,7 +591,8 @@ const CyberpunkMenu = () => {
                                         ].map((item, i) => (
                                             <div key={i}
                                                  className="relative overflow-hidden border border-green-500/30 rounded-lg p-4 bg-green-500/5 flex flex-col ">
-                                                <item.icon className="w-20 h-20 absolute opacity-15 right-0 text-green-400"/>
+                                                <item.icon
+                                                    className="w-20 h-20 absolute opacity-15 right-0 text-green-400"/>
 
                                                 <div
                                                     className="text-2xl md:text-3xl font-black text-green-400 mb-1">{item.num}</div>
@@ -733,7 +688,7 @@ const CyberpunkMenu = () => {
                                             icon: <Palette className="text-purple-300 w-8 h-8"/>,
                                             title: "UI/UX Design",
                                             desc: "Beautiful, intuitive interfaces designed for maximum user engagement and conversion.",
-                                            features: ["Wireframing", "Prototyping", "User Testing", "Design Systems"],
+                                            features: ["Wire framing", "Prototyping", "User Testing", "Design Systems"],
                                         },
                                         {
                                             icon: <MonitorSmartphone className="text-purple-300 w-8 h-8"/>,
@@ -745,7 +700,7 @@ const CyberpunkMenu = () => {
                                             icon: <Server className="text-purple-300 w-8 h-8"/>,
                                             title: "Backend Development",
                                             desc: "Robust, scalable server-side solutions with secure APIs and databases.",
-                                            features: ["Node.js", "Express", "GraphQL", "RESTful APIs"],
+                                            features: ["Node.js", "Express", "GraphQL", "REST APIs"],
                                         },
                                         {
                                             icon: <Smartphone className="text-purple-300 w-8 h-8"/>,
@@ -1089,8 +1044,9 @@ const CyberpunkMenu = () => {
     const socialLinks = [
         {icon: <Github/>, url: "https://github.com/malaksaad38"},
         {icon: <Linkedin/>, url: "https://www.linkedin.com/in/malak-saad-354a0139a/"},
-        {icon: <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
-                    className="bi bi-whatsapp" viewBox="0 0 16 16">
+        {
+            icon: <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                       className="bi bi-whatsapp" viewBox="0 0 16 16">
                 <path
                     d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
             </svg>, url: "https://wa.me/923015488577?text=Hi! I visited your website."
@@ -1208,7 +1164,7 @@ const CyberpunkMenu = () => {
                 >
                     {pages.map((page, i) => (
                         page.id === activePage &&
-                        <div>
+                        <div key={i}>
                             <button
                                 onClick={() => handlePageChange(null)}
                                 className="fixed right-0 top-0 h-full md:w-20 flex justify-end items-center pr-8 pl-2"
